@@ -9,10 +9,10 @@ def main_func():
     Mapitope_run.mapi_run()
 
 #   Ksenia's: create a seed graph
-    graph = Seed_graph.seed_graph_create()
+    graph, median, s_set = Seed_graph.seed_graph_create()
 
 #   Ksenia's: find a seed
-    seed = Seed_graph.seed_search(graph)
+    seed = Seed_graph.seed_search(graph, s_set)
 
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
     PepSurf_run.perpsurf_run(seed)
