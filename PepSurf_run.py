@@ -1,17 +1,13 @@
 import sys
 import subprocess
 import pathlib
-#
-# #LIBRARY_TYPE = NNK
-# #STOP_CODON_MODIFICATION TAG = GLU
-# #PEPTIDES_START
-# >
-# QFTAAE
-# #PEPTIDES_END
+
+
 def create_seed_txt(seed):
     f = open("seed.txt", "w+")
     f.write("#LIBRARY_TYPE = NNK\r\n#STOP_CODON_MODIFICATION TAG = GLU\r\n#PEPTIDES_START\r\n>\r\n"+seed+"\r\n#PEPTIDES_END")
     f.close()
+
 
 # arguments
 # -I seed.txt -P 1e6j.pdb -C P -S 1e6j_P.txt
