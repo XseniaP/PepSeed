@@ -3,10 +3,12 @@ from tkinter import filedialog
 from tkinter import scrolledtext
 import tkinter as tk
 import os
-import sys
 import subprocess
 import shlex
 from subprocess import check_output
+import pathlib
+import pandas as pd
+import sys
 import pathlib
 
 # define a global value as minus infinity
@@ -79,7 +81,7 @@ def get_ssps():
     # return pairs
     abc = ['A', 'B', 'X', 'J', 'C', 'H', 'U', 'M', 'Z', 'P', 'O', 'Y', 'G']
     pairs = []
-    with open(str(pathlib.Path.cwd()) + "/Results/allPairs.txt") as fp:
+    with open(str(pathlib.Path.cwd()) + "/Results_Mapi/allPairs.txt") as fp:
         for line in fp:
             if line.startswith('Significant: '):
                 temp = line.split()
@@ -154,6 +156,19 @@ def seed_graph_create():
             if graph[element].weight >= mean:
                 s_set.append(graph[element].name)
     return graph, median, s_set
+
+
+# extract graph to csv
+def extract_to_csv(graph):
+    df = pd.DataFrame(columns={'pair', 'weight', 'parents', 'children'})
+    for element in graph:
+        if graph[element] != 0:
+            df2 = pd.DataFrame([[graph[element].name, graph[element].weight, graph[element].parents, graph[element].children]], columns={'pair', 'weight', 'parents', 'children'})
+            df = df.append(df2, ignore_index = True )
+    # df = pd.DataFrame(data=graph, index=[0])
+    # file_name = str(pathlib.Path.cwd()) + "/graph.xlsx"
+    file_name = "graph.csv"
+    # df.to_csv(file_name, index = True)
 
 
 # calculate the weight recursively

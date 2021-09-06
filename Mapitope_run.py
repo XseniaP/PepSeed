@@ -5,12 +5,14 @@ import pathlib
 # Mapitope executable (mapi_exec) should be located in the same folder with all the input files and main.py code
 # input files:
 # mapi_exec arguments:
+# -U Results -P 1e6j_P.pdb -S 1e6j_P.txt -I 13b5.txt -C P -D 17.0 -V 2.5 -R rasmol.txt -F 0
 def mapi_run():
     arguments = sys.argv
     exec_name = str(pathlib.Path.cwd()) + "/mapi_exec"
     arguments[0] = exec_name
-    print(arguments[0]+'/n')
+    # arguments[0] = "Results_Mapi"
+    print(arguments[0]+'\n')
     res = subprocess.run(arguments, capture_output=True, text=True)
-    print("stdout:", res.stdout)
-    print("stderr:", res.stderr)
+    # print("stdout:", res.stdout)
+    # print("stderr:", res.stderr)
 

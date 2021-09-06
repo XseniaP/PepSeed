@@ -10,11 +10,13 @@ def main_func():
 
 #   Ksenia's: create a seed graph
     graph, median, s_set = Seed_graph.seed_graph_create()
-
+#   Extract graph to scv
+    Seed_graph.extract_to_csv(graph)
 #   Ksenia's: find a seed
     seed = Seed_graph.seed_search(graph, s_set)
 
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
+    seed = "QFTAAE"
     PepSurf_run.perpsurf_run(seed)
 
 #   Sapir's: functions calls to create a surface graph
