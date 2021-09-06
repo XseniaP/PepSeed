@@ -9,14 +9,16 @@ def main_func():
     Mapitope_run.mapi_run()
 
 #   Ksenia's: create a seed graph
-    graph, median, s_set = Seed_graph.seed_graph_create()
+    graph, mean, s_set = Seed_graph.seed_graph_create()
 #   Extract graph to scv
     Seed_graph.extract_to_csv(graph)
 #   Ksenia's: find a seed
-    seed = Seed_graph.seed_search(graph, s_set)
+    seed = Seed_graph.seed_search(graph, s_set, mean)
 
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
-    seed = "QFTAAE"
+#     seed = "QFTAAE"
+#     seed = "QMQFTAAEMGQYT"
+    print(seed)
     PepSurf_run.perpsurf_run(seed)
 
 #   Sapir's: functions calls to create a surface graph

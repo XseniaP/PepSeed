@@ -33,10 +33,27 @@ class Node:
     def change_weight(self, new_weight):
         self.weight = new_weight
 
+def truncate_carbons(seq, end, start):
+    dic = {}
+    dic['end'] = '0'
+    dic['start'] = '0'
+    if (len(seq) == end) and (seq[end-1] == 'C'):
+        dic['end'] = '1'
+    if (len(seq) == start) and (seq[0] == 'C'):
+        dic['start'] = '1'
+    if (dic['end'] == '1') and (dic['start'] == '1'):
+        seq = seq[1:len(seq)-1]
+    elif (dic['end'] == '0') and (dic['start'] == '1'):
+        seq = seq[1:len(seq)]
+    elif (dic['end'] == '1') and (dic['start'] == '0'):
+        seq = seq[0:len(seq)-1]
+    return seq
 
 def convert_abc():
     seq_set = []
     arguments = sys.argv
+    start = 0
+    end = 0
     filepath = ''
     for i in range(len(arguments)):
         if arguments[i] == '-I':
@@ -44,6 +61,10 @@ def convert_abc():
     with open(str(pathlib.Path.cwd()) + "/" + filepath) as fp:
         previous_line = ''
         for line in fp:
+            if line.startswith('#PAIR_FIXED C* = '):
+                start = int(line.split(' = ')[1])
+            if line.startswith('#PAIR_FIXED *C = '):
+                end = int(line.split(' = ')[1])
             if previous_line.startswith('>'):
                 seq_set.append(line.split('\n')[0].split(' ')[0])
             previous_line = line
@@ -51,11 +72,19 @@ def convert_abc():
     dict_abc = {'R': 'B', 'K': 'B', 'E': 'J', 'D': 'J', 'S': 'O', 'T': 'O', 'L': 'U', 'V': 'U', 'I': 'U', 'Q': 'X',
                 'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y'}
     new_set = []
-    for seq in seq_set:
-        word = str('')
-        for letter in seq:
-            word = word + str(dict_abc[letter])
-        new_set.append(word)
+    if (start == 0) and (end == 0):
+        for seq in seq_set:
+            word = str('')
+            for letter in seq:
+                word = word + str(dict_abc[letter])
+            new_set.append(word)
+    else:
+        for seq in seq_set:
+            seq = truncate_carbons(seq, end, start)
+            word = str('')
+            for letter in seq:
+                word = word + str(dict_abc[letter])
+            new_set.append(word)
     return new_set
 
 
@@ -155,7 +184,7 @@ def seed_graph_create():
         if graph[element] != 0:
             if graph[element].weight >= mean:
                 s_set.append(graph[element].name)
-    return graph, median, s_set
+    return graph, mean, s_set
 
 
 # extract graph to csv
@@ -175,7 +204,7 @@ def extract_to_csv(graph):
 def recursive_weight(i, v, S, graph):
     parent_from_set = False
     final_seed =""
-    max_v = 0
+    max_v = MINUSINF
     # is the condition S==none , s is empty?
     # this is the regular init for each node from the set to be the first node and its weight to be the first weight added
     if (i >= 0) & (S == []):
@@ -192,8 +221,11 @@ def recursive_weight(i, v, S, graph):
     if i < 0:
         return MINUSINF, v
 
-    for parent in graph[v].parents:
+    parents = graph[v].parents - set([v])
+    for parent in parents:
+    # for parent in graph[v].parents:
         S_new = []
+        temp = 0
         for element in S:
             S_new.append(element)
         if parent in S_new:
@@ -237,10 +269,32 @@ def recursive_weight(i, v, S, graph):
     return max_v, final_seed
 
 
+def redefine_seed(final_seed):
+    # for (i=1, i<=len(final_seed)-1, i++):
+    seed = ""
+    for i in range(len(final_seed)-1):
+        if (i == 2):
+            if final_seed[i] != final_seed[i-1]:
+                seed = seed + final_seed[i-2: i+2]
+            else:
+                seed = seed + final_seed[i - 2: i] + final_seed[i + 1]
+        elif (i % 2 == 0) and (i > 2):
+            if seed[len(seed)-1] == final_seed[i]:
+                seed = seed + final_seed[i+1]
+            else:
+                seed = seed + final_seed[i : i + 2]
+    return seed
+
+
+# def convert_to_20_abc(final_seed):
+
+
+
 # DP algorithm - uses the help function which calculates the weight recursively
-def seed_search(graph, s_set):
+def seed_search(graph, s_set, mean):
     # recurrence
-    for i in range(len(graph)):
+    for i in range(len(s_set)):
+    # for i in range(len(graph)):
         max = 0
         for v in s_set:
             S = []
@@ -250,11 +304,21 @@ def seed_search(graph, s_set):
             S.remove(v)
             temp, seed = recursive_weight(i, v, S, graph)
             # temp += graph[v].weight
+            temp = temp - mean * i * 2
             if temp > max:
                 max = temp
                 final_seed = seed
-        if max != 0:
-            return final_seed, i
-        else:
-            print("\n no seed found")
+        # if (max != 0) and (len(final_seed) >= 6):
+        #     # seed = redefine_seed(final_seed)
+        #     # return seed, i
+        #     return final_seed, i
+        # else:
+        #     print("\n no seed found with i=", i)
 
+    if (max != 0) and (len(final_seed) >= 6):
+        # final_seed = convert_to_20_abc(final_seed)
+        seed = redefine_seed(final_seed)
+        # return final_seed, i
+        return seed
+    else:
+        print("\n no seed found")
