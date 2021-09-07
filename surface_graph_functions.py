@@ -107,7 +107,7 @@ def choose_path_from_pepsurf(significant_path_txt):
             else:
                 sum-=1
                 #print(sum)
-                #list_path[index1][index2] = ""
+                list_path[index1][index2] = ""
             #print("cc " ,list_path[index1][index2])
         score_list.append(sum)
     #print(list_alignment_input)
