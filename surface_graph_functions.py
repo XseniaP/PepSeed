@@ -49,7 +49,7 @@ def Initialize_Neighbors_list(pairs_distance_txt , distance_param):
 
 
 def choose_path_from_pepsurf(significant_path_txt):
-    print("sapir")
+    print("sapir2")
     AA_groups_dict = {'R':'B','K':'B','E':'J','D':'J','S':'O','T':'O','L':'U','V':'U','I':'U',
                       'Q':'X','N':'X','W':'Z','F':'Z','A':'A','C':'C','G':'G','H':'H','M':'M',
                       'P':'P','Y':'Y','-':'-'}
