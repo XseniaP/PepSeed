@@ -105,13 +105,13 @@ def choose_path_from_pepsurf(significant_path_txt):
                 sum-=1
                 list_path[index1][index2] = ""
         score_list.append(sum)
-    print(list_alignment_input)
-    print(list_alignment_output)
-    print(list_path)
-    score_list[0] = 4
-    print(score_list)
+    # print(list_alignment_input)
+    # print(list_alignment_output)
+    # print(list_path)
+    # score_list[0] = 4
+    # print(score_list)
     best_indexes = [i for i, x in enumerate(score_list) if x == max(score_list)]
-    print("indexes of the max score: " , best_indexes)
+    # print("indexes of the max score: " , best_indexes)
     new_list_path=[]
     new_list_input=[]
     new_list_output=[]
@@ -122,9 +122,9 @@ def choose_path_from_pepsurf(significant_path_txt):
         new_list_input.append(list_alignment_input[index])
         new_list_output.append(list_alignment_output[index])
         new_list_path.append(list_path[index])
-    print(new_list_path)
-    print(new_list_input)
-    print(new_list_output)
+    # print(new_list_path)
+    # print(new_list_input)
+    # print(new_list_output)
     return(new_list_path , new_list_input , new_list_output)
 
 
@@ -161,6 +161,7 @@ def mark_path(significant_path_txt):
         amino_acid = k[:-1]
         surface_dict[amino_acid].insert_to_path()
     print(path)
+    # return path
 
 
 def update_path():
@@ -169,8 +170,6 @@ def update_path():
           if key not in path_dict:
               path_dict[key] = value
     print(path_dict)
-
-
 
 
 
@@ -183,5 +182,5 @@ def update_path():
 # mark_path(significant_path_txt)
 # update_path()
 # surface_dict['A209'].get_neighbors_list()
-significant_path_txt = "significantPaths2.txt"
-choose_path_from_pepsurf(significant_path_txt)
+# significant_path_txt = "significantPaths2.txt"
+# choose_path_from_pepsurf(significant_path_txt)

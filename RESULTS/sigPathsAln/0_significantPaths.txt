@@ -1,0 +1,61 @@
+*Alignment with highest score*
+Alignment score: 11.5886 P-value: 0.000308005
+
+peptide: TAADEC
+path:    T216P A217P I201P D197P K199P C198P 
+
+Alignment:
+TAADEC
+TAIDKC
+
+_________________________________
+Alignment score: 10.4414 P-value: 0.000872361
+
+peptide: TAADEC
+path:    T188P V191P A194P N193P Q155P C198P 
+
+Alignment:
+TAADEC
+TVANQC
+
+_________________________________
+Alignment score: 10.3445 P-value: 0.000952613
+
+peptide: TAADEC
+path:    A77P A78P D81P E79P 
+
+Alignment:
+AADE
+AADE
+
+_________________________________
+Alignment score: 10.1857 P-value: 0.00110023
+
+peptide: TAADEC
+path:    T210P A208P A209P E213P E212P 
+
+Alignment:
+TAADE
+TAAEE
+
+_________________________________
+Alignment score: 8.90797 P-value: 0.00350504
+
+peptide: TAADEC
+path:    T48P G46P A47P D51P Q50P 
+
+Alignment:
+TAADE
+TGADQ
+
+_________________________________
+Alignment score: 8.27902 P-value: 0.00619538
+
+peptide: TAADEC
+path:    T148P A174P K170P D166P D163P 
+
+Alignment:
+TAADE
+TAKDD
+
+_________________________________
