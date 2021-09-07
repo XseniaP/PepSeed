@@ -1,6 +1,6 @@
 NUM_OF_CLUSTERS=1
 Cluster #0
-Score: 5.6494
+Score: 6.938
  residues number: 6
 residue	score	Occurances
 CYS366:A	3.9523	1

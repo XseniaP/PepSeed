@@ -49,7 +49,7 @@ def Initialize_Neighbors_list(pairs_distance_txt , distance_param):
 
 
 def choose_path_from_pepsurf(significant_path_txt):
-    print("sapir2")
+    # print("sapir2")
     AA_groups_dict = {'R':'B','K':'B','E':'J','D':'J','S':'O','T':'O','L':'U','V':'U','I':'U',
                       'Q':'X','N':'X','W':'Z','F':'Z','A':'A','C':'C','G':'G','H':'H','M':'M',
                       'P':'P','Y':'Y','-':'-'}
@@ -93,9 +93,9 @@ def choose_path_from_pepsurf(significant_path_txt):
             j += 1
         i+=1
         j=0
-    print(list_alignment_input)
-    print(list_alignment_output)
-    print(list_path)
+    # print(list_alignment_input)
+    # print(list_alignment_output)
+    # print(list_path)
     for index1 in range(len(list_alignment_input)):          ## calculate the score of each
         sum=0
         for index2 in range(len(list_alignment_input[index1])):
@@ -114,9 +114,9 @@ def choose_path_from_pepsurf(significant_path_txt):
     #print(list_alignment_output)
     #print(list_path)
     #score_list[0] = 4
-    print(score_list)
+    # print(score_list)
     best_indexes = [i for i, x in enumerate(score_list) if x == max(score_list)]
-    print("indexes of the max score: " , best_indexes)
+    # print("indexes of the max score: " , best_indexes)
     new_list_path=[]
     new_list_input=[]
     new_list_output=[]
@@ -127,9 +127,9 @@ def choose_path_from_pepsurf(significant_path_txt):
         new_list_input.append(list_alignment_input[index])
         new_list_output.append(list_alignment_output[index])
         new_list_path.append(list_path[index])
-    print(new_list_path)
-    print(new_list_input)
-    print(new_list_output)
+    # print(new_list_path)
+    # print(new_list_input)
+    # print(new_list_output)
     return(new_list_path , new_list_input , new_list_output)
 
 

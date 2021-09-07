@@ -1,11 +1,11 @@
 *Alignment with highest score*
-Alignment score: 11.3116 P-value: 0.00351956
+Alignment score: 12.3116 P-value: 0.000970204
 
-peptide: DCLCPPCLCE
+peptide: DCPPCLCE
 path:    D414A P413A P399A Y367A C366A K365A 
 
 Alignment:
-DCLCPPCLCE
-D---PP-YCK
+DCPPCLCE
+D-PP-YCK
 
 _________________________________

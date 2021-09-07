@@ -1,6 +1,6 @@
 NUM_OF_CLUSTERS=1
 Best cluster
-Score: 5.6494
+Score: 6.938
 Residues number: 6
 
 LYS365:A
@@ -13,5 +13,5 @@ ASP414:A
 ---------------------------------------------
 Peptides participating in this cluster:
 ID	Sequence
-1	DCLCPPCLCE
+1	DCPPCLCE
 ++++++++++++++++++++++++++
