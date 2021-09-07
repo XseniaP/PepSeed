@@ -2,28 +2,17 @@ select all
 colour white
 background white
 spacefill
-select THR320:A , ASN321:A , ASN347:A , SER346:A , LYS344:A
-select selected or ASN381:A , PRO324:A , LEU504:A , LYS343:A , SER500:A , LYS373:A
-select selected or PRO335:A , MET417:A , VAL369:A , LEU374:A , ASN375:A , LEU377:A
-select selected or LEU503:A , LYS333:A , ARG342:A , LYS439:A , ARG453:A , ARG495:A
-select selected or LYS365:A , THR372:A , SER353:A , ASN330:A , ILE428:A , ASN435:A
-select selected or ASN437:A , PRO413:A , PRO450:A , ASN457:A , LEU478:A , ILE455:A
-select selected or VAL394:A , ASN424:A , ASN427:A , GLN396:A , PRO399:A , ASN357:A
-select selected or THR332:A , SER386:A , ARG426:A , SER336:A , THR431:A , SER432:A
-select selected or THR433:A , THR485:A , LYS411:A , ARG449:A , LYS447:A , SER456:A
-select selected or ARG444:A , LYS390:A , ARG395:A , THR359:A , SER362:A , THR363:A
-select selected or THR402:A , SER358:A , ILE489:A , GLN401:A , VAL404:A , LEU443:A
-select selected or VAL458:A , PRO459:A , PRO462:A , LYS465:A , PRO466:A , PRO469:A
-select selected or LEU472:A , ASN473:A , SER461:A , THR468:A
+select ILE319:A , CYS323:A , LEU322:A , PRO324:A , GLU327:A
+select selected or ASP351:A , VAL354:A , LEU355:A , LEU377:A , TYR383:A , PHE501:A
+select selected or GLU502:A , LEU504:A , CYS378:A , CYS366:A , VAL369:A , LEU374:A
+select selected or ASP376:A , LEU503:A , TYR356:A , PHE364:A , TYR367:A , PRO399:A
+select selected or MET417:A , PRO413:A , PRO450:A
 define c1 selected
-select ALA331:A , TYR438:A , ALA339:A , ALA430:A , TYR338:A
-select selected or TYR408:A , TYR440:A , TYR436:A , TYR491:A , TYR494:A
+select HIS445:A , CYS467:A , VAL458:A , PRO459:A , PHE460:A
+select selected or PRO462:A , ASP463:A , PRO466:A , PRO469:A , PRO470:A , LEU472:A
+select selected or TYR475:A , TRP476:A
 define c2 selected
-select TYR356:A , ALA371:A , TYR367:A , ALA398:A
-define c3 selected
 select c1
 colour red
 select c2
 colour yellow
-select c3
-colour green

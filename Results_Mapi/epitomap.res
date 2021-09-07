@@ -1,291 +1,117 @@
--U Results_Mapi -P 2ghw.pdb -S 2ghw.txt -I 17b.txt -C A -D 9.0 -V 2 -R rasmol.txt -F 0 
+-U Results_Mapi -P 2ghw.pdb -S 2ghw.txt -I 17b_long.txt -C A -D 9.0 -V 4 -R rasmol.txt -F 0 
 
-The -V parameter is: 2
+The -V parameter is: 4
 cluster number: 1
-number of pairs: 118
-number of different amino acids: 75
-number of different pairs' types: 6
+number of pairs: 36
+number of different amino acids: 26
+number of different pairs' types: 8
 The amino-acids are:
-THR320:A
-ASN321:A
+ILE319:A
+LEU322:A
+CYS323:A
 PRO324:A
-ASN330:A
-THR332:A
-LYS333:A
-PRO335:A
-SER336:A
-ARG342:A
-LYS343:A
-LYS344:A
-SER346:A
-ASN347:A
-SER353:A
-ASN357:A
-SER358:A
-THR359:A
-SER362:A
-THR363:A
-LYS365:A
+GLU327:A
+ASP351:A
+VAL354:A
+LEU355:A
+TYR356:A
+PHE364:A
+CYS366:A
+TYR367:A
 VAL369:A
-THR372:A
-LYS373:A
 LEU374:A
-ASN375:A
+ASP376:A
 LEU377:A
-ASN381:A
-SER386:A
-LYS390:A
-VAL394:A
-ARG395:A
-GLN396:A
+CYS378:A
+TYR383:A
 PRO399:A
-GLN401:A
-THR402:A
-VAL404:A
-LYS411:A
 PRO413:A
 MET417:A
-ASN424:A
-ARG426:A
-ASN427:A
-ILE428:A
-THR431:A
-SER432:A
-THR433:A
-ASN435:A
-ASN437:A
-LYS439:A
-LEU443:A
-ARG444:A
-LYS447:A
-ARG449:A
 PRO450:A
-ARG453:A
-ILE455:A
-SER456:A
-ASN457:A
-VAL458:A
-PRO459:A
-SER461:A
-PRO462:A
-LYS465:A
-PRO466:A
-THR468:A
-PRO469:A
-LEU472:A
-ASN473:A
-LEU478:A
-THR485:A
-ILE489:A
-ARG495:A
-SER500:A
+PHE501:A
+GLU502:A
 LEU503:A
 LEU504:A
 
 The pairs are:
-OX	T320:A	N321:A	1.33203
-OX	T320:A	N347:A	6.49969
-XO	N321:A	S346:A	4.91112
-BX	K344:A	N347:A	6.37014
-OX	S346:A	N347:A	1.33486
-OX	S346:A	N381:A	3.32046
-PB	P324:A	K344:A	7.79885
-BX	K344:A	N381:A	3.34522
-BU	K344:A	L504:A	6.82473
-BX	K343:A	N381:A	7.63666
-XO	N381:A	S500:A	3.81537
-PB	P324:A	K343:A	6.61569
-BU	K373:A	L504:A	8.66598
-PB	P335:A	K343:A	8.74279
-MO	M417:A	S500:A	6.14292
-UB	V369:A	K373:A	2.95916
-BU	K373:A	L374:A	1.3363
-BX	K373:A	N375:A	3.4161
-BU	K373:A	L377:A	5.2603
-BM	K373:A	M417:A	8.07197
-BU	K373:A	L503:A	4.08225
-BP	K333:A	P335:A	4.42299
-PB	P335:A	R342:A	6.59376
-PB	P335:A	K439:A	6.27481
-PB	P335:A	R453:A	6.45743
-PB	P335:A	R495:A	7.00042
-BM	K365:A	M417:A	7.44056
-OM	T372:A	M417:A	7.64781
-BU	K365:A	L374:A	6.9011
-OX	S353:A	N375:A	3.37545
-OX	T372:A	N375:A	4.92412
-XB	N330:A	K333:A	6.02887
-BU	K333:A	I428:A	7.42391
-BX	K333:A	N435:A	8.79424
-BX	K333:A	N437:A	6.71278
-BP	R342:A	P413:A	7.90685
-BP	R342:A	P450:A	6.85567
-XB	N435:A	K439:A	7.682
-XB	N437:A	K439:A	4.03496
-BX	K439:A	N457:A	6.32022
-BU	K439:A	L478:A	4.52805
-PB	P450:A	R453:A	6.66701
-BU	R453:A	I455:A	3.42896
-XB	N330:A	R495:A	5.63428
-UB	V394:A	R495:A	6.08288
-XB	N424:A	R495:A	5.32852
-XB	N427:A	R495:A	8.32135
-UB	I428:A	R495:A	3.62467
-XB	N435:A	R495:A	7.40744
-BU	K365:A	V394:A	6.99197
-BX	K365:A	Q396:A	8.65516
-BP	K365:A	P399:A	7.40928
-OX	S353:A	N357:A	3.02672
-XO	N330:A	T332:A	3.26992
-XO	N330:A	S386:A	7.88816
-BU	R426:A	I428:A	3.27934
-OX	S336:A	N435:A	8.91323
-BX	R426:A	N435:A	7.79659
-OX	T431:A	N435:A	3.43151
-OX	S432:A	N435:A	6.18221
-OX	T433:A	N435:A	4.5357
-XO	N435:A	T485:A	7.02009
-OX	S336:A	N437:A	3.6283
-OX	T431:A	N437:A	7.52538
-BP	K411:A	P413:A	4.08229
-PB	P413:A	R449:A	6.80033
-BP	K411:A	P450:A	3.19716
-BP	K447:A	P450:A	7.0589
-BP	R449:A	P450:A	1.35134
-OX	S456:A	N457:A	1.32532
-BU	R444:A	L478:A	8.30847
-BU	R444:A	I455:A	7.31585
-BU	K390:A	V394:A	3.31634
-UB	V394:A	R395:A	1.33466
-OX	T359:A	N424:A	8.366
-OX	S362:A	N424:A	4.29553
-OX	T363:A	N424:A	6.85903
-BX	K390:A	N424:A	8.06587
-XB	N424:A	R426:A	3.05189
-XO	N424:A	T485:A	8.95828
-BX	R426:A	N427:A	1.3236
-XO	N427:A	T431:A	6.73057
-XO	N427:A	S432:A	8.67638
-XO	N427:A	T485:A	6.07697
-OX	T363:A	Q396:A	8.53019
-BX	K390:A	Q396:A	7.49902
-BX	R395:A	Q396:A	1.33595
-XO	Q396:A	T402:A	4.01368
-XB	Q396:A	K411:A	6.25243
-BP	R395:A	P399:A	6.49984
-PB	P399:A	K411:A	5.08014
-XO	N357:A	S358:A	1.33212
-XO	N357:A	T359:A	3.75567
-BU	R426:A	I489:A	6.95167
-XB	Q401:A	K411:A	2.90719
-UB	V404:A	K411:A	8.26195
-XB	Q401:A	K447:A	6.75311
-UB	V404:A	K447:A	8.29065
-UB	L443:A	K447:A	8.43979
-UB	V404:A	R444:A	7.56744
-UB	L443:A	R444:A	1.33175
-BU	R444:A	V458:A	8.05567
-BP	R444:A	P459:A	8.79426
-BP	R444:A	P462:A	7.95466
-BU	K390:A	V404:A	8.06482
-BU	K390:A	I489:A	5.23704
-BX	R395:A	Q401:A	3.4962
-BU	R395:A	V404:A	7.92472
-XO	Q401:A	T402:A	1.32924
-UB	V458:A	K465:A	8.25455
-PB	P459:A	K465:A	5.80983
-PB	P462:A	K465:A	5.83565
-BP	K465:A	P466:A	1.34926
-BP	K465:A	P469:A	8.85526
-BU	K465:A	L472:A	8.00112
-BX	K465:A	N473:A	6.34275
-OX	S461:A	N473:A	3.15848
-OX	T468:A	N473:A	7.97401
+UC	I319:A	C323:A	7.98115
+UC	L322:A	C323:A	1.33264
+CP	C323:A	P324:A	1.35028
+CJ	C323:A	E327:A	6.81861
+CJ	C323:A	D351:A	4.99466
+CU	C323:A	V354:A	8.41331
+CU	C323:A	L355:A	6.60426
+CU	C323:A	L377:A	7.84798
+CY	C323:A	Y383:A	7.99451
+CZ	C323:A	F501:A	6.35108
+CJ	C323:A	E502:A	8.69413
+CU	C323:A	L504:A	8.25376
+UC	L322:A	C378:A	7.84169
+JC	D351:A	C378:A	5.8795
+UC	L355:A	C366:A	8.88766
+UC	L377:A	C378:A	1.33627
+CZ	C366:A	F501:A	5.9965
+CZ	C378:A	F501:A	6.80212
+CJ	C378:A	E502:A	7.82704
+CU	C378:A	L504:A	7.21547
+UC	V369:A	C378:A	8.88653
+UC	L374:A	C378:A	8.53134
+JC	D376:A	C378:A	4.25377
+CU	C378:A	L503:A	4.05799
+YC	Y356:A	C366:A	6.23879
+ZC	F364:A	C366:A	3.73833
+CY	C366:A	Y367:A	1.32552
+CU	C366:A	V369:A	6.46136
+CU	C366:A	L374:A	4.35782
+CP	C366:A	P399:A	7.91595
+CM	C366:A	M417:A	5.90737
+PP	P399:A	P413:A	3.54372
+PM	P399:A	M417:A	6.61762
+PP	P399:A	P450:A	8.50997
+PM	P413:A	M417:A	6.15364
+PP	P413:A	P450:A	3.68012
 
 
 
 cluster number: 2
-number of pairs: 9
-number of different amino acids: 10
-number of different pairs' types: 1
+number of pairs: 19
+number of different amino acids: 13
+number of different pairs' types: 7
 The amino-acids are:
-ALA331:A
-TYR338:A
-ALA339:A
-TYR408:A
-ALA430:A
-TYR436:A
-TYR438:A
-TYR440:A
-TYR491:A
-TYR494:A
-
-The pairs are:
-AY	A331:A	Y438:A	7.51164
-AY	A339:A	Y438:A	8.74642
-AY	A430:A	Y438:A	6.47792
-YA	Y338:A	A339:A	1.33941
-AY	A339:A	Y408:A	7.50282
-AY	A339:A	Y440:A	6.74292
-AY	A430:A	Y436:A	7.47244
-AY	A430:A	Y491:A	6.71385
-AY	A430:A	Y494:A	8.18306
-
-
-
-cluster number: 3
-number of pairs: 3
-number of different amino acids: 4
-number of different pairs' types: 1
-The amino-acids are:
-TYR356:A
-TYR367:A
-ALA371:A
-ALA398:A
-
-The pairs are:
-YA	Y356:A	A371:A	8.54134
-YA	Y367:A	A371:A	3.75101
-YA	Y367:A	A398:A	3.61992
-
-
-
-cluster number: 4
-number of pairs: 1
-number of different amino acids: 2
-number of different pairs' types: 1
-The amino-acids are:
-ASN505:A
-THR509:A
-
-The pairs are:
-XO	N505:A	T509:A	7.67649
-
-
-
-cluster number: 5
-number of pairs: 1
-number of different amino acids: 2
-number of different pairs' types: 1
-The amino-acids are:
-ALA471:A
+HIS445:A
+VAL458:A
+PRO459:A
+PHE460:A
+PRO462:A
+ASP463:A
+PRO466:A
+CYS467:A
+PRO469:A
+PRO470:A
+LEU472:A
 TYR475:A
+TRP476:A
 
 The pairs are:
-AY	A471:A	Y475:A	5.3315
-
-
-
-cluster number: 6
-number of pairs: 1
-number of different amino acids: 2
-number of different pairs' types: 1
-The amino-acids are:
-ALA350:A
-TYR383:A
-
-The pairs are:
-AY	A350:A	Y383:A	8.84871
+HC	H445:A	C467:A	8.8274
+UC	V458:A	C467:A	6.79035
+PC	P459:A	C467:A	3.52842
+ZC	F460:A	C467:A	4.33612
+PC	P462:A	C467:A	7.05102
+JC	D463:A	C467:A	6.64298
+PC	P466:A	C467:A	1.32497
+CP	C467:A	P469:A	3.89855
+CP	C467:A	P470:A	7.44244
+CU	C467:A	L472:A	5.88724
+CY	C467:A	Y475:A	4.9846
+CZ	C467:A	W476:A	6.46406
+PP	P459:A	P462:A	7.68967
+PP	P459:A	P466:A	6.15924
+PP	P459:A	P469:A	3.77954
+PP	P459:A	P470:A	8.52118
+PP	P462:A	P466:A	8.80092
+PP	P466:A	P469:A	7.6881
+PP	P469:A	P470:A	1.33414
 
 
 
@@ -294,169 +120,402 @@ AY	A350:A	Y383:A	8.84871
 
 peptide number 1
 
-SGLRNETFLR
---LRN---LR
+NDWPCLSHTTVCNGTQ
+---PCL----VC----
 
 peptide number 2
 
-EFFQQHMLRVPR
--------LRVPR
+ATMPCLSHPSVCKHLY
+--MPCL----VC----
 
 peptide number 3
 
-NMKLKLREMTQR
--MKLKLR-MTQR
+PMHECLSAPSVCADNY
+PM-ECL----VC----
 
 peptide number 4
 
-MTRPTSLTQLTG
-MTRP---TQ---
+TELACLSEAYICDRSN
+----CL----ICD---
 
 peptide number 5
 
-LHIRVNETAYRV
---IRV-----RV
+ETFTCISAPWTCVTWL
+----CI-----CV---
 
 peptide number 6
 
-DFLREHGMKNPR
---LR---MKNPR
+EKMACLSTLDVCMENP
+----CL----VCM---
 
 peptide number 7
 
-RSRPTNMTTLRD
---RPTNMT-LR-
+NNMSCLSHETICGRNP
+----CL----IC----
 
 peptide number 8
 
-AAYNATRGTVSA
-------------
+LPFECISKREVCDTPM
+---ECI----VCD-PM
 
 peptide number 9
 
-QLLHTWEDKMRK
---------KMR-
+SVDDCRWNLNCEPPP
+---DC-----CEPPP
 
 peptide number 10
 
-RNGELWLRRPGL
-RN----LRRP--
+SEVYCPRPDRCLRAP
+---YCP----CL---
 
 peptide number 11
 
-MVRPSNWDALTR
--VRPSN------
+VQRDCRWTFSCATLI
+---DC----------
+
+peptide number 12
+
+TPPRCSDQMYCSLSR
+-PP------YC----
+
+peptide number 13
+
+THQFCPDPKHCLAQP
+---FCP----CL---
+
+peptide number 14
+
+RMPPCMNAGECPTIA
+-MPPCM---ECP---
+
+peptide number 15
+
+TSNFCPAGGPCSPHG
+---FCP---PC----
+
+peptide number 16
+
+NPRVCMNKWECEQAI
+---VCM---ECE---
+
+peptide number 17
+
+GPPLGCLSLSCYDVA
+-PP--CL---CY---
+
+peptide number 18
+
+WNDYCTMNQCDTHN
+---YC----CD---
+
+peptide number 19
+
+KPLHCGDTFCSLNQ
+--------FC----
+
+peptide number 20
+
+YLEHCTMNECLNAR
+--------ECL---
+
+peptide number 21
+
+NGYHCLSEFCMPHP
+----CL--FCMP--
+
+peptide number 22
+
+SMEECRLWLCPPYE
+---EC---LCPP--
+
+peptide number 23
+
+YKPWCEMNKCKPLA
+---WCE--------
+
+peptide number 24
+
+VMPECLSRLCDFDM
+-MPECL--LCD---
+
+peptide number 25
+
+DDMPGCYPMCTLNK
+--MP-CYPMC----
+
+peptide number 26
+
+YDSYCIMNFCGHAA
+---YCI--FC----
+
+peptide number 27
+
+YTAADCPGLLYLCP
+----DCP----LCP
+
+peptide number 28
+
+NDVRCKLWLCPMPD
+--------LCPMP-
+
+peptide number 29
+
+NNWPCLNETCPTKG
+---PCL---CP---
+
+peptide number 30
+
+VQWPCLSKQCNDNI
+---PCL--------
+
+peptide number 31
+
+YQADCLMNRCPTAE
+---DCL---CP---
+
+peptide number 32
+
+SAPECHLYYCPEQA
+---EC---YCP---
+
+peptide number 33
+
+ANPVCRLWMCPPIV
+---VC---MCPP--
+
+peptide number 34
+
+RQTEPCNLWFCPQV
+----PC---FCP--
+
+peptide number 35
+
+REPPCVQVHCSTAK
+--PPCV--------
+
+peptide number 36
+
+PKEQPWSEFRPAGM
+--------------
+
+peptide number 37
+
+ADCTLWFCPQTSN
+-DC---FCP----
+
+peptide number 38
+
+CLSATCDCTLCGP
+CL---CDC-LC--
+
+peptide number 39
+
+FPELTCWTCLASS
+-----CW-CL---
+
+peptide number 40
+
+PPAYSCLCPWAHM
+PP---CLCP----
 
 *************  cluster number: 2 ************
 
 peptide number 1
 
-SGLRNETFLR
-----------
+NDWPCLSHTTVCNGTQ
+---PCL----VC----
 
 peptide number 2
 
-EFFQQHMLRVPR
-------------
+ATMPCLSHPSVCKHLY
+---PCL----VC----
 
 peptide number 3
 
-NMKLKLREMTQR
-------------
+PMHECLSAPSVCADNY
+---ECL----VC----
 
 peptide number 4
 
-MTRPTSLTQLTG
-------------
+TELACLSEAYICDRSN
+----CL----ICD---
 
 peptide number 5
 
-LHIRVNETAYRV
---------AY--
+ETFTCISAPWTCVTWL
+----CI-----CV---
 
 peptide number 6
 
-DFLREHGMKNPR
-------------
+EKMACLSTLDVCMENP
+----CL----VC----
 
 peptide number 7
 
-RSRPTNMTTLRD
-------------
+NNMSCLSHETICGRNP
+----CL----IC----
 
 peptide number 8
 
-AAYNATRGTVSA
--AY---------
+LPFECISKREVCDTPM
+---ECI----VCD---
 
 peptide number 9
 
-QLLHTWEDKMRK
-------------
+SVDDCRWNLNCEPPP
+---DC-----CEPPP
 
 peptide number 10
 
-RNGELWLRRPGL
-------------
+SEVYCPRPDRCLRAP
+---YCP----CL---
 
 peptide number 11
 
-MVRPSNWDALTR
-------------
+VQRDCRWTFSCATLI
+---DC----------
 
-*************  cluster number: 3 ************
+peptide number 12
 
-peptide number 1
+TPPRCSDQMYCSLSR
+-PP------YC----
 
-SGLRNETFLR
-----------
+peptide number 13
 
-peptide number 2
+THQFCPDPKHCLAQP
+---FCP---HCL---
 
-EFFQQHMLRVPR
-------------
+peptide number 14
 
-peptide number 3
+RMPPCMNAGECPTIA
+--PPC----ECP---
 
-NMKLKLREMTQR
-------------
+peptide number 15
 
-peptide number 4
+TSNFCPAGGPCSPHG
+---FCP---PC----
 
-MTRPTSLTQLTG
-------------
+peptide number 16
 
-peptide number 5
+NPRVCMNKWECEQAI
+---VC----ECE---
 
-LHIRVNETAYRV
---------AY--
+peptide number 17
 
-peptide number 6
+GPPLGCLSLSCYDVA
+-PP--CL---CY---
 
-DFLREHGMKNPR
-------------
+peptide number 18
 
-peptide number 7
+WNDYCTMNQCDTHN
+---YC----CD---
 
-RSRPTNMTTLRD
-------------
+peptide number 19
 
-peptide number 8
+KPLHCGDTFCSLNQ
+---HC---FC----
 
-AAYNATRGTVSA
--AY---------
+peptide number 20
 
-peptide number 9
+YLEHCTMNECLNAR
+---HC---ECL---
 
-QLLHTWEDKMRK
-------------
+peptide number 21
 
-peptide number 10
+NGYHCLSEFCMPHP
+---HCL--FC----
 
-RNGELWLRRPGL
-------------
+peptide number 22
 
-peptide number 11
+SMEECRLWLCPPYE
+---EC---LCPP--
 
-MVRPSNWDALTR
-------------
+peptide number 23
+
+YKPWCEMNKCKPLA
+---WCE--------
+
+peptide number 24
+
+VMPECLSRLCDFDM
+---ECL--LCD---
+
+peptide number 25
+
+DDMPGCYPMCTLNK
+-----CY-------
+
+peptide number 26
+
+YDSYCIMNFCGHAA
+---YCI--FC----
+
+peptide number 27
+
+YTAADCPGLLYLCP
+----DCP----LCP
+
+peptide number 28
+
+NDVRCKLWLCPMPD
+--------LCP---
+
+peptide number 29
+
+NNWPCLNETCPTKG
+---PCL---CP---
+
+peptide number 30
+
+VQWPCLSKQCNDNI
+---PCL--------
+
+peptide number 31
+
+YQADCLMNRCPTAE
+---DCL---CP---
+
+peptide number 32
+
+SAPECHLYYCPEQA
+---ECH--YCP---
+
+peptide number 33
+
+ANPVCRLWMCPPIV
+---VC----CPP--
+
+peptide number 34
+
+RQTEPCNLWFCPQV
+----PC---FCP--
+
+peptide number 35
+
+REPPCVQVHCSTAK
+--PPCV--HC----
+
+peptide number 36
+
+PKEQPWSEFRPAGM
+--------------
+
+peptide number 37
+
+ADCTLWFCPQTSN
+-DC---FCP----
+
+peptide number 38
+
+CLSATCDCTLCGP
+CL---CDC-LC--
+
+peptide number 39
+
+FPELTCWTCLASS
+-----CW-CL---
+
+peptide number 40
+
+PPAYSCLCPWAHM
+PP---CLCP----

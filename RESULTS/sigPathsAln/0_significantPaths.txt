@@ -1,31 +1,11 @@
 *Alignment with highest score*
-Alignment score: 7.39573 P-value: 0.00336164
+Alignment score: 11.3116 P-value: 0.00351956
 
-peptide: LRVPR
-path:    I455A R453A F451A P450A R449A 
-
-Alignment:
-LRVPR
-IRFPR
-
-_________________________________
-Alignment score: 6.67747 P-value: 0.0067482
-
-peptide: LRVPR
-path:    L443A R444A F460A P462A 
+peptide: DCLCPPCLCE
+path:    D414A P413A P399A Y367A C366A K365A 
 
 Alignment:
-LRVP
-LRFP
-
-_________________________________
-Alignment score: 5.51619 P-value: 0.0207308
-
-peptide: LRVPR
-path:    I428A R495A F334A P335A 
-
-Alignment:
-LRVP
-IRFP
+DCLCPPCLCE
+D---PP-YCK
 
 _________________________________

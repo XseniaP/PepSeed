@@ -108,7 +108,7 @@ def choose_path_from_pepsurf(significant_path_txt):
     # print(list_alignment_input)
     # print(list_alignment_output)
     # print(list_path)
-    # score_list[0] = 4
+    score_list[0] = 4
     # print(score_list)
     best_indexes = [i for i, x in enumerate(score_list) if x == max(score_list)]
     # print("indexes of the max score: " , best_indexes)
@@ -160,8 +160,7 @@ def mark_path(significant_path_txt):
     for k in path:
         amino_acid = k[:-1]
         surface_dict[amino_acid].insert_to_path()
-    print(path)
-    # return path
+    # print(path)
 
 
 def update_path():
@@ -169,7 +168,9 @@ def update_path():
         if value.check_if_in_path() == True:
           if key not in path_dict:
               path_dict[key] = value
-    print(path_dict)
+    # print(path_dict)
+
+
 
 
 
