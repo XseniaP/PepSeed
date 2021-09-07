@@ -48,11 +48,8 @@ def Initialize_Neighbors_list(pairs_distance_txt , distance_param):
             second.add_new_neighbor(first)
 
 
-"""""""""
-important to check if might be another format to this file!!!!
-"""""""""
-
 def choose_path_from_pepsurf(significant_path_txt):
+    print("sapir")
     AA_groups_dict = {'R':'B','K':'B','E':'J','D':'J','S':'O','T':'O','L':'U','V':'U','I':'U',
                       'Q':'X','N':'X','W':'Z','F':'Z','A':'A','C':'C','G':'G','H':'H','M':'M',
                       'P':'P','Y':'Y','-':'-'}
@@ -96,18 +93,26 @@ def choose_path_from_pepsurf(significant_path_txt):
             j += 1
         i+=1
         j=0
-    for index1 in range(len(list_alignment_input)):          ## calculate the score of each
-        sum=0
-        for index2 in range(len(list_alignment_input[index1])):
-            if list_alignment_input[index1][index2] == list_alignment_output[index1][index2]:
-                sum+=1
-            else:
-                sum-=1
-                list_path[index1][index2] = ""
-        score_list.append(sum)
     print(list_alignment_input)
     print(list_alignment_output)
     print(list_path)
+    for index1 in range(len(list_alignment_input)):          ## calculate the score of each
+        sum=0
+        for index2 in range(len(list_alignment_input[index1])):
+            if list_alignment_output[index1][index2] == '-':
+                list_path[index1].insert(index2,'')
+            if list_alignment_input[index1][index2] == list_alignment_output[index1][index2]:
+                sum+=1
+                #print(sum)
+            else:
+                sum-=1
+                #print(sum)
+                #list_path[index1][index2] = ""
+            #print("cc " ,list_path[index1][index2])
+        score_list.append(sum)
+    #print(list_alignment_input)
+    #print(list_alignment_output)
+    #print(list_path)
     #score_list[0] = 4
     print(score_list)
     best_indexes = [i for i, x in enumerate(score_list) if x == max(score_list)]
@@ -141,8 +146,6 @@ def update_path():
           if key not in path_dict:
               path_dict[key] = value
     #print(path_dict)
-
-
 
 
 

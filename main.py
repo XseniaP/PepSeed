@@ -8,7 +8,7 @@ import surface_graph_functions
 
 def main_func():
 #   Running mapi with the given arguments
-    Mapitope_run.mapi_run()
+    #Mapitope_run.mapi_run()
 
 #   Ksenia's: create a seed graph
     graph, median, s_set = Seed_graph.seed_graph_create()
@@ -17,7 +17,7 @@ def main_func():
     seed = Seed_graph.seed_search(graph, s_set)
 
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
-    PepSurf_run.perpsurf_run(seed)
+    #PepSurf_run.perpsurf_run(seed)
 
 #   Sapir's: functions calls to create a surface graph
 
