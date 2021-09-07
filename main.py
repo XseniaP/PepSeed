@@ -8,7 +8,7 @@ import pathlib
 
 def main_func():
 #   Running mapi with the given arguments
-    Mapitope_run.mapi_run()
+#     Mapitope_run.mapi_run()
 
 #   Ksenia's: create a seed graph
     graph, mean, s_set = Seed_graph.seed_graph_create()
@@ -36,7 +36,7 @@ def main_func():
     print(output_alignment_set)
 
 #   Ksenia's: return set of dictionaries, 1 for each path
-#     Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed)
+    set_of_dicts = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed)
 
 #   Sapir's: functions calls to create a surface graph
 

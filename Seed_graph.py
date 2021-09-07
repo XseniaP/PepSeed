@@ -133,7 +133,6 @@ def find_mean(graph):
     mean = sum / count + 1
     weights.sort()
     median = weights[round(count * 0.5)]
-    # return mean
     return mean
 
 
@@ -338,25 +337,33 @@ def seed_search(graph, s_set, mean):
 
 # getting the path or set of paths and return the relevant dictionary for each
 # which suggests the relevant nodes in the graph
-# def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed):
-#     my_set = set()
-#     for path in paths_set:
-#         dic = dict((el, {}) for el in path if el != '')
-#
-#
-#
-#
-#         for j in range(len(input_alignment_set) - 1):
-#             previous = ""
-#             for i in range(len(original_seed-1)):
-#                 if i % 2 == 0:
-#                     if input_alignment_set[j : j+2] == original_seed[i: i+2]:
-#                         dic[path[j]][original_seed[i: i + 2]] = 0
-#                         dic[path[j + 1]][original_seed[i: i + 2]] = 1
-#                     if (previous != "") and (previous[1] == original_seed[i]):
-#                         dic[path[j]][original_seed[i: i + 2]] = 0
-#
-#                     previous = original_seed[i: i+2]
-#
-#
-#     return my_set
+def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed):
+    my_set = list()
+    k = 0
+    for path in paths_set:
+        dic = dict((el, {}) for el in path if el != '')
+        i = 0
+        j = 0
+        while (j < len(input_alignment_set[k])) and (i < len(original_seed) - 1):
+            if (path[j] == ''):
+                j += 1
+                i += 2
+                continue
+            if (j == len(input_alignment_set[k]) - 1):
+                if input_alignment_set[k][j] == original_seed[i]:
+                    dic[path[j]][original_seed[i: i + 2]] = 0
+                if input_alignment_set[k][j] == original_seed[i + 1]:
+                    dic[path[j]][original_seed[i: i + 2]] = 1
+                i += 2
+                j += 1
+            else:
+                if input_alignment_set[k][j] + input_alignment_set[k][j + 1] == original_seed[i: i + 2]:
+                    dic[path[j]][original_seed[i: i + 2]] = 0
+                    dic[path[j + 1]][original_seed[i: i + 2]] = 1
+                    i += 2
+                    j += 1
+                else:
+                    j += 1
+        my_set.append(dic)
+    print(my_set)
+    return my_set
