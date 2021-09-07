@@ -1,17 +1,17 @@
 NUM_OF_CLUSTERS=1
 Best cluster
-Score: 8.0854
+Score: 5.6953
 Residues number: 6
 
-ASP197:P
-CYS198:P
-LYS199:P
-ILE201:P
-THR216:P
-ALA217:P
+LYS411:A
+ARG449:A
+PRO450:A
+PHE451:A
+ARG453:A
+ILE455:A
 
 ---------------------------------------------
 Peptides participating in this cluster:
 ID	Sequence
-1	TAADEC
+1	LRVPR
 ++++++++++++++++++++++++++

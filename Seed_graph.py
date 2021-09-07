@@ -23,6 +23,9 @@ class Node:
         self.children = children
         self.parents = parents
 
+    def set_name(self, name):
+        self.name = name
+
     def add_parent(self, new_parent):
         self.parents.add(new_parent)
 
@@ -78,6 +81,7 @@ def convert_abc():
             for letter in seq:
                 word = word + str(dict_abc[letter])
             new_set.append(word)
+            vocab[word] = seq
     else:
         for seq in seq_set:
             # seq = truncate_carbons(seq, end, start)
@@ -119,7 +123,6 @@ def check_reverse(seq, graph):
         rev = True
     return rev
 
-
 def find_mean(graph):
     count = 0
     sum = 0
@@ -138,11 +141,13 @@ def find_mean(graph):
 
 # create a seed graph and return the graph and the median weight
 def seed_graph_create():
+    reverse_indices = []
     sequences = convert_abc()[0]
     ssps = sorted(set(get_ssps()))
     graph = dict.fromkeys(ssps, 0)
     for seq in sequences:
         rev = check_reverse(seq, graph)
+        reverse_indices.append(rev)
         prev = ''
         for i in range(len(seq) - 1):
             if not rev:
@@ -151,7 +156,7 @@ def seed_graph_create():
                 temp = str(seq[-(i + 1):-i]) + str(seq[-(i + 2):-(i + 1)])
             if temp in ssps:
                 if graph[temp] == 0:
-                    graph[temp] = Node(name=str(seq[i:i + 2]), weight=1, children=set(), parents=set())
+                    graph[temp] = Node(name=temp, weight=1, children=set(), parents=set())
                 else:
                     graph[temp].change_weight(graph[temp].weight + 1)
                 if prev != '':
@@ -170,7 +175,7 @@ def seed_graph_create():
         if graph_new[element] != 0:
             if graph_new[element].weight >= mean:
                 s_set.append(graph_new[element].name)
-    return graph_new, mean, s_set
+    return graph_new, mean, s_set, reverse_indices
 
 
 # extract graph to csv
@@ -254,17 +259,24 @@ def redefine_seed(final_seed):
     return seed
 
 
-def convert_to_20(seed, vocab):
+def convert_to_20(seed, vocab, rev_indices):
     new_seed = ""
     for i in range(len(seed)-1):
         # the seed is not redefined yet (pair is not merged to the next one by last-first letter match)
         # so each consequent pair is reviewed separately
         if i % 2 == 0:
             my_list = list()
+            k = 0
             for seq in vocab:
+                rev = rev_indices[k]
                 for j in range(len(seq)-1):
-                    if seq[j : j+2] == seed[i : i+2]:
-                        my_list.append(vocab[seq][j: j+2])
+                    if rev == False:
+                        if seq[j: j+2] == seed[i: i+2]:
+                            my_list.append(vocab[seq][j: j+2])
+                    else:
+                        if seq[j + 1] + seq[j] == seed[i: i+2]:
+                            my_list.append(vocab[seq][j + 1] + vocab[seq][j])
+                k += 1
             my_dict_1 = {}
             my_dict_2 = {}
             for el in my_list:
@@ -278,12 +290,15 @@ def convert_to_20(seed, vocab):
                     my_dict_2[el[1]] = 1
             max1 = 0
             max2 = 0
+
+            letter = ""
             for element in my_dict_1:
                 if my_dict_1[element] > max1:
                     max1 = my_dict_1[element]
                     letter = element
             new_seed = new_seed + letter
 
+            letter = ""
             for element in my_dict_2:
                 if my_dict_2[element] > max2:
                     max2 = my_dict_2[element]
@@ -297,7 +312,7 @@ def convert_to_20(seed, vocab):
 
 
 # DP algorithm - uses the help function which calculates the weight recursively
-def seed_search(graph, s_set, mean):
+def seed_search(graph, s_set, mean, rev_indices):
     # DP target , no more than 4 insersions allowed, each insertion leads to penalty
     abs_max = 0
     k = input("Enter max number of pairs with the weight below mean value on the path: ")
@@ -325,7 +340,7 @@ def seed_search(graph, s_set, mean):
         vocab = convert_abc()[1]
         print(f_final_seed)
         original_seed = f_final_seed
-        f_final_seed = convert_to_20(f_final_seed, vocab)
+        f_final_seed = convert_to_20(f_final_seed, vocab, rev_indices)
         print(f_final_seed)
         seed = redefine_seed(f_final_seed)
         print(f_final_seed)
@@ -344,12 +359,25 @@ def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_align
         dic = dict((el, {}) for el in path if el != '')
         i = 0
         j = 0
+        temp = list()
+        offset = 0
+        for l in range(len(path)):
+            if output_alignment_set[k][l + offset] != '-':
+                temp.append(path[l])
+            else:
+                temp.append("-")
+                temp.append(path[l])
+                offset += 1
+        path = temp
+        print(path)
         while (j < len(input_alignment_set[k])) and (i < len(original_seed) - 1):
-            if (path[j] == ''):
-                j += 1
+            # if current position in path is not found
+            if (path[j] == '') or (path[j] == '-'):
                 i += 2
+                j += 1
                 continue
-            if (j == len(input_alignment_set[k]) - 1):
+            # if it's a list position so only 1 letter can be compared
+            if j == len(input_alignment_set[k]) - 1:
                 if input_alignment_set[k][j] == original_seed[i]:
                     dic[path[j]][original_seed[i: i + 2]] = 0
                 if input_alignment_set[k][j] == original_seed[i + 1]:
@@ -357,13 +385,32 @@ def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_align
                 i += 2
                 j += 1
             else:
+                # if the pair starting in this position is identical to the pair in the original seed
                 if input_alignment_set[k][j] + input_alignment_set[k][j + 1] == original_seed[i: i + 2]:
                     dic[path[j]][original_seed[i: i + 2]] = 0
                     dic[path[j + 1]][original_seed[i: i + 2]] = 1
                     i += 2
                     j += 1
+
+                if (input_alignment_set[k][j] == original_seed[i]) and (path[j + 1] == ''):
+                    dic[path[j]][original_seed[i: i + 2]] = 0
+                    i += 2
+                    j += 1
+                if (input_alignment_set[k][j] == original_seed[i]) and (path[j + 1] == '-'):
+                    dic[path[j]][original_seed[i: i + 2]] = 0
+                    i += 2
+                    j += 1
+                if (input_alignment_set[k][j + 1] == original_seed[i + 1]) and (path[j] == ''):
+                    dic[path[j]][original_seed[i: i + 2]] = 1
+                    i += 2
+                    j += 1
+                if (input_alignment_set[k][j + 1] == original_seed[i + 1]) and (path[j] == '-'):
+                    dic[path[j]][original_seed[i: i + 2]] = 1
+                    i += 2
+                    j += 1
                 else:
                     j += 1
         my_set.append(dic)
+        k += 1
     print(my_set)
     return my_set

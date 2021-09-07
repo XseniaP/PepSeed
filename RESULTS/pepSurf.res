@@ -1,14 +1,14 @@
 NUM_OF_CLUSTERS=1
 Cluster #0
-Score: 8.0854
+Score: 5.6953
  residues number: 6
 residue	score	Occurances
-CYS198:P	3.9523	1
-ASP197:P	3.6686	1
-ALA217:P	2.2149	1
-THR216:P	1.9799	1
-LYS199:P	0.18013	1
-ILE201:P	0.001	1
+PRO450:A	2.9812	1
+ARG453:A	1.8795	1
+ARG449:A	1.8795	1
+ILE455:A	0.84066	1
+PHE451:A	0.001	1
+LYS411:A	0	2
 
 ---------------------------------------------
 Peptide Contribution:

@@ -6,18 +6,26 @@ import Cluster_extend
 import surface_graph_functions
 import pathlib
 
+# -U TEST4 -P 2ghw.pdb -S 2ghw.txt -I 17b.txt -C A -D 7.0 -V 5.0 -R rasmol.txt
+# -U TEST6 -P 2ghw.pdb -S 2ghw.txt -I 17b.txt -C A -D 9.0 -V 3.0 -R rasmol.txt -F 3
+#  -U TEST4 -P 2ghw.pdb -S 2ghw.txt -I 17b.txt -C A -D 7.0 -V 5.0 -R rasmol.txt
+# -U Results_Mapi -P 2ghw.pdb -S 2ghw.txt -I 17b.txt -C A -D 9.0 -V 3.0 -R rasmol.txt -F 3
+
+# -U Results_Mapi -P 1e6j_P.pdb -S 1e6j_P.txt -I 13b5.txt -C P -D 17.0 -V 2.5 -R rasmol.txt -F 0
+
+
 def main_func():
 #   Running mapi with the given arguments
-#     Mapitope_run.mapi_run()
+    Mapitope_run.mapi_run()
 
 #   Ksenia's: create a seed graph
-    graph, mean, s_set = Seed_graph.seed_graph_create()
+    graph, mean, s_set, rev_indices = Seed_graph.seed_graph_create()
 
 #   Extract graph to scv
 #     Seed_graph.extract_to_csv(graph)
 
 #   Ksenia's: find a seed
-    seed, original_seed = Seed_graph.seed_search(graph, s_set, mean)
+    seed, original_seed = Seed_graph.seed_search(graph, s_set, mean, rev_indices)
     print(seed)
 
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
