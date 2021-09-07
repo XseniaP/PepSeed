@@ -3,6 +3,8 @@ import Mapitope_run
 import PepSurf_run
 import Seed_graph
 import Cluster_extend
+import surface_graph
+import surface_graph_functions
 
 def main_func():
 #   Running mapi with the given arguments

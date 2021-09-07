@@ -108,7 +108,7 @@ def choose_path_from_pepsurf(significant_path_txt):
     print(list_alignment_input)
     print(list_alignment_output)
     print(list_path)
-    score_list[0] = 4
+    #score_list[0] = 4
     print(score_list)
     best_indexes = [i for i, x in enumerate(score_list) if x == max(score_list)]
     print("indexes of the max score: " , best_indexes)
@@ -128,39 +128,11 @@ def choose_path_from_pepsurf(significant_path_txt):
     return(new_list_path , new_list_input , new_list_output)
 
 
-
-
-def mark_path(significant_path_txt):
-    significant_path = open(significant_path_txt, "r")
-    i=0
-    index = 0
-    for x in significant_path:
-        if x.startswith("path:"):
-            path = x
-        if x.startswith("Alignment:"):
-            index = i
-        if i == index+1 :                ## the input of the alignment
-            alignment_input = x
-        if i == index+2 :                   ## the output of the alignment
-            alignment_output = x
-        i+=1
-    #print(path)
-    #print(alignment_input)
-    #print(alignment_output)
-    indexes = []
-    for j in range (len(alignment_input)-1):
-        if alignment_input[j] == alignment_output[j]:
-            #print(alignment_input[j])
-            indexes.append(j)
-    #print(indexes)
-    path = path.split(":")
-    path = path[1]
-    path = path.split()
-    path = [path[i] for i in indexes]
+def mark_path(path):
     for k in path:
-        amino_acid = k[:-1]
-        surface_dict[amino_acid].insert_to_path()
-    print(path)
+        if k != "":
+            #print(k)
+            surface_dict[k].insert_to_path()
 
 
 def update_path():
@@ -168,20 +140,9 @@ def update_path():
         if value.check_if_in_path() == True:
           if key not in path_dict:
               path_dict[key] = value
-    print(path_dict)
+    #print(path_dict)
 
 
 
 
 
-# residue_txt = "surface.txt"
-# Initialize_graph(residue_txt)
-# print(surface_dict)
-# pairs_distance_txt = "pairsDistance.txt"
-# Initialize_Neighbors_list(pairs_distance_txt , 10)
-# significant_path_txt = "significantPaths.txt"
-# mark_path(significant_path_txt)
-# update_path()
-# surface_dict['A209'].get_neighbors_list()
-significant_path_txt = "significantPaths2.txt"
-choose_path_from_pepsurf(significant_path_txt)
