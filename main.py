@@ -19,7 +19,7 @@ def main_func():
 #     seed = "QFTAAE"
 #     seed = "QMQFTAAEMGQYT"
 #     seed = "QFTAAE"
-    # seed = "NFTAAD"
+#     seed = "QFTAAEEC"
     print(seed)
     PepSurf_run.perpsurf_run(seed)
 

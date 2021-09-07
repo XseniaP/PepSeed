@@ -119,6 +119,7 @@ def check_reverse(seq, graph):
         rev = True
     return rev
 
+
 def find_mean(graph):
     count = 0
     sum = 0
@@ -187,7 +188,7 @@ def extract_to_csv(graph):
 def recursive_weight(i, v, S, graph, nodes):
     final_seed = ""
     max_v = MINUSINF
-    penalty = 2 * find_mean(graph)
+    penalty = 1.3 * find_mean(graph)
 
     # this is the regular init for each node from the set to be the first node and its weight to be the first weight added
     if (i >= 0) & (S == []):
@@ -294,6 +295,7 @@ def convert_to_20(seed, vocab):
 
     return new_seed
 
+
 # DP algorithm - uses the help function which calculates the weight recursively
 def seed_search(graph, s_set, mean):
     # DP target , no more than 4 insersions allowed, each insertion leads to penalty
@@ -321,8 +323,11 @@ def seed_search(graph, s_set, mean):
             f_final_seed = final_seed
     if (abs_max != 0) and (len(f_final_seed) >= 6):
         vocab = convert_abc()[1]
+        print(f_final_seed)
         f_final_seed = convert_to_20(f_final_seed, vocab)
+        print(f_final_seed)
         seed = redefine_seed(f_final_seed)
+        print(f_final_seed)
         # return final_seed, i
         return seed
     else:
