@@ -1,11 +1,81 @@
 *Alignment with highest score*
-Alignment score: 12.3116 P-value: 0.000970204
+Alignment score: 14.7389 P-value: 9.35157e-05
 
-peptide: DCPPCLCE
-path:    D414A P413A P399A Y367A C366A K365A 
+peptide: NFTAADEC
+path:    N183P W184P T188P V191P A194P N195P Q155P C198P 
 
 Alignment:
-DCPPCLCE
-D-PP-YCK
+NFTAADEC
+NWTVANQC
+
+_________________________________
+Alignment score: 13.686 P-value: 0.000226213
+
+peptide: NFTAADEC
+path:    N74P I73P A77P A78P D81P E79P 
+
+Alignment:
+NFTAADE
+NI-AADE
+
+_________________________________
+Alignment score: 12.8748 P-value: 0.000446707
+
+peptide: NFTAADEC
+path:    N120P M118P T48P G46P A47P D51P Q50P 
+
+Alignment:
+NFTAADE
+NMTGADQ
+
+_________________________________
+Alignment score: 12.7111 P-value: 0.000512481
+
+peptide: NFTAADEC
+path:    Q219P M215P T216P A217P I201P D197P K199P C198P 
+
+Alignment:
+NFTAADEC
+QMTAIDKC
+
+_________________________________
+Alignment score: 12.2819 P-value: 0.000734524
+
+peptide: NFTAADEC
+path:    N21P L20P T19P A22P V26P E29P E28P 
+
+Alignment:
+NFTAADE
+NLTAVEE
+
+_________________________________
+Alignment score: 12.1205 P-value: 0.00084095
+
+peptide: NFTAADEC
+path:    N193P I153P T171P A174P K170P D166P D163P 
+
+Alignment:
+NFTAADE
+NITAKDD
+
+_________________________________
+Alignment score: 10.8106 P-value: 0.00252163
+
+peptide: NFTAADEC
+path:    M214P T210P A208P A209P E213P E212P 
+
+Alignment:
+FTAADE
+MTAAEE
+
+_________________________________
+Alignment score: 10.1077 P-value: 0.00454304
+
+peptide: NFTAADEC
+path:    D166P Y169P T186P K182P A177P Q179P E180P 
+
+Alignment:
+NFTAADE
+DYTKAQE
 
 _________________________________

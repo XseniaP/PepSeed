@@ -2,17 +2,28 @@ select all
 colour white
 background white
 spacefill
-select ILE319:A , CYS323:A , LEU322:A , PRO324:A , GLU327:A
-select selected or ASP351:A , VAL354:A , LEU355:A , LEU377:A , TYR383:A , PHE501:A
-select selected or GLU502:A , LEU504:A , CYS378:A , CYS366:A , VAL369:A , LEU374:A
-select selected or ASP376:A , LEU503:A , TYR356:A , PHE364:A , TYR367:A , PRO399:A
-select selected or MET417:A , PRO413:A , PRO450:A
+select HIS12:P , ALA14:P , ALA42:P , ALA47:P , ALA105:P
+select selected or SER16:P , THR19:P , ALA22:P , SER41:P , GLU45:P , THR48:P
+select selected or ASP51:P , THR54:P , THR58:P , THR107:P , SER109:P , THR110:P
+select selected or GLU113:P , THR119:P , GLU128:P , GLU28:P , GLU29:P , ALA31:P
+select selected or SER33:P , GLU35:P , GLU76:P , ALA77:P , GLU98:P , SER102:P
+select selected or THR108:P , GLU71:P , GLU75:P , ALA78:P , GLU79:P , ASP81:P
+select selected or HIS84:P , HIS87:P , ALA88:P , HIS62:P , ALA64:P , TYR145:P
+select selected or ALA92:P , SER146:P , THR148:P , ALA174:P , TRP80:P , TRP133:P
+select selected or MET39:P , ASN57:P , GLN63:P , MET66:P , GLN67:P , MET68:P
+select selected or ASN139:P , MET144:P , SER149:P , THR171:P , GLN176:P , TYR169:P
+select selected or ALA177:P , ALA194:P , ASP152:P , GLU159:P , ASP163:P , ASP166:P
+select selected or GLU175:P , SER178:P , GLU180:P , THR186:P , GLU187:P , THR188:P
+select selected or GLN50:P , ASN53:P , ASN74:P , PRO85:P , PRO90:P , GLN95:P
+select selected or PRO99:P , GLN112:P , ASN120:P , ASN121:P , PRO122:P , PRO123:P
+select selected or PRO125:P , PRO34:P , PRO38:P , GLN13:P , ASN21:P , GLY46:P
+select selected or GLY60:P , GLY61:P , MET118:P , GLY106:P , TRP184:P , GLN155:P
+select selected or GLN179:P , ASN183:P , GLN192:P , ASN193:P , ASN195:P , CYS198:P
+select selected or THR210:P , MET214:P , MET215:P , THR216:P , GLN219:P , ASP197:P
+select selected or THR200:P , ALA204:P , ALA208:P , ALA209:P , GLU212:P , GLU213:P
+select selected or ALA217:P , MET96:P , GLY89:P , GLY94:P , GLY116:P , PRO17:P
+select selected or PRO147:P , PRO196:P , PRO207:P , GLY156:P , GLY206:P , GLY220:P
+select selected or PRO93:P , PRO157:P , PRO160:P
 define c1 selected
-select HIS445:A , CYS467:A , VAL458:A , PRO459:A , PHE460:A
-select selected or PRO462:A , ASP463:A , PRO466:A , PRO469:A , PRO470:A , LEU472:A
-select selected or TYR475:A , TRP476:A
-define c2 selected
 select c1
 colour red
-select c2
-colour yellow
