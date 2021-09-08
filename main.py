@@ -34,6 +34,7 @@ def main_func():
 #     seed = "QMQFTAAEMGQYT"
 #     seed = "QFTAAE"
 #     seed = "QFTAAEEC"
+#     seed = 'NSPRVIR'
     print(seed)
     PepSurf_run.perpsurf_run(seed)
 

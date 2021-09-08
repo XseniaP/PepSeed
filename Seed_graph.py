@@ -348,6 +348,7 @@ def seed_search(graph, s_set, mean, rev_indices):
         return seed, original_seed
     else:
         print("\n no seed found")
+        return "", ""
 
 
 def add_cut_spaces(paths_set, input_alignment_set, output_alignment_set, k, cut_at_start, seq_cut):
@@ -441,47 +442,6 @@ def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_align
                 # if the pairs are not identical
                 else:
                     j += 1
-
-
-        # while (j < len(input_alignment_set[k])) and (i < len(original_seed) - 1):
-        #     # if it's a list position so only 1 letter can be compared
-        #     if j == len(input_alignment_set[k]) - 1:
-        #         if input_alignment_set[k][j] == original_seed[i]:
-        #             dic[path[j]][original_seed[i: i + 2]] = 0
-        #         if input_alignment_set[k][j] == original_seed[i + 1]:
-        #             dic[path[j]][original_seed[i: i + 2]] = 1
-        #         i += 2
-        #         j += 1
-        #     else:
-        #         # if the pair starting in this position is identical to the pair in the original seed
-        #         if input_alignment_set[k][j] + input_alignment_set[k][j + 1] == original_seed[i: i + 2]:
-        #             if (path[j] != '') and (path[j + 1] != ''):
-        #                 dic[path[j]][original_seed[i: i + 2]] = 0
-        #                 dic[path[j + 1]][original_seed[i: i + 2]] = 1
-        #                 i += 2
-        #                 j += 1
-        #                 continue
-        #             elif (path[j] != '') and (path[j + 1] == ''):
-        #                 dic[path[j]][original_seed[i: i + 2]] = 0
-        #                 i += 2
-        #                 j += 1
-        #                 continue
-        #             elif (path[j] == '') and (path[j + 1] != ''):
-        #                 dic[path[j + 1]][original_seed[i: i + 2]] = 1
-        #                 i += 2
-        #                 j += 1
-        #                 continue
-        #             elif (path[j] == '') and (path[j + 1] == ''):
-        #                 i += 2
-        #                 j += 1
-        #                 continue
-        #         # if the pairs are not identical
-        #         else:
-        #             j += 1
-
-
-
-
         my_set.append(dic)
         k += 1
     print(my_set)
