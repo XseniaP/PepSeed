@@ -73,7 +73,7 @@ def convert_abc():
             previous_line = line
     fp.close()
     dict_abc = {'R': 'B', 'K': 'B', 'E': 'J', 'D': 'J', 'S': 'O', 'T': 'O', 'L': 'U', 'V': 'U', 'I': 'U', 'Q': 'X',
-                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y'}
+                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y', 'q': 'X'}
     new_set = []
     if (start == 0) and (end == 0):
         for seq in seq_set:
@@ -133,7 +133,7 @@ def find_mean(graph):
             count += 1
             sum += graph[element].weight
             weights.append(graph[element].weight)
-    mean = sum / count
+    mean = (sum / count)
     weights.sort()
     median = weights[round(count * 0.5)]
     return mean
@@ -180,10 +180,10 @@ def seed_graph_create():
 
 # extract graph to csv
 def extract_to_csv(graph):
-    df = pd.DataFrame(columns={'pair', 'weight', 'parents', 'children'})
+    df = pd.DataFrame(columns=['pair', 'weight', 'parents', 'children'])
     for element in graph:
         if graph[element] != 0:
-            df2 = pd.DataFrame([[graph[element].name, graph[element].weight, graph[element].parents, graph[element].children]], columns={'pair', 'weight', 'parents', 'children'})
+            df2 = pd.DataFrame([[graph[element].name, graph[element].weight, graph[element].parents, graph[element].children]], columns=['pair', 'weight', 'parents', 'children'])
             df = df.append(df2)
     file_name = "graph.csv"
     df.to_csv(file_name, index = False)
@@ -193,7 +193,7 @@ def extract_to_csv(graph):
 def recursive_weight(i, v, S, graph, nodes):
     final_seed = ""
     max_v = MINUSINF
-    penalty = 1.3 * find_mean(graph)
+    penalty = 1.5 * find_mean(graph)
 
     # this is the regular init for each node from the set to be the first node and its weight to be the first weight added
     if (i >= 0) & (S == []):
@@ -208,6 +208,8 @@ def recursive_weight(i, v, S, graph, nodes):
         return graph[v].weight, v
     # more than i nodes not from the SET were used in the path
     if i < 0:
+        return MINUSINF, v
+    if v == 'q':
         return MINUSINF, v
 
     # recurrence
@@ -390,7 +392,7 @@ def add_cut_spaces(paths_set, input_alignment_set, output_alignment_set, k, cut_
 # which suggests the relevant nodes in the graph
 def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed, seed):
     dict_abc = {'R': 'B', 'K': 'B', 'E': 'J', 'D': 'J', 'S': 'O', 'T': 'O', 'L': 'U', 'V': 'U', 'I': 'U', 'Q': 'X',
-                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y'}
+                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y', 'q': 'X'}
     my_set = list()
     k = 0
     for path in paths_set:
@@ -410,6 +412,10 @@ def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_align
         while (j < len(input_alignment)) and (i < len(original_seed) - 1):
             # if it's a list position so only 1 letter can be compared
             if j == len(input_alignment) - 1:
+                if path[j] == '':
+                    i += 2
+                    j += 1
+                    continue
                 if input_alignment[j] == original_seed[i]:
                     dic[path[j]][original_seed[i: i + 2]] = 0
                 if input_alignment[j] == original_seed[i + 1]:
