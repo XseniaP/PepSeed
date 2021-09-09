@@ -8,6 +8,7 @@ import pathlib
 from surface_graph_functions import Initialize_Neighbors_list
 from surface_graph_functions import choose_path_from_pepsurf
 from surface_graph_functions import Initialize_graph
+from surface_graph_functions import get_paths_and_return_best_epitope
 
 
 # -U TEST4 -P 2ghw.pdb -S 2ghw.txt -I 17b.txt -C A -D 7.0 -V 5.0 -R rasmol.txt
@@ -42,9 +43,23 @@ def main_func():
     print(seed)
     PepSurf_run.perpsurf_run(seed)
 
+
+    #   Sapir's: functions calls to create a surface graph
+    residue_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/surface.txt"
+    # residue_txt = "surface.txt"
+    Initialize_graph(residue_txt)
+
+
+    pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
+    # pairs_distance_txt = "pairsDistance.txt"
+    D_param = 10
+    Initialize_Neighbors_list(pairs_distance_txt, D_param)
+
+
 #   Sapir's: get the highest score paths
-    filepath = str(pathlib.Path.cwd()) + "/RESULTS/sigPathsAln/0_significantPaths.txt"
-    paths_set, input_alignment_set, output_alignment_set = surface_graph_functions.choose_path_from_pepsurf(filepath)
+    significant_path_txt = str(pathlib.Path.cwd()) + "/RESULTS/sigPathsAln/0_significantPaths.txt"
+    # significant_path_txt = '0_significantPaths.txt'
+    paths_set, input_alignment_set, output_alignment_set = choose_path_from_pepsurf(significant_path_txt)
     print(paths_set)
     print(input_alignment_set)
     print(output_alignment_set)
@@ -54,40 +69,13 @@ def main_func():
     # output_alignment_set = [['X', 'Z', 'O', 'U', 'A', 'X', 'X', 'C'], ['X', 'U', '-', 'A', 'A', 'J', 'J'], ['X', 'M', 'O', 'G', 'A', 'J', 'X'], ['X', 'M', 'O', 'A', 'U', 'J', 'B', 'C'], ['X', 'U', 'O', 'A', 'U', 'J', 'J'], ['X', 'U', 'O', 'A', 'B', 'J', 'J'], ['M', 'O', 'A', 'A', 'J', 'J'], ['J', 'Y', 'O', 'B', 'A', 'X', 'J']]
 
 #   Ksenia's: return set of dictionaries, 1 for each path
-    set_of_dicts = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed, seed)
+    seed_graph_indexes_dict = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed, seed)
 
-    #   Sapir's: functions calls to create a surface graph
-    residue_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/surface.txt"
-    # residue_txt = "surface.txt"
-    Initialize_graph(residue_txt)
-
-    pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
-    # pairs_distance_txt = "pairsDistance.txt"
-    D_param = 10
-    Initialize_Neighbors_list(pairs_distance_txt , D_param)
-
-
-    significant_path_txt = str(pathlib.Path.cwd()) + "/RESULTS/sigPathsAln/0_significantPaths.txt"
-    # significant_path_txt = '0_significantPaths.txt'
-    pepsurf_result = choose_path_from_pepsurf(significant_path_txt)
-
-    ## ksenia, this is the input for the dict creation:
-    ## 0 - path
-    ## 1 - input
-    ## 2 - output
-    pepsurf_result[0]
-    pepsurf_result[1]
-    pepsurf_result[2]
-
-    graph_csv = "our_graph.csv"
-
-    seed_graph_indexes_dict = "here put the function that create the dict"
-
-    #   Sapir's: locating the cluster found by pepsurf on the surface graph
-
-    #   Running cluster extension
+#   Sapir's: locating the cluster found by pepsurf on the surface graph
+#   Running cluster extension
+    graph_csv = str(pathlib.Path.cwd()) + "/graph.csv"
     extention_param = 3
-    get_paths_and_return_best_epitope(pepsurf_result[0] ,seed_graph_indexes_dict ,graph_csv ,extention_param)
+    get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extention_param)
 
 
 # Press the green button in the gutter to run the script.
