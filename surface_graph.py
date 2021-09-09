@@ -20,6 +20,8 @@ class Surface_Amino_Acid:
             return (True)
 
     def get_neighbors_list(self):
+        lst=[]
         for neighbor in self.Neighbors_list:
-            print(neighbor.AA_name + neighbor.index)
+            lst.append(neighbor.AA_name + neighbor.index)
+        return(lst)
             #return(neighbor.AA_name + neighbor.index)
