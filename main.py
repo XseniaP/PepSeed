@@ -75,6 +75,8 @@ def main_func():
     #   Sapir's: locating the cluster found by pepsurf on the surface graph
     #   Running cluster extension
     graph_csv = str(pathlib.Path.cwd()) + "/graph.csv"
+
+    # extension is spelled with s , but I remember a lesson and I am not changing it hahaha
     extention_param = 1
     get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extention_param)
 

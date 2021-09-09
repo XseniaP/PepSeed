@@ -1,11 +1,51 @@
 *Alignment with highest score*
-Alignment score: 9.88778 P-value: 0.00162909
+Alignment score: 10.3406 P-value: 0.000528299
 
-peptide: RVLRPTQRC
-path:    R444A L443A F460A P462A S461A K465A C467A 
+peptide: FYIVQ
+path:    F170A Y85A I275A A274A N272A 
 
 Alignment:
-RVLRPTQRC
-RLF-PSK-C
+FYIVQ
+FYIAN
+
+_________________________________
+Alignment score: 9.85551 P-value: 0.000819836
+
+peptide: FYIVQ
+path:    F196A H161A A202A V199A Q132A 
+
+Alignment:
+FYIVQ
+FHAVQ
+
+_________________________________
+Alignment score: 8.62413 P-value: 0.00250014
+
+peptide: FYIVQ
+path:    F325A W315A A48A L44A Q328A 
+
+Alignment:
+FYIVQ
+FWALQ
+
+_________________________________
+Alignment score: 8.41645 P-value: 0.00301704
+
+peptide: FYIVQ
+path:    F250A L251A L252A Q242A 
+
+Alignment:
+FYIVQ
+F-LLQ
+
+_________________________________
+Alignment score: 5.13662 P-value: 0.0573107
+
+peptide: FYIVQ
+path:    F170A F190A 
+
+Alignment:
+FY
+FF
 
 _________________________________

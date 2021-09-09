@@ -13,8 +13,8 @@ import sys
 import pathlib
 
 # define a global value as minus infinity
-# MINUSINF = -1000000000
 MINUSINF = -math.inf
+
 
 class Node:
     def __init__(self, name, weight, children, parents):
@@ -35,6 +35,7 @@ class Node:
     def change_weight(self, new_weight):
         self.weight = new_weight
 
+
 def truncate_carbons(seq, end, start):
     dic = {}
     dic['end'] = '0'
@@ -50,6 +51,7 @@ def truncate_carbons(seq, end, start):
     elif (dic['end'] == '1') and (dic['start'] == '0'):
         seq = seq[0:len(seq)-1]
     return seq
+
 
 def convert_abc():
     vocab = {}
@@ -84,13 +86,21 @@ def convert_abc():
             vocab[word] = seq
     else:
         for seq in seq_set:
-            # seq = truncate_carbons(seq, end, start)
+            seq = truncate_carbons(seq, end, start)
             word = str('')
             for letter in seq:
                 word = word + str(dict_abc[letter])
             new_set.append(word)
             vocab[word] = seq
     return new_set, vocab
+
+
+def add_source_sink(seq, rev):
+    if rev == False:
+        seq = "cc" + seq + "zz"
+    else:
+        seq = "zz" + seq + "cc"
+    return seq
 
 
 # extract sssps out of the file sspMatrix.txt created by mapitope
@@ -129,15 +139,15 @@ def find_mean(graph):
     weights = []
     s_set = []
     for element in graph:
-        if graph[element] != 0:
+        if (graph[element] != 0) and (graph[element] != 'cc') and (graph[element] != 'zz'):
             count += 1
             sum += graph[element].weight
             weights.append(graph[element].weight)
     mean = (sum / count)
     weights.sort()
     median = weights[round(count * 0.5)]
-    return mean
-
+    # return mean
+    return median
 
 # create a seed graph and return the graph and the median weight
 def seed_graph_create():
@@ -145,18 +155,24 @@ def seed_graph_create():
     sequences = convert_abc()[0]
     ssps = sorted(set(get_ssps()))
     graph = dict.fromkeys(ssps, 0)
+    graph['cc'] = 0
+    graph['zz'] = 0
     for seq in sequences:
         rev = check_reverse(seq, graph)
         reverse_indices.append(rev)
+        seq = add_source_sink(seq, rev)
         prev = ''
         for i in range(len(seq) - 1):
             if not rev:
                 temp = str(seq[i:i + 2])
             else:
                 temp = str(seq[-(i + 1):-i]) + str(seq[-(i + 2):-(i + 1)])
-            if temp in ssps:
-                if graph[temp] == 0:
+            if (temp in ssps) or (temp == 'cc') or (temp == 'zz'):
+                if (graph[temp] == 0) and (graph[temp[1]+temp[0]] == 0):
                     graph[temp] = Node(name=temp, weight=1, children=set(), parents=set())
+                elif (graph[temp[1]+temp[0]] != 0):
+                    temp = temp[1]+temp[0]
+                    graph[temp].change_weight(graph[temp].weight + 1)
                 else:
                     graph[temp].change_weight(graph[temp].weight + 1)
                 if prev != '':
@@ -209,8 +225,8 @@ def recursive_weight(i, v, S, graph, nodes):
     # more than i nodes not from the SET were used in the path
     if i < 0:
         return MINUSINF, v
-    if v == 'q':
-        return MINUSINF, v
+    # if v == 'q':
+    #     return MINUSINF, v
 
     # recurrence
     parents = graph[v].parents - set([v])
@@ -244,6 +260,12 @@ def recursive_weight(i, v, S, graph, nodes):
         final_seed = v
     return max_v, final_seed
 
+def remove_source_sink(seq):
+    seed_f = ''
+    for i in range(len(seq)):
+        if (i != len(seq)) and (seq[i] != 'c') and (seq[i] != 'z'):
+            seed_f = seed_f + seq[i]
+    return seed_f
 
 def redefine_seed(final_seed):
     seed = ""
@@ -258,6 +280,11 @@ def redefine_seed(final_seed):
                 seed = seed + final_seed[i+1]
             else:
                 seed = seed + final_seed[i : i + 2]
+    # seed_f = ''
+    # for i in range(len(seed) - 1):
+    #     if (i != len(seed) - 2) and (seed[i] != 'c') and (seed[i] != 'z'):
+    #         seed_f = seed_f + seed[i]
+    seed = remove_source_sink(seed)
     return seed
 
 
@@ -342,6 +369,7 @@ def seed_search(graph, s_set, mean, rev_indices):
         vocab = convert_abc()[1]
         print(f_final_seed)
         original_seed = f_final_seed
+        original_seed = remove_source_sink(original_seed)
         f_final_seed = convert_to_20(f_final_seed, vocab, rev_indices)
         print(f_final_seed)
         seed = redefine_seed(f_final_seed)
@@ -392,7 +420,7 @@ def add_cut_spaces(paths_set, input_alignment_set, output_alignment_set, k, cut_
 # which suggests the relevant nodes in the graph
 def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed, seed):
     dict_abc = {'R': 'B', 'K': 'B', 'E': 'J', 'D': 'J', 'S': 'O', 'T': 'O', 'L': 'U', 'V': 'U', 'I': 'U', 'Q': 'X',
-                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y', 'q': 'X'}
+                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y', 'q': 'X', 'c': 'c', 'z': 'z'}
     my_set = list()
     k = 0
     for path in paths_set:

@@ -2,25 +2,23 @@ select all
 colour white
 background white
 spacefill
-select THR320:A , ASN321:A , ASN347:A , SER346:A , LYS344:A
-select selected or ASN381:A , CYS323:A , PRO324:A , LEU504:A , LYS343:A , SER500:A
-select selected or LYS373:A , PRO335:A , MET417:A , CYS366:A , VAL369:A , LEU374:A
-select selected or ASN375:A , LEU377:A , CYS378:A , LEU503:A , LYS333:A , ARG342:A
-select selected or LYS439:A , ARG453:A , ARG495:A , LYS365:A , THR372:A , SER353:A
-select selected or ASN330:A , ILE428:A , ASN435:A , ASN437:A , PRO413:A , PRO450:A
-select selected or ASN457:A , LEU478:A , ILE455:A , VAL394:A , ASN424:A , ASN427:A
-select selected or GLN396:A , PRO399:A , ASN357:A , THR332:A , SER386:A , ARG426:A
-select selected or SER336:A , THR431:A , SER432:A , THR433:A , THR485:A , LYS411:A
-select selected or ARG449:A , LYS447:A , SER456:A , ARG444:A , LYS390:A , ARG395:A
-select selected or THR359:A , SER362:A , THR363:A , THR402:A , SER358:A , ILE489:A
-select selected or GLN401:A , VAL404:A , LEU443:A , VAL458:A , PRO459:A , PRO462:A
-select selected or LYS465:A , PRO466:A , CYS467:A , PRO469:A , LEU472:A , ASN473:A
-select selected or SER461:A , THR468:A
+select VAL19:A , GLN310:A , ALA20:A , ALA306:A , ALA347:A
+select selected or PRO23:A , GLN307:A , GLN300:A , ASP302:A , ASP343:A , ALA24:A
+select selected or ALA304:A , ALA303:A , VAL77:A , ALA344:A , PRO27:A , ASN55:A
+select selected or GLN61:A , GLN71:A , ASN78:A , VAL28:A , ALA60:A , ALA67:A
+select selected or ILE69:A , ALA70:A , ALA73:A , ALA74:A , ALA31:A , ASN43:A
+select selected or TYR85:A , ASN297:A , LEU44:A , PHE170:A , PHE190:A , ILE275:A
+select selected or TYR39:A , GLN328:A , ASN272:A , PHE229:A , ALA323:A , ALA271:A
+select selected or ALA274:A , LEU345:A , ASN321:A , ASP327:A , PRO270:A , VAL339:A
 define c1 selected
-select ALA331:A , TYR438:A , ALA339:A , ALA430:A , TYR338:A
-select selected or TYR408:A , TYR440:A , TYR436:A , TYR491:A , TYR494:A
+select ASN123:A , LEU146:A , GLN142:A , ALA129:A , ALA144:A
+select selected or ALA145:A , GLN132:A , ASP180:A , ASP139:A , ASP140:A , PRO141:A
+select selected or PRO148:A , VAL199:A , GLY149:A
 define c2 selected
-select TYR356:A , ALA371:A , TYR367:A , ALA398:A
+select PRO253:A , ALA255:A , ASP254:A , GLN256:A , GLN259:A
+select selected or GLN332:A , ALA260:A , ALA262:A , ALA263:A , ASP284:A , PRO335:A
+select selected or ALA282:A , ALA266:A , ALA337:A , PRO281:A , PRO283:A , PRO336:A
+select selected or GLY264:A
 define c3 selected
 select c1
 colour red

@@ -1,17 +1,12 @@
 pair,weight,parents,children
-AY,2,{'BU'},{'BU'}
-BC,5,"{'OX', 'MB', 'XB', 'PB'}",set()
-BM,1,set(),{'MB'}
-BP,4,"{'CB', 'UB', 'MO'}",{'OX'}
-BU,5,"{'MB', 'UB', 'AY'}","{'AY', 'UB', 'PB'}"
-BX,3,"{'CB', 'MB', 'UB'}","{'UB', 'PB'}"
-CB,2,set(),"{'BP', 'BX'}"
-CM,2,set(),"{'UB', 'MO'}"
-HM,1,set(),{'UB'}
-MB,3,"{'XM', 'UB', 'BM'}","{'BU', 'BC', 'BX'}"
-MO,3,"{'CM', 'XM', 'UB'}","{'BP', 'OX', 'UB'}"
-OX,4,"{'BP', 'MO'}","{'XM', 'XB', 'BC'}"
-PB,2,"{'BU', 'BX'}",{'BC'}
-UB,10,"{'MO', 'BX', 'HM', 'CM', 'BU'}","{'BP', 'MB', 'MO', 'BX', 'BU'}"
-XB,1,{'OX'},{'BC'}
-XM,2,{'OX'},"{'MB', 'MO'}"
+AJ,72,"{'PA', 'CG', 'AJ', 'cc', 'YU', 'XA'}","{'AJ', 'UX', 'zz', 'YU', 'XA'}"
+CG,62,"{'UX', 'cc', 'CG', 'YU'}","{'ZY', 'CG', 'AJ', 'UX', 'zz'}"
+CY,25,{'cc'},"{'UX', 'YU'}"
+GP,56,"{'ZY', 'UX', 'cc', 'YU', 'GP'}","{'PA', 'UX', 'zz', 'YU', 'GP'}"
+PA,58,"{'ZY', 'PA', 'UX', 'YU', 'GP'}","{'PA', 'AJ', 'UX', 'zz', 'XA'}"
+UX,221,"{'ZY', 'PA', 'CG', 'AJ', 'UX', 'CY', 'cc', 'YU', 'XA', 'GP'}","{'PA', 'CG', 'UX', 'zz', 'YU', 'XA', 'GP'}"
+XA,82,"{'PA', 'AJ', 'UX', 'YU', 'XA'}","{'UX', 'zz', 'XA', 'AJ'}"
+YU,126,"{'ZY', 'CY', 'UX', 'AJ', 'cc', 'YU', 'GP'}","{'PA', 'CG', 'AJ', 'UX', 'zz', 'YU', 'XA', 'GP'}"
+ZY,94,"{'ZY', 'cc', 'CG'}","{'ZY', 'PA', 'UX', 'zz', 'YU', 'GP'}"
+cc,250,set(),"{'ZY', 'CG', 'CY', 'UX', 'AJ', 'zz', 'YU', 'GP'}"
+zz,274,"{'ZY', 'PA', 'CG', 'AJ', 'UX', 'cc', 'YU', 'XA', 'GP'}",set()
