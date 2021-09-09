@@ -5,8 +5,3 @@ backbone
 colour [200,200,200]
 select :P
 spacefill
-select ALA194:P , ASN183:P , ASN195:P , CYS198:P , GLN155:P
-select selected or GLU187:P , THR188:P , TRP184:P , VAL191:P
-define c1 selected
-select c1
-colour red
