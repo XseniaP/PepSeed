@@ -2,28 +2,27 @@ select all
 colour white
 background white
 spacefill
-select HIS12:P , ALA14:P , ALA42:P , ALA47:P , ALA105:P
-select selected or SER16:P , THR19:P , ALA22:P , SER41:P , GLU45:P , THR48:P
-select selected or ASP51:P , THR54:P , THR58:P , THR107:P , SER109:P , THR110:P
-select selected or GLU113:P , THR119:P , GLU128:P , GLU28:P , GLU29:P , ALA31:P
-select selected or SER33:P , GLU35:P , GLU76:P , ALA77:P , GLU98:P , SER102:P
-select selected or THR108:P , GLU71:P , GLU75:P , ALA78:P , GLU79:P , ASP81:P
-select selected or HIS84:P , HIS87:P , ALA88:P , HIS62:P , ALA64:P , TYR145:P
-select selected or ALA92:P , SER146:P , THR148:P , ALA174:P , TRP80:P , TRP133:P
-select selected or MET39:P , ASN57:P , GLN63:P , MET66:P , GLN67:P , MET68:P
-select selected or ASN139:P , MET144:P , SER149:P , THR171:P , GLN176:P , TYR169:P
-select selected or ALA177:P , ALA194:P , ASP152:P , GLU159:P , ASP163:P , ASP166:P
-select selected or GLU175:P , SER178:P , GLU180:P , THR186:P , GLU187:P , THR188:P
-select selected or GLN50:P , ASN53:P , ASN74:P , PRO85:P , PRO90:P , GLN95:P
-select selected or PRO99:P , GLN112:P , ASN120:P , ASN121:P , PRO122:P , PRO123:P
-select selected or PRO125:P , PRO34:P , PRO38:P , GLN13:P , ASN21:P , GLY46:P
-select selected or GLY60:P , GLY61:P , MET118:P , GLY106:P , TRP184:P , GLN155:P
-select selected or GLN179:P , ASN183:P , GLN192:P , ASN193:P , ASN195:P , CYS198:P
-select selected or THR210:P , MET214:P , MET215:P , THR216:P , GLN219:P , ASP197:P
-select selected or THR200:P , ALA204:P , ALA208:P , ALA209:P , GLU212:P , GLU213:P
-select selected or ALA217:P , MET96:P , GLY89:P , GLY94:P , GLY116:P , PRO17:P
-select selected or PRO147:P , PRO196:P , PRO207:P , GLY156:P , GLY206:P , GLY220:P
-select selected or PRO93:P , PRO157:P , PRO160:P
+select VAL19:A , GLN310:A , ALA20:A , ALA306:A , ALA347:A
+select selected or PRO23:A , GLN307:A , GLN300:A , ASP302:A , ASP343:A , ALA24:A
+select selected or ALA304:A , ALA303:A , VAL77:A , ALA344:A , PRO27:A , ASN55:A
+select selected or GLN61:A , GLN71:A , ASN78:A , VAL28:A , ALA60:A , ALA67:A
+select selected or ILE69:A , ALA70:A , ALA73:A , ALA74:A , ALA31:A , ASN43:A
+select selected or TYR85:A , ASN297:A , LEU44:A , PHE170:A , PHE190:A , ILE275:A
+select selected or TYR39:A , GLN328:A , ASN272:A , PHE229:A , ALA323:A , ALA271:A
+select selected or ALA274:A , LEU345:A , ASN321:A , ASP327:A , PRO270:A , VAL339:A
 define c1 selected
+select ASN123:A , LEU146:A , GLN142:A , ALA129:A , ALA144:A
+select selected or ALA145:A , GLN132:A , ASP180:A , ASP139:A , ASP140:A , PRO141:A
+select selected or PRO148:A , VAL199:A , GLY149:A
+define c2 selected
+select PRO253:A , ALA255:A , ASP254:A , GLN256:A , GLN259:A
+select selected or GLN332:A , ALA260:A , ALA262:A , ALA263:A , ASP284:A , PRO335:A
+select selected or ALA282:A , ALA266:A , ALA337:A , PRO281:A , PRO283:A , PRO336:A
+select selected or GLY264:A
+define c3 selected
 select c1
 colour red
+select c2
+colour yellow
+select c3
+colour green

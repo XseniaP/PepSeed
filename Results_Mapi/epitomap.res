@@ -1,622 +1,382 @@
--U Results_Mapi -P 1e6j_P.pdb -S 1e6j_P.txt -I 13b5.txt -C P -D 17.0 -V 2.5 -R rasmol.txt -F 0 
+-U Results_Mapi -P 1pc3_model1_A.pdb -S 1pc3_model1_A.txt -I fasta_all_motifs_p4_36.txt -C A -D 6.0 -V 11.4 -R rasmol.txt -F 0 
 
-The -V parameter is: 2.5
+The -V parameter is: 11.4
 cluster number: 1
-number of pairs: 481
-number of different amino acids: 128
-number of different pairs' types: 17
+number of pairs: 53
+number of different amino acids: 47
+number of different pairs' types: 6
 The amino-acids are:
-HIS12:P
-GLN13:P
-ALA14:P
-SER16:P
-PRO17:P
-THR19:P
-ASN21:P
-ALA22:P
-GLU28:P
-GLU29:P
-ALA31:P
-SER33:P
-PRO34:P
-GLU35:P
-PRO38:P
-MET39:P
-SER41:P
-ALA42:P
-GLU45:P
-GLY46:P
-ALA47:P
-THR48:P
-GLN50:P
-ASP51:P
-ASN53:P
-THR54:P
-ASN57:P
-THR58:P
-GLY60:P
-GLY61:P
-HIS62:P
-GLN63:P
-ALA64:P
-MET66:P
-GLN67:P
-MET68:P
-GLU71:P
-ASN74:P
-GLU75:P
-GLU76:P
-ALA77:P
-ALA78:P
-GLU79:P
-TRP80:P
-ASP81:P
-HIS84:P
-PRO85:P
-HIS87:P
-ALA88:P
-GLY89:P
-PRO90:P
-ALA92:P
-PRO93:P
-GLY94:P
-GLN95:P
-MET96:P
-GLU98:P
-PRO99:P
-SER102:P
-ALA105:P
-GLY106:P
-THR107:P
-THR108:P
-SER109:P
-THR110:P
-GLN112:P
-GLU113:P
-GLY116:P
-MET118:P
-THR119:P
-ASN120:P
-ASN121:P
-PRO122:P
-PRO123:P
-PRO125:P
-GLU128:P
-TRP133:P
-ASN139:P
-MET144:P
-TYR145:P
-SER146:P
-PRO147:P
-THR148:P
-SER149:P
-ASP152:P
-GLN155:P
-GLY156:P
-PRO157:P
-GLU159:P
-PRO160:P
-ASP163:P
-ASP166:P
-TYR169:P
-THR171:P
-ALA174:P
-GLU175:P
-GLN176:P
-ALA177:P
-SER178:P
-GLN179:P
-GLU180:P
-ASN183:P
-TRP184:P
-THR186:P
-GLU187:P
-THR188:P
-GLN192:P
-ASN193:P
-ALA194:P
-ASN195:P
-PRO196:P
-ASP197:P
-CYS198:P
-THR200:P
-ALA204:P
-GLY206:P
-PRO207:P
-ALA208:P
-ALA209:P
-THR210:P
-GLU212:P
-GLU213:P
-MET214:P
-MET215:P
-THR216:P
-ALA217:P
-GLN219:P
-GLY220:P
+VAL19:A
+ALA20:A
+PRO23:A
+ALA24:A
+PRO27:A
+VAL28:A
+ALA31:A
+TYR39:A
+ASN43:A
+LEU44:A
+ASN55:A
+ALA60:A
+GLN61:A
+ALA67:A
+ILE69:A
+ALA70:A
+GLN71:A
+ALA73:A
+ALA74:A
+VAL77:A
+ASN78:A
+TYR85:A
+PHE170:A
+PHE190:A
+PHE229:A
+PRO270:A
+ALA271:A
+ASN272:A
+ALA274:A
+ILE275:A
+ASN297:A
+GLN300:A
+ASP302:A
+ALA303:A
+ALA304:A
+ALA306:A
+GLN307:A
+GLN310:A
+ASN321:A
+ALA323:A
+ASP327:A
+GLN328:A
+VAL339:A
+ASP343:A
+ALA344:A
+LEU345:A
+ALA347:A
 
 The pairs are:
-HA	H12:P	A14:P	3.7922
-HA	H12:P	A42:P	16.0092
-HA	H12:P	A47:P	7.88386
-HA	H12:P	A105:P	13.6306
-AO	A14:P	S16:P	3.28163
-AO	A14:P	T19:P	7.14695
-AA	A14:P	A22:P	12.7102
-AO	A14:P	S41:P	13.7867
-AA	A14:P	A42:P	12.2036
-AJ	A14:P	E45:P	9.10423
-AA	A14:P	A47:P	7.52575
-AO	A14:P	T48:P	6.72012
-AJ	A14:P	D51:P	4.20741
-AO	A14:P	T54:P	7.54047
-AO	A14:P	T58:P	11.786
-AA	A14:P	A105:P	15.0859
-AO	A14:P	T107:P	16.1141
-AO	A14:P	S109:P	13.2794
-AO	A14:P	T110:P	11.874
-AJ	A14:P	E113:P	13.5565
-AO	A14:P	T119:P	13.8203
-AJ	A14:P	E128:P	14.4029
-OA	S16:P	A42:P	10.853
-OA	T19:P	A42:P	6.42739
-AA	A22:P	A42:P	9.40479
-JA	E28:P	A42:P	15.0872
-JA	E29:P	A42:P	14.6785
-AA	A31:P	A42:P	14.2456
-OA	S33:P	A42:P	12.6154
-JA	E35:P	A42:P	8.71851
-OA	S41:P	A42:P	1.3301
-AJ	A42:P	E45:P	3.5954
-AA	A42:P	A47:P	7.89745
-AO	A42:P	T48:P	11.135
-AJ	A42:P	D51:P	11.0514
-AO	A42:P	T54:P	13.6947
-AO	A42:P	T58:P	14.4798
-AJ	A42:P	E128:P	8.76924
-OA	S16:P	A47:P	8.41648
-OA	T19:P	A47:P	7.84199
-AA	A22:P	A47:P	13.2547
-OA	S41:P	A47:P	7.43823
-JA	E45:P	A47:P	3.05029
-AO	A47:P	T48:P	1.33027
-AJ	A47:P	D51:P	3.56882
-AO	A47:P	T54:P	8.28287
-AO	A47:P	T58:P	11.7101
-AJ	A47:P	E76:P	16.0412
-AA	A47:P	A77:P	16.2777
-AJ	A47:P	E98:P	16.9566
-AO	A47:P	S102:P	13.7377
-AA	A47:P	A105:P	10.4448
-AO	A47:P	T107:P	12.9114
-AO	A47:P	T108:P	14.8389
-AO	A47:P	S109:P	11.3889
-AO	A47:P	T110:P	11.3307
-AJ	A47:P	E113:P	11.3536
-AO	A47:P	T119:P	10.9569
-AJ	A47:P	E128:P	5.09615
-OA	S41:P	A105:P	16.3741
-JA	E45:P	A105:P	15.2914
-OA	T48:P	A105:P	7.65651
-JA	D51:P	A105:P	8.06179
-OA	T54:P	A105:P	8.20788
-OA	T58:P	A105:P	12.7228
-JA	E71:P	A105:P	10.0749
-JA	E75:P	A105:P	9.12753
-JA	E76:P	A105:P	8.26624
-AA	A77:P	A105:P	5.44915
-AA	A78:P	A105:P	8.52071
-JA	E79:P	A105:P	10.8201
-JA	D81:P	A105:P	9.18484
-HA	H84:P	A105:P	12.2323
-HA	H87:P	A105:P	16.666
-AA	A88:P	A105:P	16.8211
-JA	E98:P	A105:P	10.6793
-OA	S102:P	A105:P	3.67047
-AO	A105:P	T107:P	3.20492
-AO	A105:P	T108:P	5.59608
-AO	A105:P	S109:P	5.25892
-AO	A105:P	T110:P	9.02179
-AJ	A105:P	E113:P	10.4194
-AO	A105:P	T119:P	15.0187
-AJ	A105:P	E128:P	9.43524
-OA	S16:P	A22:P	6.83848
-OA	T19:P	A22:P	3.31506
-OA	T19:P	A31:P	14.0765
-AJ	A22:P	E28:P	6.50902
-AJ	A22:P	E29:P	7.52377
-AA	A22:P	A31:P	9.84321
-AO	A22:P	S33:P	12.6292
-AJ	A22:P	E35:P	11.0926
-AO	A22:P	S41:P	11.1098
-AJ	A22:P	E45:P	11.751
-AO	A22:P	T48:P	15.9249
-AJ	A22:P	D51:P	11.8217
-AO	A22:P	T54:P	10.9009
-AO	A22:P	T58:P	7.64507
-AH	A22:P	H62:P	11.8801
-AO	A31:P	S41:P	12.1846
-OA	T48:P	A77:P	14.6926
-AJ	A31:P	D51:P	16.5338
-JA	D51:P	A77:P	16.1356
-AO	A31:P	T54:P	14.3748
-OA	T54:P	A64:P	15.8398
-OA	T54:P	A77:P	16.0294
-AO	A31:P	T58:P	11.196
-OA	T58:P	A64:P	12.8648
-OY	T58:P	Y145:P	14.12
-AO	A77:P	T107:P	7.74918
-AO	A78:P	T107:P	10.5208
-AO	A88:P	T107:P	16.9042
-AO	A77:P	S109:P	11.2889
-AO	A78:P	S109:P	13.9413
-AO	A88:P	S109:P	15.6748
-AO	A77:P	T110:P	15.1092
-AJ	A77:P	E113:P	15.2146
-AJ	A88:P	E113:P	14.1391
-AJ	A92:P	E113:P	14.4884
-AJ	A77:P	E128:P	11.7033
-AJ	A78:P	E128:P	14.243
-JA	E28:P	A31:P	4.4312
-JA	E28:P	A64:P	14.1666
-JA	E29:P	A31:P	3.10836
-JA	E29:P	A64:P	15.909
-AO	A31:P	S33:P	3.86828
-AJ	A31:P	E35:P	6.93937
-AH	A31:P	H62:P	4.79412
-AA	A31:P	A64:P	11.1486
-AJ	A31:P	E71:P	16.9283
-AO	A31:P	S146:P	10.1553
-AO	A31:P	T148:P	15.3965
-OA	S33:P	A64:P	13.269
-OY	S33:P	Y145:P	6.26368
-OA	S33:P	A174:P	16.8913
-AJ	A64:P	E76:P	15.7515
-JA	E76:P	A77:P	1.33044
-JA	E76:P	A78:P	3.35548
-JA	E76:P	A88:P	16.2176
-JA	E71:P	A77:P	6.76788
-JA	E75:P	A77:P	3.24003
-AA	A77:P	A78:P	1.33109
-AJ	A77:P	E79:P	3.16228
-AJ	A77:P	D81:P	3.30104
-AH	A77:P	H84:P	8.00244
-AH	A77:P	H87:P	13.3899
-AA	A77:P	A88:P	13.1292
-AJ	A77:P	E98:P	11.1816
-AO	A77:P	S102:P	4.70567
-AO	A77:P	T108:P	9.25157
-AJ	A78:P	E98:P	12.8822
-AJ	A88:P	E98:P	8.10196
-AJ	A92:P	E98:P	10.6467
-AO	A78:P	S102:P	6.64598
-AO	A88:P	S102:P	11.4762
-AO	A78:P	T108:P	11.2681
-AO	A88:P	T108:P	12.9364
-AJ	A64:P	E71:P	7.65978
-JA	E71:P	A78:P	7.60989
-AJ	A64:P	E75:P	12.3283
-JA	E75:P	A78:P	3.31829
-AJ	A78:P	E79:P	1.32809
-AJ	A78:P	D81:P	3.18336
-AH	A78:P	H84:P	7.21935
-AH	A78:P	H87:P	13.2227
-AA	A78:P	A88:P	12.6049
-JA	E79:P	A88:P	13.6427
-JA	D81:P	A88:P	8.89599
-ZH	W80:P	H84:P	2.97903
-HA	H84:P	A88:P	7.49292
-HA	H84:P	A92:P	16.4307
-HZ	H84:P	W133:P	7.87491
-ZH	W80:P	H87:P	9.98226
-HA	H87:P	A88:P	1.3279
-HA	H87:P	A92:P	9.02133
-HZ	H87:P	W133:P	15.5458
-AA	A88:P	A92:P	9.86614
-HA	H62:P	A64:P	2.85265
-HZ	H62:P	W133:P	14.9278
-AO	A64:P	S146:P	12.2049
-AO	A64:P	T148:P	15.9451
-MY	M39:P	Y145:P	15.2617
-XY	N57:P	Y145:P	15.0968
-XY	Q63:P	Y145:P	6.45976
-MY	M66:P	Y145:P	6.54861
-XY	Q67:P	Y145:P	8.65007
-MY	M68:P	Y145:P	6.29204
-XY	N139:P	Y145:P	6.94797
-MY	M144:P	Y145:P	1.32822
-YO	Y145:P	S146:P	1.32858
-YO	Y145:P	T148:P	6.68829
-YO	Y145:P	S149:P	9.5034
-YO	Y145:P	T171:P	12.5816
-YX	Y145:P	Q176:P	11.9243
-OY	S146:P	Y169:P	15.0182
-OA	S146:P	A174:P	8.75767
-OA	S146:P	A177:P	14.004
-OY	T148:P	Y169:P	9.22125
-OA	T148:P	A174:P	3.99145
-OA	T148:P	A177:P	9.6642
-OA	T148:P	A194:P	16.4028
-OA	S149:P	A174:P	6.70166
-JA	D152:P	A174:P	11.2911
-JA	E159:P	A174:P	16.4612
-JA	D163:P	A174:P	14.1433
-JA	D166:P	A174:P	9.47069
-OA	T171:P	A174:P	2.76512
-AJ	A174:P	E175:P	1.32932
-AA	A174:P	A177:P	7.287
-AO	A174:P	S178:P	10.5654
-AJ	A174:P	E180:P	13.8813
-AO	A174:P	T186:P	10.9729
-AJ	A174:P	E187:P	14.7856
-AO	A174:P	T188:P	16.896
-XZ	Q50:P	W80:P	15.1439
-XZ	N53:P	W80:P	14.2791
-XZ	N74:P	W80:P	6.9766
-ZP	W80:P	P85:P	5.13503
-ZP	W80:P	P90:P	13.6534
-ZX	W80:P	Q95:P	14.4113
-ZP	W80:P	P99:P	3.22453
-ZX	W80:P	Q112:P	15.6262
-ZX	W80:P	N120:P	12.5815
-ZX	W80:P	N121:P	13.7485
-ZP	W80:P	P122:P	10.7167
-ZP	W80:P	P123:P	8.76261
-ZP	W80:P	P125:P	7.42855
-ZZ	W80:P	W133:P	4.06926
-PZ	P34:P	W133:P	14.1462
-PZ	P38:P	W133:P	13.021
-XZ	Q50:P	W133:P	11.623
-XZ	N53:P	W133:P	9.3253
-XZ	N57:P	W133:P	13.3841
-XZ	Q63:P	W133:P	14.9196
-XZ	Q67:P	W133:P	10.9181
-XZ	N74:P	W133:P	6.31918
-PZ	P85:P	W133:P	12.0299
-PZ	P99:P	W133:P	7.80224
-XZ	Q112:P	W133:P	16.8896
-PZ	P122:P	W133:P	15.8128
-PZ	P123:P	W133:P	13.4375
-PZ	P125:P	W133:P	8.6566
-ZX	W133:P	N139:P	6.96785
-XM	Q13:P	M39:P	16.2341
-XM	N21:P	M39:P	10.1878
-MG	M39:P	G46:P	10.133
-MX	M39:P	Q50:P	15.0293
-MX	M39:P	N53:P	13.2947
-MX	M39:P	N57:P	14.2999
-MG	M39:P	G60:P	15.0222
-MG	M39:P	G61:P	16.9269
-MX	M39:P	N139:P	10.8021
-XM	N57:P	M66:P	5.26039
-XM	N57:P	M68:P	12.646
-XM	N57:P	M118:P	16.9674
-XM	Q63:P	M66:P	3.303
-XM	Q63:P	M68:P	5.30282
-XM	Q63:P	M144:P	8.4607
-XM	N21:P	M66:P	13.9306
-XM	Q50:P	M66:P	12.2698
-XM	N53:P	M66:P	7.59147
-GM	G60:P	M66:P	6.23141
-GM	G61:P	M66:P	4.22229
-MX	M66:P	Q67:P	1.32943
-MX	M66:P	N74:P	8.34948
-MG	M66:P	G106:P	14.9287
-MX	M66:P	N139:P	10.879
-XM	Q67:P	M68:P	1.32994
-XM	Q67:P	M144:P	8.30884
-XM	N53:P	M68:P	12.1209
-GM	G60:P	M68:P	13.0102
-GM	G61:P	M68:P	10.1052
-MX	M68:P	N74:P	6.70552
-MG	M68:P	G106:P	15.1012
-MX	M68:P	N139:P	6.62832
-XM	N139:P	M144:P	5.40823
-GM	G60:P	M144:P	13.8912
-GM	G61:P	M144:P	11.6754
-XM	N74:P	M144:P	15.7885
-MX	M144:P	Q176:P	14.9056
-OY	S149:P	Y169:P	10.235
-OA	S149:P	A177:P	10.2699
-OA	S149:P	A194:P	13.0098
-YO	Y169:P	T171:P	3.31725
-OA	T171:P	A177:P	8.94183
-OA	T171:P	A194:P	13.3936
-YX	Y169:P	Q176:P	10.596
-XZ	Q176:P	W184:P	10.3398
-XY	Q155:P	Y169:P	11.1925
-YO	Y169:P	S178:P	12.782
-YX	Y169:P	Q179:P	8.57181
-YX	Y169:P	N183:P	7.40418
-YO	Y169:P	T186:P	2.92923
-YO	Y169:P	T188:P	8.67737
-YX	Y169:P	Q192:P	11.284
-YX	Y169:P	N193:P	10.3208
-YX	Y169:P	N195:P	14.0037
-YC	Y169:P	C198:P	13.8986
-YO	Y169:P	T210:P	8.04084
-YM	Y169:P	M214:P	8.04631
-YM	Y169:P	M215:P	7.61109
-YO	Y169:P	T216:P	12.5792
-YX	Y169:P	Q219:P	15.0078
-JA	D152:P	A177:P	13.1872
-JA	D166:P	A177:P	16.4171
-JA	E175:P	A177:P	3.58648
-AO	A177:P	S178:P	1.32849
-AJ	A177:P	E180:P	5.99125
-AO	A177:P	T186:P	9.96342
-AJ	A177:P	E187:P	12.4882
-AO	A177:P	T188:P	13.681
-JA	D152:P	A194:P	9.59228
-JA	E159:P	A194:P	7.70633
-JA	D163:P	A194:P	10.3138
-JA	D166:P	A194:P	11.4611
-JA	E175:P	A194:P	16.1692
-OA	T186:P	A194:P	10.2987
-JA	E187:P	A194:P	9.2914
-OA	T188:P	A194:P	7.21029
-AJ	A194:P	D197:P	6.11001
-AC	A194:P	C198:P	4.31799
-AO	A194:P	T200:P	6.80275
-AA	A194:P	A204:P	11.087
-AA	A194:P	A208:P	14.3492
-AA	A194:P	A209:P	12.3749
-AO	A194:P	T210:P	12.1602
-AJ	A194:P	E212:P	13.5003
-AJ	A194:P	E213:P	12.1344
-AO	A194:P	T216:P	12.3154
-AA	A194:P	A217:P	10.6274
-JC	D152:P	C198:P	15.128
-JC	E159:P	C198:P	5.46286
-JA	E159:P	A204:P	16.772
-JA	E159:P	A217:P	11.0528
-JC	D163:P	C198:P	9.36733
-JA	D163:P	A209:P	16.7041
-JA	D163:P	A217:P	11.9166
-JC	D166:P	C198:P	12.1508
-JA	D166:P	A209:P	15.2151
-JA	D166:P	A217:P	13.9747
-JA	E180:P	A208:P	14.6834
-JA	E180:P	A209:P	14.6761
-OA	T186:P	A204:P	14.4971
-OA	T186:P	A208:P	9.65867
-OA	T186:P	A209:P	7.38515
-OA	T186:P	A217:P	13.8192
-JC	E187:P	C198:P	10.9712
-JA	E187:P	A204:P	11.8185
-JA	E187:P	A208:P	7.01067
-JA	E187:P	A209:P	6.61619
-JA	E187:P	A217:P	12.9673
-OA	T188:P	A204:P	12.0856
-OA	T188:P	A208:P	8.51601
-OA	T188:P	A209:P	8.18716
-OA	T188:P	A217:P	14.4251
-XM	Q50:P	M96:P	13.5863
-XM	Q50:P	M118:P	6.78162
-XM	N53:P	M96:P	16.2577
-XM	N53:P	M118:P	10.6251
-PG	P85:P	G89:P	7.30829
-PG	P85:P	G94:P	15.2851
-PG	P85:P	G106:P	16.8759
-GP	G89:P	P90:P	1.34261
-PG	P90:P	G94:P	6.51572
-PG	P90:P	G116:P	15.489
-XM	Q95:P	M96:P	1.32971
-XM	Q95:P	M118:P	12.2694
-GP	G46:P	P99:P	15.5577
-GP	G89:P	P99:P	10.831
-GP	G94:P	P99:P	12.8472
-PG	P99:P	G106:P	8.79672
-PG	P99:P	G116:P	8.48942
-MX	M96:P	Q112:P	5.2147
-XM	Q112:P	M118:P	6.87149
-MX	M96:P	N120:P	4.18409
-MX	M118:P	N120:P	3.62577
-MX	M96:P	N121:P	7.83198
-MX	M118:P	N121:P	6.74134
-GP	G46:P	P122:P	15.7827
-GP	G94:P	P122:P	12.6914
-GP	G116:P	P122:P	6.81227
-GP	G46:P	P123:P	12.4574
-GP	G94:P	P123:P	15.3511
-GP	G106:P	P123:P	15.4482
-GP	G116:P	P123:P	6.45748
-GP	G46:P	P125:P	9.20213
-GP	G106:P	P125:P	10.7123
-GP	G116:P	P125:P	8.15084
-PG	P34:P	G60:P	16.4059
-PG	P34:P	G61:P	16.6736
-PG	P38:P	G46:P	11.0502
-XM	Q13:P	M96:P	16.4944
-XM	Q13:P	M118:P	9.52244
-PG	P17:P	G46:P	13.6671
-GM	G46:P	M96:P	15.6
-GM	G46:P	M118:P	5.51975
-PG	P17:P	G60:P	13.6636
-GM	G94:P	M118:P	15.6834
-GM	G106:P	M118:P	9.59371
-GM	G116:P	M118:P	3.184
-MG	M96:P	G106:P	12.7543
-PZ	P147:P	W184:P	14.2255
-XZ	Q155:P	W184:P	14.109
-XZ	Q179:P	W184:P	5.49308
-XZ	N183:P	W184:P	1.33727
-ZX	W184:P	Q192:P	4.57814
-ZX	W184:P	N193:P	7.59614
-ZX	W184:P	N195:P	14.9973
-ZP	W184:P	P196:P	16.9614
-ZP	W184:P	P207:P	9.01222
-XM	Q155:P	M214:P	8.50129
-XM	Q155:P	M215:P	8.7913
-XM	Q179:P	M214:P	15.4664
-XM	Q179:P	M215:P	15.9091
-XM	N183:P	M214:P	10.1061
-XM	N183:P	M215:P	14.4721
-XM	Q192:P	M214:P	8.04608
-XM	Q192:P	M215:P	12.6779
-XM	N193:P	M214:P	10.2986
-XM	N193:P	M215:P	13.2464
-XM	N195:P	M214:P	10.9009
-XM	N195:P	M215:P	11.6067
-JC	D197:P	C198:P	1.32908
-CA	C198:P	A204:P	6.7148
-CA	C198:P	A208:P	12.8459
-CA	C198:P	A209:P	10.1237
-CJ	C198:P	E212:P	11.928
-CJ	C198:P	E213:P	9.43355
-CA	C198:P	A217:P	6.8946
-AO	A204:P	T210:P	10.2431
-AO	A208:P	T210:P	3.60446
-AO	A209:P	T210:P	1.33008
-OA	T210:P	A217:P	7.66073
-GM	G156:P	M214:P	13.6201
-GM	G206:P	M214:P	4.96919
-MX	M214:P	Q219:P	5.11891
-MG	M214:P	G220:P	7.83684
-GM	G156:P	M215:P	13.633
-GM	G206:P	M215:P	10.9373
-MX	M215:P	Q219:P	3.16801
-MG	M215:P	G220:P	5.95316
-AO	A204:P	T216:P	11.333
-AO	A208:P	T216:P	12.6965
-AO	A209:P	T216:P	9.45606
-OA	T216:P	A217:P	1.32966
-JA	D197:P	A204:P	8.15248
-JA	D197:P	A208:P	15.8013
-JA	D197:P	A209:P	13.1485
-JA	D197:P	A217:P	7.69831
-OA	T200:P	A204:P	3.53405
-OA	T200:P	A208:P	12.4438
-OA	T200:P	A209:P	10.6389
-OA	T200:P	A217:P	8.49881
-AA	A204:P	A208:P	8.63645
-AA	A204:P	A209:P	7.09545
-AJ	A204:P	E212:P	12.8087
-AJ	A204:P	E213:P	9.70114
-AA	A204:P	A217:P	7.75494
-AA	A208:P	A209:P	1.32821
-AJ	A208:P	E212:P	8.95873
-AJ	A208:P	E213:P	4.97473
-AA	A208:P	A217:P	11.3955
-AJ	A209:P	E212:P	6.4593
-AJ	A209:P	E213:P	3.70818
-AA	A209:P	A217:P	7.70037
-JA	E212:P	A217:P	5.06318
-JA	E213:P	A217:P	2.96976
-GM	G89:P	M96:P	10.5496
-GM	G94:P	M96:P	4.3538
-MG	M96:P	G116:P	3.8786
-GP	G89:P	P93:P	8.36927
-PG	P93:P	G94:P	1.32788
-PG	P93:P	G116:P	15.9616
-GP	G156:P	P196:P	7.04002
-PG	P196:P	G206:P	13.0094
-PG	P196:P	G220:P	10.0752
-GP	G206:P	P207:P	1.34371
-GP	G156:P	P157:P	1.34545
-GP	G156:P	P160:P	5.51383
-PG	P157:P	G220:P	8.51841
-PG	P160:P	G220:P	7.21042
+UX	V19:A	Q310:A	3.51906
+AX	A20:A	Q310:A	2.81316
+AX	A306:A	Q310:A	3.00972
+XA	Q310:A	A347:A	3.69825
+AP	A20:A	P23:A	5.96958
+AX	A20:A	Q307:A	3.72557
+XA	Q300:A	A306:A	3.98785
+JA	D302:A	A306:A	3.03708
+AX	A306:A	Q307:A	1.33153
+JA	D343:A	A347:A	2.97551
+PA	P23:A	A24:A	1.32792
+PA	P23:A	A304:A	5.77666
+AX	A24:A	Q307:A	3.91276
+AX	A303:A	Q307:A	2.99253
+AX	A304:A	Q307:A	3.46471
+UX	V77:A	Q300:A	5.85015
+XA	Q300:A	A303:A	5.7925
+JA	D302:A	A303:A	1.32666
+JA	D302:A	A304:A	3.2437
+JA	D343:A	A344:A	1.32566
+AP	A24:A	P27:A	5.89911
+AX	A24:A	N55:A	2.86727
+XU	Q61:A	V77:A	4.844
+XU	Q71:A	V77:A	3.69971
+UX	V77:A	N78:A	1.32971
+UX	V28:A	N55:A	3.03823
+AX	A60:A	Q61:A	1.32668
+AX	A67:A	Q71:A	2.74932
+UX	I69:A	Q71:A	3.45787
+AX	A70:A	Q71:A	1.32734
+XA	Q71:A	A73:A	3.16946
+XA	Q71:A	A74:A	3.21021
+AX	A31:A	N78:A	2.95298
+XA	N43:A	A60:A	5.16963
+UY	I69:A	Y85:A	4.89218
+AX	A73:A	N297:A	5.96771
+XU	N43:A	L44:A	1.33115
+YZ	Y85:A	F170:A	3.79969
+YZ	Y85:A	F190:A	5.06024
+YU	Y85:A	I275:A	3.60853
+YU	Y39:A	L44:A	5.37204
+UX	L44:A	Q328:A	3.58677
+XU	N272:A	I275:A	5.67137
+YZ	Y39:A	F229:A	5.98587
+AX	A323:A	Q328:A	4.4329
+AX	A271:A	N272:A	1.32796
+XA	N272:A	A274:A	3.08292
+XU	N272:A	L345:A	4.71742
+XA	N321:A	A323:A	3.71364
+AJ	A323:A	D327:A	2.84235
+PA	P270:A	A271:A	1.33303
+PA	P270:A	A274:A	3.89413
+XU	N321:A	V339:A	5.21207
+
+
+
+cluster number: 2
+number of pairs: 16
+number of different amino acids: 14
+number of different pairs' types: 5
+The amino-acids are:
+ASN123:A
+ALA129:A
+GLN132:A
+ASP139:A
+ASP140:A
+PRO141:A
+GLN142:A
+ALA144:A
+ALA145:A
+LEU146:A
+PRO148:A
+GLY149:A
+ASP180:A
+VAL199:A
+
+The pairs are:
+XU	N123:A	L146:A	4.11352
+XU	Q142:A	L146:A	3.77514
+AX	A129:A	Q142:A	4.59807
+XA	Q142:A	A144:A	3.53676
+XA	Q142:A	A145:A	3.99122
+AX	A129:A	Q132:A	3.21783
+AJ	A129:A	D180:A	5.85964
+JA	D139:A	A144:A	4.58968
+JA	D140:A	A144:A	3.06405
+PA	P141:A	A144:A	3.24086
+AP	A144:A	P148:A	3.52648
+JA	D140:A	A145:A	5.05049
+PA	P141:A	A145:A	2.89154
+AP	A145:A	P148:A	3.82133
+XU	Q132:A	V199:A	3.29557
+PG	P148:A	G149:A	1.32578
+
+
+
+cluster number: 3
+number of pairs: 18
+number of different amino acids: 18
+number of different pairs' types: 4
+The amino-acids are:
+PRO253:A
+ASP254:A
+ALA255:A
+GLN256:A
+GLN259:A
+ALA260:A
+ALA262:A
+ALA263:A
+GLY264:A
+ALA266:A
+PRO281:A
+ALA282:A
+PRO283:A
+ASP284:A
+GLN332:A
+PRO335:A
+PRO336:A
+ALA337:A
+
+The pairs are:
+PA	P253:A	A255:A	4.7021
+JA	D254:A	A255:A	1.3285
+AX	A255:A	Q256:A	1.3224
+AX	A255:A	Q259:A	2.78136
+AX	A255:A	Q332:A	3.59389
+XA	Q256:A	A260:A	3.01376
+XA	Q259:A	A260:A	1.32817
+XA	Q259:A	A262:A	3.66366
+XA	Q259:A	A263:A	3.3749
+AJ	A260:A	D284:A	3.65648
+AP	A262:A	P335:A	5.89605
+AJ	A282:A	D284:A	3.12344
+AP	A266:A	P335:A	4.02114
+PA	P335:A	A337:A	3.15836
+PA	P281:A	A282:A	1.32357
+AP	A282:A	P283:A	1.33698
+PA	P336:A	A337:A	1.32461
+GP	G264:A	P281:A	5.08229
+
+
+
+cluster number: 4
+number of pairs: 10
+number of different amino acids: 10
+number of different pairs' types: 4
+The amino-acids are:
+ASN112:A
+LEU113:A
+ALA156:A
+ALA216:A
+GLU217:A
+PRO219:A
+LEU230:A
+GLN232:A
+GLN235:A
+LEU238:A
+
+The pairs are:
+XU	N112:A	L113:A	1.32659
+XA	N112:A	A216:A	3.09432
+XU	N112:A	L238:A	4.22172
+AJ	A216:A	E217:A	1.32437
+AP	A216:A	P219:A	5.28987
+XU	Q232:A	L238:A	5.80449
+XU	Q235:A	L238:A	5.53511
+AP	A156:A	P219:A	4.57556
+UX	L230:A	Q232:A	3.26924
+UX	L230:A	Q235:A	5.02101
+
+
+
+cluster number: 5
+number of pairs: 3
+number of different amino acids: 4
+number of different pairs' types: 3
+The amino-acids are:
+GLY46:A
+PRO47:A
+ALA48:A
+GLU51:A
+
+The pairs are:
+GP	G46:A	P47:A	1.33588
+PA	P47:A	A48:A	1.32688
+AJ	A48:A	E51:A	3.19044
+
+
+
+cluster number: 6
+number of pairs: 7
+number of different amino acids: 6
+number of different pairs' types: 2
+The amino-acids are:
+GLY133:A
+PRO197:A
+ALA198:A
+PRO200:A
+GLY201:A
+ALA202:A
+
+The pairs are:
+GP	G133:A	P197:A	5.68094
+GP	G133:A	P200:A	5.70741
+PA	P197:A	A198:A	1.33091
+PA	P197:A	A202:A	3.39819
+AP	A198:A	P200:A	4.49483
+PG	P200:A	G201:A	1.32715
+PA	P200:A	A202:A	3.39093
+
+
+
+cluster number: 7
+number of pairs: 5
+number of different amino acids: 5
+number of different pairs' types: 1
+The amino-acids are:
+PRO181:A
+GLY183:A
+GLY185:A
+PRO188:A
+GLY189:A
+
+The pairs are:
+PG	P181:A	G183:A	3.30046
+PG	P181:A	G185:A	3.51259
+GP	G183:A	P188:A	5.2981
+GP	G185:A	P188:A	5.32136
+PG	P188:A	G189:A	1.32767
+
+
+
+cluster number: 8
+number of pairs: 4
+number of different amino acids: 4
+number of different pairs' types: 1
+The amino-acids are:
+GLU88:A
+ASP90:A
+ALA92:A
+ALA93:A
+
+The pairs are:
+JA	E88:A	A92:A	3.17244
+JA	E88:A	A93:A	5.25347
+JA	D90:A	A92:A	3.25212
+JA	D90:A	A93:A	3.29826
+
+
+
+cluster number: 9
+number of pairs: 3
+number of different amino acids: 4
+number of different pairs' types: 1
+The amino-acids are:
+VAL116:A
+VAL150:A
+ASN151:A
+LEU152:A
+
+The pairs are:
+UX	V116:A	N151:A	4.42852
+UX	V150:A	N151:A	1.32997
+XU	N151:A	L152:A	1.32736
+
+
+
+cluster number: 10
+number of pairs: 3
+number of different amino acids: 4
+number of different pairs' types: 1
+The amino-acids are:
+GLN242:A
+ASN249:A
+LEU251:A
+LEU252:A
+
+The pairs are:
+XU	Q242:A	L251:A	3.43881
+XU	Q242:A	L252:A	3.73993
+XU	N249:A	L251:A	3.66214
+
+
+
+cluster number: 11
+number of pairs: 2
+number of different amino acids: 3
+number of different pairs' types: 1
+The amino-acids are:
+PRO114:A
+GLY115:A
+GLY237:A
+
+The pairs are:
+PG	P114:A	G115:A	1.32471
+PG	P114:A	G237:A	5.93893
+
+
+
+cluster number: 12
+number of pairs: 1
+number of different amino acids: 2
+number of different pairs' types: 1
+The amino-acids are:
+TYR53:A
+TRP315:A
+
+The pairs are:
+YZ	Y53:A	W315:A	5.29626
+
+
+
+cluster number: 13
+number of pairs: 1
+number of different amino acids: 2
+number of different pairs' types: 1
+The amino-acids are:
+PRO153:A
+GLY154:A
+
+The pairs are:
+PG	P153:A	G154:A	1.32691
 
 
 
@@ -625,80 +385,4114 @@ PG	P160:P	G220:P	7.21042
 
 peptide number 1
 
-CAHFPPRSQMIADC
-CAHFP---QM-ADC
+GINAVQNENTKS
+-INAVQ------
 
 peptide number 2
 
-CAHFAPGTAMYSDC
-CAHF-PGTAMYSDC
+GINAVQNVNTKS
+-INAVQNVN---
 
 peptide number 3
 
-CRQFPHSSSMYTDC
---QFP----MYTDC
+GINAVQNANTKT
+-INAVQNAN---
 
 peptide number 4
 
-CRESRAALERGWWC
------AA----WW-
+TGIRELEHSNKH
+------------
 
 peptide number 5
 
-CEARTHNEARRRRC
-CEA----EA-----
+WGAVWAMMSFDKLC
+--------------
 
 peptide number 6
 
-CAAARSTGETSAHY
-CAAA------SAH-
+GINAVQNANTKS
+-INAVQNAN---
 
 peptide number 7
 
-CYYRMGANYTVGEC
-CY--MG-NYT--EC
+CGAVWAMMSFDKPC
+--------------
 
 peptide number 8
 
-CSVSPLYAADDPLC
--------AAD----
+GINAVKNANTKS
+-INA--NAN---
 
 peptide number 9
 
-CTQMHEMDPNFPPC
---QM-----NFP--
+GINAVQNANTKQ
+-INAVQNAN---
 
 peptide number 10
 
-CVTALGPNYTGQEC
---TA-GPNYT--EC
+CGAVWEMMSFDKLC
+--------------
 
 peptide number 11
 
-VWRCNWF
-----NWF
+CGAVWAMMSFDKLS
+--------------
 
 peptide number 12
 
-CVVFLDVSEAFRDC
---------EA--DC
+TGIRELEHSNLP
+---------NL-
 
 peptide number 13
 
-CADVMGPLVTAAEC
-CAD-MGP--TAAEC
+GINAVRNANTKS
+-INA--NAN---
 
 peptide number 14
 
-CADVMGPLVTAGEC
-CAD-MGP--TA-EC
+GINAVQNSNTKS
+-INAVQ------
 
 peptide number 15
 
-AASWNGR
-AASWN--
+CGAVWAMMSFDKLC
+--------------
 
 peptide number 16
 
-CYVQQPWWVLEREC
-CY---PWW----EC
+FYITGPAETKNA
+FYI--PAE--NA
+
+peptide number 17
+
+FYITGPAETKNI
+FYI--PAE--NI
+
+peptide number 18
+
+FYITGPAETKND
+FYI--PAE----
+
+peptide number 19
+
+FYITGPAETKNV
+FYI--PAE--NV
+
+peptide number 20
+
+FYITGPAETKNH
+FYI--PAE----
+
+peptide number 21
+
+FYITGPAETKNL
+FYI--PAE--NL
+
+peptide number 22
+
+FYIKGPAETKNV
+FYI--PAE--NV
+
+peptide number 23
+
+FYITGPAETKNF
+FYI--PAE----
+
+peptide number 24
+
+FYITGPEETKNV
+FYI-------NV
+
+peptide number 25
+
+FYITGPEETKNF
+FYI---------
+
+peptide number 26
+
+CGAVWAMMSFDKHC
+--------------
+
+peptide number 27
+
+CNPMARVQTEVC
+------VQ----
+
+peptide number 28
+
+CGAVWAMMTFDKLC
+--------------
+
+peptide number 29
+
+FYITGPAEKKNV
+FYI--PAE--NV
+
+peptide number 30
+
+FYITAPAETKND
+FYI-APAE----
+
+peptide number 31
+
+FYITAPAETKNV
+FYI-APAE--NV
+
+peptide number 32
+
+CGAVRAMMSFDKLC
+--------------
+
+peptide number 33
+
+FNITGPAETKND
+-NI--PAE----
+
+peptide number 34
+
+GVNAVQNANTKS
+-VNAVQNAN---
+
+peptide number 35
+
+FNITGPAETKNV
+-NI--PAE--NV
+
+peptide number 36
+
+FYITGTAETKNV
+FYI---AE--NV
+
+peptide number 37
+
+FYITGQAETKNV
+FYI--QAE--NV
+
+peptide number 38
+
+CNTMARVQTAVC
+------VQ----
+
+peptide number 39
+
+SIHFMTSLDTPP
+------------
+
+peptide number 40
+
+FYITGTAETKNF
+FYI---AE----
+
+peptide number 41
+
+CNPMARVQTAVC
+------VQ----
+
+peptide number 42
+
+FYITGPAETKIV
+FYI--PAE----
+
+peptide number 43
+
+CNPMERVQTAVC
+------VQ----
+
+peptide number 44
+
+FYNTGPAETKNV
+FY---PAE--NV
+
+peptide number 45
+
+GINAVLNANTKS
+-INA-LNAN---
+
+peptide number 46
+
+FYITRPAETKND
+FYI--PAE----
+
+peptide number 47
+
+FYITRPAETKNV
+FYI--PAE--NV
+
+peptide number 48
+
+FYITGPAESKNV
+FYI--PAE--NV
+
+peptide number 49
+
+FYITGSAETKNV
+FYI---AE--NV
+
+peptide number 50
+
+GLNAVQNANTKS
+-LNAVQNAN---
+
+peptide number 51
+
+YYITGPAETKND
+-YI--PAE----
+
+peptide number 52
+
+FYITGLAETKNV
+FYI---AE--NV
+
+peptide number 53
+
+FYFTGPAETKNV
+FYF--PAE--NV
+
+peptide number 54
+
+GINDVQNANTKS
+-IN-VQNAN---
+
+peptide number 55
+
+GINAVHNANTKS
+-INA--NAN---
+
+peptide number 56
+
+YYITGPAETKNV
+-YI--PAE--NV
+
+peptide number 57
+
+CAAVWAMMSFDKLS
+--------------
+
+peptide number 58
+
+GINAVQNAITKS
+-INAVQNA----
+
+peptide number 59
+
+GWKEWYIGES
+----WYI---
+
+peptide number 60
+
+GWKEWYIDEF
+----WYI---
+
+peptide number 61
+
+LYITGPAETKNV
+LYI--PAE--NV
+
+peptide number 62
+
+FYITGPEETNNV
+FYI-------NV
+
+peptide number 63
+
+GWKEWYIGEF
+----WYI---
+
+peptide number 64
+
+GWKEWYIGEY
+----WYI---
+
+peptide number 65
+
+SWYHIEPTLSEH
+-WY---------
+
+peptide number 66
+
+GINSVQNANTKS
+-IN-VQNAN---
+
+peptide number 67
+
+GWKEWYISEF
+----WYI---
+
+peptide number 68
+
+GWKEWYIVEF
+----WYI---
+
+peptide number 69
+
+GWKEWYIGDF
+----WYI---
+
+peptide number 70
+
+CGAVWAMMSYDKLC
+--------------
+
+peptide number 71
+
+CNPMARVQTAVS
+------VQ----
+
+peptide number 72
+
+GWKEWYICEF
+----WYI---
+
+peptide number 73
+
+FYITGPSETKNV
+FYI-------NV
+
+peptide number 74
+
+YIHFMTSLDSPP
+YI----------
+
+peptide number 75
+
+CNPMARVQTAVY
+------VQ--VY
+
+peptide number 76
+
+GINAVQNANKKS
+-INAVQNAN---
+
+peptide number 77
+
+GINPVQNANTKS
+-IN-VQNAN---
+
+peptide number 78
+
+CGAVSAMMSFDKLC
+--------------
+
+peptide number 79
+
+FYITGPSETKNF
+FYI---------
+
+peptide number 80
+
+CNLQVFRWSMWCGC
+-NLQV---------
+
+peptide number 81
+
+FYITGPAETNNV
+FYI--PAE--NV
+
+peptide number 82
+
+AINAVQNANTKS
+-INAVQNAN---
+
+peptide number 83
+
+FYITGPGETKNV
+FYI-------NV
+
+peptide number 84
+
+SIHFMTSLDSPP
+------------
+
+peptide number 85
+
+VYITGPAETKNV
+VYI--PAE--NV
+
+peptide number 86
+
+CGAVWAMTSFDKLC
+--------------
+
+peptide number 87
+
+CNPMALVQTAVC
+------VQ----
+
+peptide number 88
+
+FYITVPAETKND
+FYI--PAE----
+
+peptide number 89
+
+FFITGPAETKNV
+-----PAE--NV
+
+peptide number 90
+
+FYITGPAEAKNV
+FYI--PAEA-NV
+
+peptide number 91
+
+FYISGPAETKNV
+FYI--PAE--NV
+
+peptide number 92
+
+FYITVPAETKNV
+FYI--PAE--NV
+
+peptide number 93
+
+SIHFMTSIDSPP
+------------
+
+peptide number 94
+
+CNPMARVQTAAC
+------VQ----
+
+peptide number 95
+
+SWYHIEPALSEH
+-WY---PA----
+
+peptide number 96
+
+CGAVWAMMYFDKIC
+--------YF----
+
+peptide number 97
+
+FYITDPAETKNV
+FYI--PAE--NV
+
+peptide number 98
+
+CYITGPAETKNV
+-YI--PAE--NV
+
+peptide number 99
+
+CRAVWAMMSFDKLC
+--------------
+
+peptide number 100
+
+YYLQVFRWSMWCGC
+-YLQV---------
+
+peptide number 101
+
+CYLQEFRWSMWCGC
+-YLQ----------
+
+peptide number 102
+
+FYITGQAEKKND
+FYI--QAE----
+
+peptide number 103
+
+PIHFMTSLDSPP
+------------
+
+peptide number 104
+
+FYNTVPAETKNV
+FY---PAE--NV
+
+peptide number 105
+
+SIHFMTSLDNPP
+------------
+
+peptide number 106
+
+SWYHIKPTLSEH
+-WY---------
+
+peptide number 107
+
+CNPMARVQAAVC
+------VQA---
+
+peptide number 108
+
+TGIRELAHSNLA
+---------NL-
+
+peptide number 109
+
+SWYNIEPTLSEH
+-WYNI-------
+
+peptide number 110
+
+CYLQVFRWSMWCGC
+-YLQV---------
+
+peptide number 111
+
+CYLQVFRWTMWCGC
+-YLQV---------
+
+peptide number 112
+
+SWYHIEPPLSEH
+-WY---------
+
+peptide number 113
+
+FYITGPAQTKNV
+FYI--PAQ--NV
+
+peptide number 114
+
+FYITGPAQTKNV
+FYI--PAQ--NV
+
+peptide number 115
+
+FYITGPPETKNV
+FYI-------NV
+
+peptide number 116
+
+GWKEWFIGEF
+----------
+
+peptide number 117
+
+CDLQVFRWSMWCGC
+--LQV---------
+
+peptide number 118
+
+RINAVQNANTKS
+-INAVQNAN---
+
+peptide number 119
+
+FYIKGPDETKNV
+FYI-------NV
+
+peptide number 120
+
+FYITGPAETMNV
+FYI--PAE--NV
+
+peptide number 121
+
+FYITGPAEPKNV
+FYI--PAE--NV
+
+peptide number 122
+
+TGIRELANSNLP
+------AN-NL-
+
+peptide number 123
+
+FYITGPAKTKNV
+FYI--PA---NV
+
+peptide number 124
+
+TGIRELAHSNLT
+---------NL-
+
+peptide number 125
+
+FYITGPADTKNV
+FYI--PAD--NV
+
+peptide number 126
+
+CGADWAMMSFDKLC
+--AD----------
+
+peptide number 127
+
+FYITSPAETKNV
+FYI--PAE--NV
+
+peptide number 128
+
+FYITGPAEPKND
+FYI--PAE----
+
+peptide number 129
+
+FYITGPAETKYV
+FYI--PAE--YV
+
+peptide number 130
+
+GWREWYIGEF
+----WYI---
+
+peptide number 131
+
+CYMQVFRWSMWCGC
+---QV---------
+
+peptide number 132
+
+FYITGPAETKSV
+FYI--PAE----
+
+peptide number 133
+
+SWYHIEPTQTEH
+-WY---------
+
+peptide number 134
+
+SINFMTSIDSPP
+-IN---------
+
+peptide number 135
+
+TGIRELAHSNLL
+---------NL-
+
+peptide number 136
+
+SIHFITSLDSPP
+------------
+
+peptide number 137
+
+GINAYQNANTKS
+-INA--NAN---
+
+peptide number 138
+
+SINFMTSLDSPP
+-IN---------
+
+peptide number 139
+
+CNPKARVQTAVC
+------VQ----
+
+peptide number 140
+
+GIDAVQNANTKS
+--DAVQNAN---
+
+peptide number 141
+
+GINADQNANTKS
+-INAD-NAN---
+
+peptide number 142
+
+SYITGPAETKNV
+-YI--PAE--NV
+
+peptide number 143
+
+FCITGPAETKNV
+-----PAE--NV
+
+peptide number 144
+
+SWNHIEPTLSEH
+------------
+
+peptide number 145
+
+TGIRELAHSNLP
+---------NL-
+
+peptide number 146
+
+FYITANAETKNF
+FYI-ANAE----
+
+peptide number 147
+
+SIHFVTSLDSPP
+------------
+
+peptide number 148
+
+CYLLVFRWSMWCGC
+-YL-----------
+
+peptide number 149
+
+FYIKSPAETKNV
+FYI--PAE--NV
+
+peptide number 150
+
+CNPVARVQTAVC
+------VQ----
+
+peptide number 151
+
+CINAVQNANTKS
+-INAVQNAN---
+
+peptide number 152
+
+CNPMAGVQTAVC
+------VQ----
+
+peptide number 153
+
+GWKDWYIGDF
+----WYI---
+
+peptide number 154
+
+TGIRELAHTNLP
+---------NL-
+
+peptide number 155
+
+CYLQVFRWSMWFGC
+-YLQV---------
+
+peptide number 156
+
+CNNMARVQNAVC
+------VQNA--
+
+peptide number 157
+
+YYITGPAETNNV
+-YI--PAE--NV
+
+peptide number 158
+
+TGIRELADSNLP
+------AD-NL-
+
+peptide number 159
+
+FYITGPAETQNV
+FYI--PAE--NV
+
+peptide number 160
+
+FYITGPAETQNV
+FYI--PAE--NV
+
+peptide number 161
+
+SWYHIEPRLSEH
+-WY---------
+
+peptide number 162
+
+CYLQLFRWSMWCGC
+-YLQL---------
+
+peptide number 163
+
+SIHFMTSLDSPT
+------------
+
+peptide number 164
+
+GINDFQNANTKS
+-IN---NAN---
+
+peptide number 165
+
+YYITRQAETKNV
+-YI--QAE--NV
+
+peptide number 166
+
+FYITGQPETKNV
+FYI-------NV
+
+peptide number 167
+
+GINADQNDNTKS
+-INAD-------
+
+peptide number 168
+
+TGIRELAHSNQP
+------------
+
+peptide number 169
+
+FYIKGPSETNNV
+FYI-------NV
+
+peptide number 170
+
+CYLQVFRWSMWCRC
+-YLQV---------
+
+peptide number 171
+
+CNPLARVQTAVC
+------VQ----
+
+peptide number 172
+
+RWKEWYIGEF
+----WYI---
+
+peptide number 173
+
+FYITCPAETKNV
+FYI--PAE--NV
+
+peptide number 174
+
+FYITGPAGTKNV
+FYI--PA---NV
+
+peptide number 175
+
+GINAVQNANTTS
+-INAVQNAN---
+
+peptide number 176
+
+CGAVWAMMSIHKHC
+--------------
+
+peptide number 177
+
+FYITVTAEKKNV
+FYI---AE--NV
+
+peptide number 178
+
+SIHFMTSLDYPP
+------------
+
+peptide number 179
+
+CYLQVFRWSIWCGC
+-YLQV---------
+
+peptide number 180
+
+TGIRELARSNLP
+---------NL-
+
+peptide number 181
+
+TGIREIAHSNLP
+---------NL-
+
+peptide number 182
+
+IYITGPAQTKND
+IYI--PAQ----
+
+peptide number 183
+
+VWKEWYIGEF
+----WYI---
+
+peptide number 184
+
+GRKEWYIAQN
+----WYIAQ-
+
+peptide number 185
+
+FYITGPAQKKNI
+FYI--PAQ--NI
+
+peptide number 186
+
+CYLQVFRWCMWCGC
+-YLQV---------
+
+peptide number 187
+
+CYLQVFSWSMWCGC
+-YLQV---------
+
+peptide number 188
+
+FYITGQADTKND
+FYI--QAD----
+
+peptide number 189
+
+FYITGPAQKKNV
+FYI--PAQ--NV
+
+peptide number 190
+
+CYLQVFRWSMRCGS
+-YLQV---------
+
+peptide number 191
+
+GWKEWYNGEF
+----WY----
+
+peptide number 192
+
+CYLQVFPWSMWCGC
+-YLQV---------
+
+peptide number 193
+
+CYLQVYRWTMWCGC
+-YLQVY--------
+
+peptide number 194
+
+TGIMELAHSNLP
+---------NL-
+
+peptide number 195
+
+CLFTTHLLLISVLC
+--------------
+
+peptide number 196
+
+SIHFMTSLASPP
+------------
+
+peptide number 197
+
+YYITGPAEPKNV
+-YI--PAE--NV
+
+peptide number 198
+
+CYLQVFRWSMRCGC
+-YLQV---------
+
+peptide number 199
+
+CYLQVFRWSMWGGC
+-YLQV---------
+
+peptide number 200
+
+WWKEWYIGEF
+----WYI---
+
+peptide number 201
+
+SIHFMPSLDSPP
+------------
+
+peptide number 202
+
+CNPIARVQTSVC
+------VQ----
+
+peptide number 203
+
+GWKERYIGEF
+-----YI---
+
+peptide number 204
+
+FYITGPQQTKND
+FYI---------
+
+peptide number 205
+
+CTFTTHLLLISVLC
+--------------
+
+peptide number 206
+
+SWYHIETTLSEN
+-WY---------
+
+peptide number 207
+
+CYLQVFRLSMWCGC
+-YLQV---------
+
+peptide number 208
+
+CYLQVSRWSMWCGC
+-YLQV---------
+
+peptide number 209
+
+CYLQVFRWSKWCGC
+-YLQV---------
+
+peptide number 210
+
+CPITTHLLLISVLC
+--------------
+
+peptide number 211
+
+SIHFMTSIHSPP
+------------
+
+peptide number 212
+
+FNITGPSETNNF
+-NI---------
+
+peptide number 213
+
+CKFTTHLQNISVLC
+------LQNI----
+
+peptide number 214
+
+CPFTTHLLLISVLC
+--------------
+
+peptide number 215
+
+FYITCTAETKNV
+FYI---AE--NV
+
+peptide number 216
+
+VYNTGPPETKNV
+VY--------NV
+
+peptide number 217
+
+CPYTTHLLLISVLC
+--------------
+
+peptide number 218
+
+SIHFMTWLDSPP
+------------
+
+peptide number 219
+
+CYLQVFRRSMWCGC
+-YLQV---------
+
+peptide number 220
+
+SWYHIEPTQNEH
+-WY---------
+
+peptide number 221
+
+CYLQVFRWSMWRGC
+-YLQV---------
+
+peptide number 222
+
+CYLQVFCWSMWCGC
+-YLQV---------
+
+peptide number 223
+
+YYITGHAEKKNV
+-YI---AE--NV
+
+peptide number 224
+
+CPSTTHLLLISVLC
+--------------
+
+peptide number 225
+
+SINFMTQIDSPP
+-IN---QI----
+
+peptide number 226
+
+TAIRELAHSNLP
+---------NL-
+
+peptide number 227
+
+SSHFMTSLDSPP
+------------
+
+peptide number 228
+
+TGIRELAHYNLP
+---------NL-
+
+peptide number 229
+
+TGIWELAHSNLP
+---------NL-
+
+peptide number 230
+
+TGIRELAHSSLP
+------------
+
+peptide number 231
+
+CPFTTHLLLISELC
+--------------
+
+peptide number 232
+
+CQFTTHLLLIYVLC
+---------IYV--
+
+peptide number 233
+
+CPFTTHLLIISVLC
+--------------
+
+peptide number 234
+
+CPFTTHLMLISVLC
+--------------
+
+peptide number 235
+
+TGNRELAHSNLP
+---------NL-
+
+peptide number 236
+
+KRYHIEPTQSEH
+------------
+
+peptide number 237
+
+SWYHNEPTLSEN
+-WY---------
+
+peptide number 238
+
+SWYHNEPTVSEH
+-WY---------
+
+peptide number 239
+
+TGISELAHSNLP
+---------NL-
+
+peptide number 240
+
+CPFTNHLLLISVLC
+--------------
+
+peptide number 241
+
+SIHFMTSHDTPT
+------------
+
+peptide number 242
+
+CYLQVIRWSKWCGC
+-YLQV---------
+
+peptide number 243
+
+FNITCPSETKND
+-NI---------
+
+peptide number 244
+
+CNPMARDQTADS
+---------AD-
+
+peptide number 245
+
+CPFTTHLLVISVLC
+--------------
+
+peptide number 246
+
+CYLQVVRWSMWSGC
+-YLQV---------
+
+peptide number 247
+
+CPNNTHKLLISVLC
+--------------
+
+peptide number 248
+
+CPFTTHLLLITELC
+--------------
+
+peptide number 249
+
+SPFTTHLLLNSVLC
+--------LN----
+
+peptide number 250
+
+CGAVWPMKYFDKLC
+--------YF----
+
+peptide number 251
+
+SINIKKALDYKP
+-INI--------
+
+peptide number 252
+
+CPFSTHLLLISVLC
+--------------
+
+peptide number 253
+
+CAERLQLQRVLC
+-AE-LQLQ----
+
+peptide number 254
+
+TAYVLEDELTKS
+--YV--------
+
+peptide number 255
+
+CNTMARVQPADC
+------VQPAD-
+
+peptide number 256
+
+CPFTTHLLLISLLC
+--------------
+
+peptide number 257
+
+GRKQWYIPEY
+----WYI---
+
+peptide number 258
+
+CPFTSHLLLISVLC
+--------------
+
+peptide number 259
+
+CAERLQLQRELC
+-AE-LQLQ----
+
+peptide number 260
+
+CIYPVQNANTKS
+-IY-VQNAN---
+
+peptide number 261
+
+TRIRELAHSNLP
+---------NL-
+
+peptide number 262
+
+FYITCTQETNNV
+FYI-------NV
+
+peptide number 263
+
+GCKQWYIGEF
+----WYI---
+
+peptide number 264
+
+CAERLQMQRVLC
+-AE-LQ------
+
+peptide number 265
+
+CNTKALVYTAVS
+------VY----
+
+peptide number 266
+
+TAYVLEDELSKS
+--YV--------
+
+peptide number 267
+
+TGIRQLAHSNLP
+----QL---NL-
+
+peptide number 268
+
+TGIRQLAHSNLP
+----QL---NL-
+
+peptide number 269
+
+CAERLQLQRVMC
+-AE-LQLQ----
+
+peptide number 270
+
+CAERLQKQRVLC
+-AE-LQ------
+
+peptide number 271
+
+TGSVFVLEMINK
+---------IN-
+
+peptide number 272
+
+TCIRELAHSNLP
+---------NL-
+
+peptide number 273
+
+SGISELPHTNMT
+------------
+
+peptide number 274
+
+CENHRQIRSELC
+-----QI-----
+
+*************  cluster number: 2 ************
+
+peptide number 1
+
+GINAVQNENTKS
+-INAVQ------
+
+peptide number 2
+
+GINAVQNVNTKS
+-INAVQNVN---
+
+peptide number 3
+
+GINAVQNANTKT
+-INAVQNAN---
+
+peptide number 4
+
+TGIRELEHSNKH
+------------
+
+peptide number 5
+
+WGAVWAMMSFDKLC
+--------------
+
+peptide number 6
+
+GINAVQNANTKS
+-INAVQNAN---
+
+peptide number 7
+
+CGAVWAMMSFDKPC
+--------------
+
+peptide number 8
+
+GINAVKNANTKS
+-INA--NAN---
+
+peptide number 9
+
+GINAVQNANTKQ
+-INAVQNAN---
+
+peptide number 10
+
+CGAVWEMMSFDKLC
+--------------
+
+peptide number 11
+
+CGAVWAMMSFDKLS
+--------------
+
+peptide number 12
+
+TGIRELEHSNLP
+---------NL-
+
+peptide number 13
+
+GINAVRNANTKS
+-INA--NAN---
+
+peptide number 14
+
+GINAVQNSNTKS
+-INAVQ------
+
+peptide number 15
+
+CGAVWAMMSFDKLC
+--------------
+
+peptide number 16
+
+FYITGPAETKNA
+----GPAE--NA
+
+peptide number 17
+
+FYITGPAETKNI
+----GPAE--NI
+
+peptide number 18
+
+FYITGPAETKND
+----GPAE----
+
+peptide number 19
+
+FYITGPAETKNV
+----GPAE--NV
+
+peptide number 20
+
+FYITGPAETKNH
+----GPAE----
+
+peptide number 21
+
+FYITGPAETKNL
+----GPAE--NL
+
+peptide number 22
+
+FYIKGPAETKNV
+----GPAE--NV
+
+peptide number 23
+
+FYITGPAETKNF
+----GPAE----
+
+peptide number 24
+
+FYITGPEETKNV
+----GP----NV
+
+peptide number 25
+
+FYITGPEETKNF
+----GP------
+
+peptide number 26
+
+CGAVWAMMSFDKHC
+--------------
+
+peptide number 27
+
+CNPMARVQTEVC
+------VQ----
+
+peptide number 28
+
+CGAVWAMMTFDKLC
+--------------
+
+peptide number 29
+
+FYITGPAEKKNV
+----GPAE--NV
+
+peptide number 30
+
+FYITAPAETKND
+----APAE----
+
+peptide number 31
+
+FYITAPAETKNV
+----APAE--NV
+
+peptide number 32
+
+CGAVRAMMSFDKLC
+--------------
+
+peptide number 33
+
+FNITGPAETKND
+-NI-GPAE----
+
+peptide number 34
+
+GVNAVQNANTKS
+-VNAVQNAN---
+
+peptide number 35
+
+FNITGPAETKNV
+-NI-GPAE--NV
+
+peptide number 36
+
+FYITGTAETKNV
+------AE--NV
+
+peptide number 37
+
+FYITGQAETKNV
+-----QAE--NV
+
+peptide number 38
+
+CNTMARVQTAVC
+------VQ----
+
+peptide number 39
+
+SIHFMTSLDTPP
+------------
+
+peptide number 40
+
+FYITGTAETKNF
+------AE----
+
+peptide number 41
+
+CNPMARVQTAVC
+------VQ----
+
+peptide number 42
+
+FYITGPAETKIV
+----GPAE----
+
+peptide number 43
+
+CNPMERVQTAVC
+------VQ----
+
+peptide number 44
+
+FYNTGPAETKNV
+----GPAE--NV
+
+peptide number 45
+
+GINAVLNANTKS
+-INA-LNAN---
+
+peptide number 46
+
+FYITRPAETKND
+-----PAE----
+
+peptide number 47
+
+FYITRPAETKNV
+-----PAE--NV
+
+peptide number 48
+
+FYITGPAESKNV
+----GPAE--NV
+
+peptide number 49
+
+FYITGSAETKNV
+------AE--NV
+
+peptide number 50
+
+GLNAVQNANTKS
+-LNAVQNAN---
+
+peptide number 51
+
+YYITGPAETKND
+----GPAE----
+
+peptide number 52
+
+FYITGLAETKNV
+------AE--NV
+
+peptide number 53
+
+FYFTGPAETKNV
+----GPAE--NV
+
+peptide number 54
+
+GINDVQNANTKS
+-IN-VQNAN---
+
+peptide number 55
+
+GINAVHNANTKS
+-INA--NAN---
+
+peptide number 56
+
+YYITGPAETKNV
+----GPAE--NV
+
+peptide number 57
+
+CAAVWAMMSFDKLS
+--------------
+
+peptide number 58
+
+GINAVQNAITKS
+-INAVQNA----
+
+peptide number 59
+
+GWKEWYIGES
+----------
+
+peptide number 60
+
+GWKEWYIDEF
+----------
+
+peptide number 61
+
+LYITGPAETKNV
+----GPAE--NV
+
+peptide number 62
+
+FYITGPEETNNV
+----GP----NV
+
+peptide number 63
+
+GWKEWYIGEF
+----------
+
+peptide number 64
+
+GWKEWYIGEY
+----------
+
+peptide number 65
+
+SWYHIEPTLSEH
+------------
+
+peptide number 66
+
+GINSVQNANTKS
+-IN-VQNAN---
+
+peptide number 67
+
+GWKEWYISEF
+----------
+
+peptide number 68
+
+GWKEWYIVEF
+----------
+
+peptide number 69
+
+GWKEWYIGDF
+----------
+
+peptide number 70
+
+CGAVWAMMSYDKLC
+--------------
+
+peptide number 71
+
+CNPMARVQTAVS
+------VQ----
+
+peptide number 72
+
+GWKEWYICEF
+----------
+
+peptide number 73
+
+FYITGPSETKNV
+----GP----NV
+
+peptide number 74
+
+YIHFMTSLDSPP
+------------
+
+peptide number 75
+
+CNPMARVQTAVY
+------VQ----
+
+peptide number 76
+
+GINAVQNANKKS
+-INAVQNAN---
+
+peptide number 77
+
+GINPVQNANTKS
+-IN-VQNAN---
+
+peptide number 78
+
+CGAVSAMMSFDKLC
+--------------
+
+peptide number 79
+
+FYITGPSETKNF
+----GP------
+
+peptide number 80
+
+CNLQVFRWSMWCGC
+-NLQV---------
+
+peptide number 81
+
+FYITGPAETNNV
+----GPAE--NV
+
+peptide number 82
+
+AINAVQNANTKS
+-INAVQNAN---
+
+peptide number 83
+
+FYITGPGETKNV
+----GPG---NV
+
+peptide number 84
+
+SIHFMTSLDSPP
+------------
+
+peptide number 85
+
+VYITGPAETKNV
+----GPAE--NV
+
+peptide number 86
+
+CGAVWAMTSFDKLC
+--------------
+
+peptide number 87
+
+CNPMALVQTAVC
+------VQ----
+
+peptide number 88
+
+FYITVPAETKND
+-----PAE----
+
+peptide number 89
+
+FFITGPAETKNV
+----GPAE--NV
+
+peptide number 90
+
+FYITGPAEAKNV
+----GPAEA-NV
+
+peptide number 91
+
+FYISGPAETKNV
+----GPAE--NV
+
+peptide number 92
+
+FYITVPAETKNV
+-----PAE--NV
+
+peptide number 93
+
+SIHFMTSIDSPP
+------------
+
+peptide number 94
+
+CNPMARVQTAAC
+------VQ----
+
+peptide number 95
+
+SWYHIEPALSEH
+------PA----
+
+peptide number 96
+
+CGAVWAMMYFDKIC
+--------------
+
+peptide number 97
+
+FYITDPAETKNV
+-----PAE--NV
+
+peptide number 98
+
+CYITGPAETKNV
+----GPAE--NV
+
+peptide number 99
+
+CRAVWAMMSFDKLC
+--------------
+
+peptide number 100
+
+YYLQVFRWSMWCGC
+--LQV---------
+
+peptide number 101
+
+CYLQEFRWSMWCGC
+--LQ----------
+
+peptide number 102
+
+FYITGQAEKKND
+-----QAE----
+
+peptide number 103
+
+PIHFMTSLDSPP
+------------
+
+peptide number 104
+
+FYNTVPAETKNV
+-----PAE--NV
+
+peptide number 105
+
+SIHFMTSLDNPP
+------------
+
+peptide number 106
+
+SWYHIKPTLSEH
+------------
+
+peptide number 107
+
+CNPMARVQAAVC
+------VQA---
+
+peptide number 108
+
+TGIRELAHSNLA
+---------NL-
+
+peptide number 109
+
+SWYNIEPTLSEH
+---NI-------
+
+peptide number 110
+
+CYLQVFRWSMWCGC
+--LQV---------
+
+peptide number 111
+
+CYLQVFRWTMWCGC
+--LQV---------
+
+peptide number 112
+
+SWYHIEPPLSEH
+------------
+
+peptide number 113
+
+FYITGPAQTKNV
+----GPAQ--NV
+
+peptide number 114
+
+FYITGPAQTKNV
+----GPAQ--NV
+
+peptide number 115
+
+FYITGPPETKNV
+----GP----NV
+
+peptide number 116
+
+GWKEWFIGEF
+----------
+
+peptide number 117
+
+CDLQVFRWSMWCGC
+--LQV---------
+
+peptide number 118
+
+RINAVQNANTKS
+-INAVQNAN---
+
+peptide number 119
+
+FYIKGPDETKNV
+----GP----NV
+
+peptide number 120
+
+FYITGPAETMNV
+----GPAE--NV
+
+peptide number 121
+
+FYITGPAEPKNV
+----GPAE--NV
+
+peptide number 122
+
+TGIRELANSNLP
+------AN-NL-
+
+peptide number 123
+
+FYITGPAKTKNV
+----GPA---NV
+
+peptide number 124
+
+TGIRELAHSNLT
+---------NL-
+
+peptide number 125
+
+FYITGPADTKNV
+----GPAD--NV
+
+peptide number 126
+
+CGADWAMMSFDKLC
+--AD----------
+
+peptide number 127
+
+FYITSPAETKNV
+-----PAE--NV
+
+peptide number 128
+
+FYITGPAEPKND
+----GPAE----
+
+peptide number 129
+
+FYITGPAETKYV
+----GPAE----
+
+peptide number 130
+
+GWREWYIGEF
+----------
+
+peptide number 131
+
+CYMQVFRWSMWCGC
+---QV---------
+
+peptide number 132
+
+FYITGPAETKSV
+----GPAE----
+
+peptide number 133
+
+SWYHIEPTQTEH
+------------
+
+peptide number 134
+
+SINFMTSIDSPP
+-IN---------
+
+peptide number 135
+
+TGIRELAHSNLL
+---------NL-
+
+peptide number 136
+
+SIHFITSLDSPP
+------------
+
+peptide number 137
+
+GINAYQNANTKS
+-INA--NAN---
+
+peptide number 138
+
+SINFMTSLDSPP
+-IN---------
+
+peptide number 139
+
+CNPKARVQTAVC
+------VQ----
+
+peptide number 140
+
+GIDAVQNANTKS
+--DAVQNAN---
+
+peptide number 141
+
+GINADQNANTKS
+-INAD-NAN---
+
+peptide number 142
+
+SYITGPAETKNV
+----GPAE--NV
+
+peptide number 143
+
+FCITGPAETKNV
+----GPAE--NV
+
+peptide number 144
+
+SWNHIEPTLSEH
+------------
+
+peptide number 145
+
+TGIRELAHSNLP
+---------NL-
+
+peptide number 146
+
+FYITANAETKNF
+----ANAE----
+
+peptide number 147
+
+SIHFVTSLDSPP
+------------
+
+peptide number 148
+
+CYLLVFRWSMWCGC
+--------------
+
+peptide number 149
+
+FYIKSPAETKNV
+-----PAE--NV
+
+peptide number 150
+
+CNPVARVQTAVC
+------VQ----
+
+peptide number 151
+
+CINAVQNANTKS
+-INAVQNAN---
+
+peptide number 152
+
+CNPMAGVQTAVC
+------VQ----
+
+peptide number 153
+
+GWKDWYIGDF
+----------
+
+peptide number 154
+
+TGIRELAHTNLP
+---------NL-
+
+peptide number 155
+
+CYLQVFRWSMWFGC
+--LQV---------
+
+peptide number 156
+
+CNNMARVQNAVC
+------VQNA--
+
+peptide number 157
+
+YYITGPAETNNV
+----GPAE--NV
+
+peptide number 158
+
+TGIRELADSNLP
+------AD-NL-
+
+peptide number 159
+
+FYITGPAETQNV
+----GPAE--NV
+
+peptide number 160
+
+FYITGPAETQNV
+----GPAE--NV
+
+peptide number 161
+
+SWYHIEPRLSEH
+------------
+
+peptide number 162
+
+CYLQLFRWSMWCGC
+--LQL---------
+
+peptide number 163
+
+SIHFMTSLDSPT
+------------
+
+peptide number 164
+
+GINDFQNANTKS
+-IN---NAN---
+
+peptide number 165
+
+YYITRQAETKNV
+-----QAE--NV
+
+peptide number 166
+
+FYITGQPETKNV
+----------NV
+
+peptide number 167
+
+GINADQNDNTKS
+-INAD-------
+
+peptide number 168
+
+TGIRELAHSNQP
+------------
+
+peptide number 169
+
+FYIKGPSETNNV
+----GP----NV
+
+peptide number 170
+
+CYLQVFRWSMWCRC
+--LQV---------
+
+peptide number 171
+
+CNPLARVQTAVC
+------VQ----
+
+peptide number 172
+
+RWKEWYIGEF
+----------
+
+peptide number 173
+
+FYITCPAETKNV
+-----PAE--NV
+
+peptide number 174
+
+FYITGPAGTKNV
+----GPA---NV
+
+peptide number 175
+
+GINAVQNANTTS
+-INAVQNAN---
+
+peptide number 176
+
+CGAVWAMMSIHKHC
+--------------
+
+peptide number 177
+
+FYITVTAEKKNV
+------AE--NV
+
+peptide number 178
+
+SIHFMTSLDYPP
+------------
+
+peptide number 179
+
+CYLQVFRWSIWCGC
+--LQV---------
+
+peptide number 180
+
+TGIRELARSNLP
+---------NL-
+
+peptide number 181
+
+TGIREIAHSNLP
+---------NL-
+
+peptide number 182
+
+IYITGPAQTKND
+----GPAQ----
+
+peptide number 183
+
+VWKEWYIGEF
+----------
+
+peptide number 184
+
+GRKEWYIAQN
+-------AQ-
+
+peptide number 185
+
+FYITGPAQKKNI
+----GPAQ--NI
+
+peptide number 186
+
+CYLQVFRWCMWCGC
+--LQV---------
+
+peptide number 187
+
+CYLQVFSWSMWCGC
+--LQV---------
+
+peptide number 188
+
+FYITGQADTKND
+-----QAD----
+
+peptide number 189
+
+FYITGPAQKKNV
+----GPAQ--NV
+
+peptide number 190
+
+CYLQVFRWSMRCGS
+--LQV---------
+
+peptide number 191
+
+GWKEWYNGEF
+----------
+
+peptide number 192
+
+CYLQVFPWSMWCGC
+--LQV---------
+
+peptide number 193
+
+CYLQVYRWTMWCGC
+--LQV---------
+
+peptide number 194
+
+TGIMELAHSNLP
+---------NL-
+
+peptide number 195
+
+CLFTTHLLLISVLC
+--------------
+
+peptide number 196
+
+SIHFMTSLASPP
+------------
+
+peptide number 197
+
+YYITGPAEPKNV
+----GPAE--NV
+
+peptide number 198
+
+CYLQVFRWSMRCGC
+--LQV---------
+
+peptide number 199
+
+CYLQVFRWSMWGGC
+--LQV---------
+
+peptide number 200
+
+WWKEWYIGEF
+----------
+
+peptide number 201
+
+SIHFMPSLDSPP
+------------
+
+peptide number 202
+
+CNPIARVQTSVC
+------VQ----
+
+peptide number 203
+
+GWKERYIGEF
+----------
+
+peptide number 204
+
+FYITGPQQTKND
+----GP------
+
+peptide number 205
+
+CTFTTHLLLISVLC
+--------------
+
+peptide number 206
+
+SWYHIETTLSEN
+------------
+
+peptide number 207
+
+CYLQVFRLSMWCGC
+--LQV---------
+
+peptide number 208
+
+CYLQVSRWSMWCGC
+--LQV---------
+
+peptide number 209
+
+CYLQVFRWSKWCGC
+--LQV---------
+
+peptide number 210
+
+CPITTHLLLISVLC
+--------------
+
+peptide number 211
+
+SIHFMTSIHSPP
+------------
+
+peptide number 212
+
+FNITGPSETNNF
+-NI-GP------
+
+peptide number 213
+
+CKFTTHLQNISVLC
+------LQNI----
+
+peptide number 214
+
+CPFTTHLLLISVLC
+--------------
+
+peptide number 215
+
+FYITCTAETKNV
+------AE--NV
+
+peptide number 216
+
+VYNTGPPETKNV
+----GP----NV
+
+peptide number 217
+
+CPYTTHLLLISVLC
+--------------
+
+peptide number 218
+
+SIHFMTWLDSPP
+------------
+
+peptide number 219
+
+CYLQVFRRSMWCGC
+--LQV---------
+
+peptide number 220
+
+SWYHIEPTQNEH
+------------
+
+peptide number 221
+
+CYLQVFRWSMWRGC
+--LQV---------
+
+peptide number 222
+
+CYLQVFCWSMWCGC
+--LQV---------
+
+peptide number 223
+
+YYITGHAEKKNV
+------AE--NV
+
+peptide number 224
+
+CPSTTHLLLISVLC
+--------------
+
+peptide number 225
+
+SINFMTQIDSPP
+-IN---QI----
+
+peptide number 226
+
+TAIRELAHSNLP
+---------NL-
+
+peptide number 227
+
+SSHFMTSLDSPP
+------------
+
+peptide number 228
+
+TGIRELAHYNLP
+---------NL-
+
+peptide number 229
+
+TGIWELAHSNLP
+---------NL-
+
+peptide number 230
+
+TGIRELAHSSLP
+------------
+
+peptide number 231
+
+CPFTTHLLLISELC
+--------------
+
+peptide number 232
+
+CQFTTHLLLIYVLC
+--------------
+
+peptide number 233
+
+CPFTTHLLIISVLC
+--------------
+
+peptide number 234
+
+CPFTTHLMLISVLC
+--------------
+
+peptide number 235
+
+TGNRELAHSNLP
+---------NL-
+
+peptide number 236
+
+KRYHIEPTQSEH
+------------
+
+peptide number 237
+
+SWYHNEPTLSEN
+------------
+
+peptide number 238
+
+SWYHNEPTVSEH
+------------
+
+peptide number 239
+
+TGISELAHSNLP
+---------NL-
+
+peptide number 240
+
+CPFTNHLLLISVLC
+--------------
+
+peptide number 241
+
+SIHFMTSHDTPT
+------------
+
+peptide number 242
+
+CYLQVIRWSKWCGC
+--LQV---------
+
+peptide number 243
+
+FNITCPSETKND
+-NI---------
+
+peptide number 244
+
+CNPMARDQTADS
+---------AD-
+
+peptide number 245
+
+CPFTTHLLVISVLC
+--------------
+
+peptide number 246
+
+CYLQVVRWSMWSGC
+--LQV---------
+
+peptide number 247
+
+CPNNTHKLLISVLC
+--------------
+
+peptide number 248
+
+CPFTTHLLLITELC
+--------------
+
+peptide number 249
+
+SPFTTHLLLNSVLC
+--------LN----
+
+peptide number 250
+
+CGAVWPMKYFDKLC
+--------------
+
+peptide number 251
+
+SINIKKALDYKP
+-INI--------
+
+peptide number 252
+
+CPFSTHLLLISVLC
+--------------
+
+peptide number 253
+
+CAERLQLQRVLC
+-AE-LQLQ----
+
+peptide number 254
+
+TAYVLEDELTKS
+------------
+
+peptide number 255
+
+CNTMARVQPADC
+------VQPAD-
+
+peptide number 256
+
+CPFTTHLLLISLLC
+--------------
+
+peptide number 257
+
+GRKQWYIPEY
+----------
+
+peptide number 258
+
+CPFTSHLLLISVLC
+--------------
+
+peptide number 259
+
+CAERLQLQRELC
+-AE-LQLQ----
+
+peptide number 260
+
+CIYPVQNANTKS
+----VQNAN---
+
+peptide number 261
+
+TRIRELAHSNLP
+---------NL-
+
+peptide number 262
+
+FYITCTQETNNV
+----------NV
+
+peptide number 263
+
+GCKQWYIGEF
+----------
+
+peptide number 264
+
+CAERLQMQRVLC
+-AE-LQ------
+
+peptide number 265
+
+CNTKALVYTAVS
+------------
+
+peptide number 266
+
+TAYVLEDELSKS
+------------
+
+peptide number 267
+
+TGIRQLAHSNLP
+----QL---NL-
+
+peptide number 268
+
+TGIRQLAHSNLP
+----QL---NL-
+
+peptide number 269
+
+CAERLQLQRVMC
+-AE-LQLQ----
+
+peptide number 270
+
+CAERLQKQRVLC
+-AE-LQ------
+
+peptide number 271
+
+TGSVFVLEMINK
+---------IN-
+
+peptide number 272
+
+TCIRELAHSNLP
+---------NL-
+
+peptide number 273
+
+SGISELPHTNMT
+------------
+
+peptide number 274
+
+CENHRQIRSELC
+-----QI-----
+
+*************  cluster number: 3 ************
+
+peptide number 1
+
+GINAVQNENTKS
+--NA--------
+
+peptide number 2
+
+GINAVQNVNTKS
+--NA--------
+
+peptide number 3
+
+GINAVQNANTKT
+--NA--NAN---
+
+peptide number 4
+
+TGIRELEHSNKH
+------------
+
+peptide number 5
+
+WGAVWAMMSFDKLC
+--------------
+
+peptide number 6
+
+GINAVQNANTKS
+--NA--NAN---
+
+peptide number 7
+
+CGAVWAMMSFDKPC
+--------------
+
+peptide number 8
+
+GINAVKNANTKS
+--NA--NAN---
+
+peptide number 9
+
+GINAVQNANTKQ
+--NA--NAN---
+
+peptide number 10
+
+CGAVWEMMSFDKLC
+--------------
+
+peptide number 11
+
+CGAVWAMMSFDKLS
+--------------
+
+peptide number 12
+
+TGIRELEHSNLP
+------------
+
+peptide number 13
+
+GINAVRNANTKS
+--NA--NAN---
+
+peptide number 14
+
+GINAVQNSNTKS
+--NA--------
+
+peptide number 15
+
+CGAVWAMMSFDKLC
+--------------
+
+peptide number 16
+
+FYITGPAETKNA
+----GPAE--NA
+
+peptide number 17
+
+FYITGPAETKNI
+----GPAE----
+
+peptide number 18
+
+FYITGPAETKND
+----GPAE----
+
+peptide number 19
+
+FYITGPAETKNV
+----GPAE----
+
+peptide number 20
+
+FYITGPAETKNH
+----GPAE----
+
+peptide number 21
+
+FYITGPAETKNL
+----GPAE----
+
+peptide number 22
+
+FYIKGPAETKNV
+----GPAE----
+
+peptide number 23
+
+FYITGPAETKNF
+----GPAE----
+
+peptide number 24
+
+FYITGPEETKNV
+----GP------
+
+peptide number 25
+
+FYITGPEETKNF
+----GP------
+
+peptide number 26
+
+CGAVWAMMSFDKHC
+--------------
+
+peptide number 27
+
+CNPMARVQTEVC
+------------
+
+peptide number 28
+
+CGAVWAMMTFDKLC
+--------------
+
+peptide number 29
+
+FYITGPAEKKNV
+----GPAE----
+
+peptide number 30
+
+FYITAPAETKND
+----APAE----
+
+peptide number 31
+
+FYITAPAETKNV
+----APAE----
+
+peptide number 32
+
+CGAVRAMMSFDKLC
+--------------
+
+peptide number 33
+
+FNITGPAETKND
+----GPAE----
+
+peptide number 34
+
+GVNAVQNANTKS
+--NA--NAN---
+
+peptide number 35
+
+FNITGPAETKNV
+----GPAE----
+
+peptide number 36
+
+FYITGTAETKNV
+------AE----
+
+peptide number 37
+
+FYITGQAETKNV
+-----QAE----
+
+peptide number 38
+
+CNTMARVQTAVC
+------------
+
+peptide number 39
+
+SIHFMTSLDTPP
+------------
+
+peptide number 40
+
+FYITGTAETKNF
+------AE----
+
+peptide number 41
+
+CNPMARVQTAVC
+------------
+
+peptide number 42
+
+FYITGPAETKIV
+----GPAE----
+
+peptide number 43
+
+CNPMERVQTAVC
+------------
+
+peptide number 44
+
+FYNTGPAETKNV
+----GPAE----
+
+peptide number 45
+
+GINAVLNANTKS
+--NA--NAN---
+
+peptide number 46
+
+FYITRPAETKND
+-----PAE----
+
+peptide number 47
+
+FYITRPAETKNV
+-----PAE----
+
+peptide number 48
+
+FYITGPAESKNV
+----GPAE----
+
+peptide number 49
+
+FYITGSAETKNV
+------AE----
+
+peptide number 50
+
+GLNAVQNANTKS
+--NA--NAN---
+
+peptide number 51
+
+YYITGPAETKND
+----GPAE----
+
+peptide number 52
+
+FYITGLAETKNV
+------AE----
+
+peptide number 53
+
+FYFTGPAETKNV
+----GPAE----
+
+peptide number 54
+
+GINDVQNANTKS
+------NAN---
+
+peptide number 55
+
+GINAVHNANTKS
+--NA--NAN---
+
+peptide number 56
+
+YYITGPAETKNV
+----GPAE----
+
+peptide number 57
+
+CAAVWAMMSFDKLS
+--------------
+
+peptide number 58
+
+GINAVQNAITKS
+--NA--NA----
+
+peptide number 59
+
+GWKEWYIGES
+----------
+
+peptide number 60
+
+GWKEWYIDEF
+----------
+
+peptide number 61
+
+LYITGPAETKNV
+----GPAE----
+
+peptide number 62
+
+FYITGPEETNNV
+----GP------
+
+peptide number 63
+
+GWKEWYIGEF
+----------
+
+peptide number 64
+
+GWKEWYIGEY
+----------
+
+peptide number 65
+
+SWYHIEPTLSEH
+------------
+
+peptide number 66
+
+GINSVQNANTKS
+------NAN---
+
+peptide number 67
+
+GWKEWYISEF
+----------
+
+peptide number 68
+
+GWKEWYIVEF
+----------
+
+peptide number 69
+
+GWKEWYIGDF
+----------
+
+peptide number 70
+
+CGAVWAMMSYDKLC
+--------------
+
+peptide number 71
+
+CNPMARVQTAVS
+------------
+
+peptide number 72
+
+GWKEWYICEF
+----------
+
+peptide number 73
+
+FYITGPSETKNV
+----GP------
+
+peptide number 74
+
+YIHFMTSLDSPP
+------------
+
+peptide number 75
+
+CNPMARVQTAVY
+------------
+
+peptide number 76
+
+GINAVQNANKKS
+--NA--NAN---
+
+peptide number 77
+
+GINPVQNANTKS
+------NAN---
+
+peptide number 78
+
+CGAVSAMMSFDKLC
+--------------
+
+peptide number 79
+
+FYITGPSETKNF
+----GP------
+
+peptide number 80
+
+CNLQVFRWSMWCGC
+--------------
+
+peptide number 81
+
+FYITGPAETNNV
+----GPAE----
+
+peptide number 82
+
+AINAVQNANTKS
+--NA--NAN---
+
+peptide number 83
+
+FYITGPGETKNV
+----GPG-----
+
+peptide number 84
+
+SIHFMTSLDSPP
+------------
+
+peptide number 85
+
+VYITGPAETKNV
+----GPAE----
+
+peptide number 86
+
+CGAVWAMTSFDKLC
+--------------
+
+peptide number 87
+
+CNPMALVQTAVC
+------------
+
+peptide number 88
+
+FYITVPAETKND
+-----PAE----
+
+peptide number 89
+
+FFITGPAETKNV
+----GPAE----
+
+peptide number 90
+
+FYITGPAEAKNV
+----GPAEA---
+
+peptide number 91
+
+FYISGPAETKNV
+----GPAE----
+
+peptide number 92
+
+FYITVPAETKNV
+-----PAE----
+
+peptide number 93
+
+SIHFMTSIDSPP
+------------
+
+peptide number 94
+
+CNPMARVQTAAC
+------------
+
+peptide number 95
+
+SWYHIEPALSEH
+------PA----
+
+peptide number 96
+
+CGAVWAMMYFDKIC
+--------------
+
+peptide number 97
+
+FYITDPAETKNV
+-----PAE----
+
+peptide number 98
+
+CYITGPAETKNV
+----GPAE----
+
+peptide number 99
+
+CRAVWAMMSFDKLC
+--------------
+
+peptide number 100
+
+YYLQVFRWSMWCGC
+--------------
+
+peptide number 101
+
+CYLQEFRWSMWCGC
+--------------
+
+peptide number 102
+
+FYITGQAEKKND
+-----QAE----
+
+peptide number 103
+
+PIHFMTSLDSPP
+------------
+
+peptide number 104
+
+FYNTVPAETKNV
+-----PAE----
+
+peptide number 105
+
+SIHFMTSLDNPP
+------------
+
+peptide number 106
+
+SWYHIKPTLSEH
+------------
+
+peptide number 107
+
+CNPMARVQAAVC
+-------QA---
+
+peptide number 108
+
+TGIRELAHSNLA
+------------
+
+peptide number 109
+
+SWYNIEPTLSEH
+------------
+
+peptide number 110
+
+CYLQVFRWSMWCGC
+--------------
+
+peptide number 111
+
+CYLQVFRWTMWCGC
+--------------
+
+peptide number 112
+
+SWYHIEPPLSEH
+------------
+
+peptide number 113
+
+FYITGPAQTKNV
+----GPAQ----
+
+peptide number 114
+
+FYITGPAQTKNV
+----GPAQ----
+
+peptide number 115
+
+FYITGPPETKNV
+----GP------
+
+peptide number 116
+
+GWKEWFIGEF
+----------
+
+peptide number 117
+
+CDLQVFRWSMWCGC
+--------------
+
+peptide number 118
+
+RINAVQNANTKS
+--NA--NAN---
+
+peptide number 119
+
+FYIKGPDETKNV
+----GP------
+
+peptide number 120
+
+FYITGPAETMNV
+----GPAE----
+
+peptide number 121
+
+FYITGPAEPKNV
+----GPAE----
+
+peptide number 122
+
+TGIRELANSNLP
+------AN----
+
+peptide number 123
+
+FYITGPAKTKNV
+----GPA-----
+
+peptide number 124
+
+TGIRELAHSNLT
+------------
+
+peptide number 125
+
+FYITGPADTKNV
+----GPAD----
+
+peptide number 126
+
+CGADWAMMSFDKLC
+--AD----------
+
+peptide number 127
+
+FYITSPAETKNV
+-----PAE----
+
+peptide number 128
+
+FYITGPAEPKND
+----GPAE----
+
+peptide number 129
+
+FYITGPAETKYV
+----GPAE----
+
+peptide number 130
+
+GWREWYIGEF
+----------
+
+peptide number 131
+
+CYMQVFRWSMWCGC
+--------------
+
+peptide number 132
+
+FYITGPAETKSV
+----GPAE----
+
+peptide number 133
+
+SWYHIEPTQTEH
+------------
+
+peptide number 134
+
+SINFMTSIDSPP
+------------
+
+peptide number 135
+
+TGIRELAHSNLL
+------------
+
+peptide number 136
+
+SIHFITSLDSPP
+------------
+
+peptide number 137
+
+GINAYQNANTKS
+--NA--NAN---
+
+peptide number 138
+
+SINFMTSLDSPP
+------------
+
+peptide number 139
+
+CNPKARVQTAVC
+------------
+
+peptide number 140
+
+GIDAVQNANTKS
+--DA--NAN---
+
+peptide number 141
+
+GINADQNANTKS
+--NAD-NAN---
+
+peptide number 142
+
+SYITGPAETKNV
+----GPAE----
+
+peptide number 143
+
+FCITGPAETKNV
+----GPAE----
+
+peptide number 144
+
+SWNHIEPTLSEH
+------------
+
+peptide number 145
+
+TGIRELAHSNLP
+------------
+
+peptide number 146
+
+FYITANAETKNF
+----ANAE----
+
+peptide number 147
+
+SIHFVTSLDSPP
+------------
+
+peptide number 148
+
+CYLLVFRWSMWCGC
+--------------
+
+peptide number 149
+
+FYIKSPAETKNV
+-----PAE----
+
+peptide number 150
+
+CNPVARVQTAVC
+------------
+
+peptide number 151
+
+CINAVQNANTKS
+--NA--NAN---
+
+peptide number 152
+
+CNPMAGVQTAVC
+------------
+
+peptide number 153
+
+GWKDWYIGDF
+----------
+
+peptide number 154
+
+TGIRELAHTNLP
+------------
+
+peptide number 155
+
+CYLQVFRWSMWFGC
+--------------
+
+peptide number 156
+
+CNNMARVQNAVC
+--------NA--
+
+peptide number 157
+
+YYITGPAETNNV
+----GPAE----
+
+peptide number 158
+
+TGIRELADSNLP
+------AD----
+
+peptide number 159
+
+FYITGPAETQNV
+----GPAE----
+
+peptide number 160
+
+FYITGPAETQNV
+----GPAE----
+
+peptide number 161
+
+SWYHIEPRLSEH
+------------
+
+peptide number 162
+
+CYLQLFRWSMWCGC
+--------------
+
+peptide number 163
+
+SIHFMTSLDSPT
+------------
+
+peptide number 164
+
+GINDFQNANTKS
+------NAN---
+
+peptide number 165
+
+YYITRQAETKNV
+-----QAE----
+
+peptide number 166
+
+FYITGQPETKNV
+------------
+
+peptide number 167
+
+GINADQNDNTKS
+--NAD-------
+
+peptide number 168
+
+TGIRELAHSNQP
+------------
+
+peptide number 169
+
+FYIKGPSETNNV
+----GP------
+
+peptide number 170
+
+CYLQVFRWSMWCRC
+--------------
+
+peptide number 171
+
+CNPLARVQTAVC
+------------
+
+peptide number 172
+
+RWKEWYIGEF
+----------
+
+peptide number 173
+
+FYITCPAETKNV
+-----PAE----
+
+peptide number 174
+
+FYITGPAGTKNV
+----GPA-----
+
+peptide number 175
+
+GINAVQNANTTS
+--NA--NAN---
+
+peptide number 176
+
+CGAVWAMMSIHKHC
+--------------
+
+peptide number 177
+
+FYITVTAEKKNV
+------AE----
+
+peptide number 178
+
+SIHFMTSLDYPP
+------------
+
+peptide number 179
+
+CYLQVFRWSIWCGC
+--------------
+
+peptide number 180
+
+TGIRELARSNLP
+------------
+
+peptide number 181
+
+TGIREIAHSNLP
+------------
+
+peptide number 182
+
+IYITGPAQTKND
+----GPAQ----
+
+peptide number 183
+
+VWKEWYIGEF
+----------
+
+peptide number 184
+
+GRKEWYIAQN
+-------AQ-
+
+peptide number 185
+
+FYITGPAQKKNI
+----GPAQ----
+
+peptide number 186
+
+CYLQVFRWCMWCGC
+--------------
+
+peptide number 187
+
+CYLQVFSWSMWCGC
+--------------
+
+peptide number 188
+
+FYITGQADTKND
+-----QAD----
+
+peptide number 189
+
+FYITGPAQKKNV
+----GPAQ----
+
+peptide number 190
+
+CYLQVFRWSMRCGS
+--------------
+
+peptide number 191
+
+GWKEWYNGEF
+----------
+
+peptide number 192
+
+CYLQVFPWSMWCGC
+--------------
+
+peptide number 193
+
+CYLQVYRWTMWCGC
+--------------
+
+peptide number 194
+
+TGIMELAHSNLP
+------------
+
+peptide number 195
+
+CLFTTHLLLISVLC
+--------------
+
+peptide number 196
+
+SIHFMTSLASPP
+------------
+
+peptide number 197
+
+YYITGPAEPKNV
+----GPAE----
+
+peptide number 198
+
+CYLQVFRWSMRCGC
+--------------
+
+peptide number 199
+
+CYLQVFRWSMWGGC
+--------------
+
+peptide number 200
+
+WWKEWYIGEF
+----------
+
+peptide number 201
+
+SIHFMPSLDSPP
+------------
+
+peptide number 202
+
+CNPIARVQTSVC
+------------
+
+peptide number 203
+
+GWKERYIGEF
+----------
+
+peptide number 204
+
+FYITGPQQTKND
+----GP------
+
+peptide number 205
+
+CTFTTHLLLISVLC
+--------------
+
+peptide number 206
+
+SWYHIETTLSEN
+------------
+
+peptide number 207
+
+CYLQVFRLSMWCGC
+--------------
+
+peptide number 208
+
+CYLQVSRWSMWCGC
+--------------
+
+peptide number 209
+
+CYLQVFRWSKWCGC
+--------------
+
+peptide number 210
+
+CPITTHLLLISVLC
+--------------
+
+peptide number 211
+
+SIHFMTSIHSPP
+------------
+
+peptide number 212
+
+FNITGPSETNNF
+----GP------
+
+peptide number 213
+
+CKFTTHLQNISVLC
+--------------
+
+peptide number 214
+
+CPFTTHLLLISVLC
+--------------
+
+peptide number 215
+
+FYITCTAETKNV
+------AE----
+
+peptide number 216
+
+VYNTGPPETKNV
+----GP------
+
+peptide number 217
+
+CPYTTHLLLISVLC
+--------------
+
+peptide number 218
+
+SIHFMTWLDSPP
+------------
+
+peptide number 219
+
+CYLQVFRRSMWCGC
+--------------
+
+peptide number 220
+
+SWYHIEPTQNEH
+------------
+
+peptide number 221
+
+CYLQVFRWSMWRGC
+--------------
+
+peptide number 222
+
+CYLQVFCWSMWCGC
+--------------
+
+peptide number 223
+
+YYITGHAEKKNV
+------AE----
+
+peptide number 224
+
+CPSTTHLLLISVLC
+--------------
+
+peptide number 225
+
+SINFMTQIDSPP
+------------
+
+peptide number 226
+
+TAIRELAHSNLP
+------------
+
+peptide number 227
+
+SSHFMTSLDSPP
+------------
+
+peptide number 228
+
+TGIRELAHYNLP
+------------
+
+peptide number 229
+
+TGIWELAHSNLP
+------------
+
+peptide number 230
+
+TGIRELAHSSLP
+------------
+
+peptide number 231
+
+CPFTTHLLLISELC
+--------------
+
+peptide number 232
+
+CQFTTHLLLIYVLC
+--------------
+
+peptide number 233
+
+CPFTTHLLIISVLC
+--------------
+
+peptide number 234
+
+CPFTTHLMLISVLC
+--------------
+
+peptide number 235
+
+TGNRELAHSNLP
+------------
+
+peptide number 236
+
+KRYHIEPTQSEH
+------------
+
+peptide number 237
+
+SWYHNEPTLSEN
+------------
+
+peptide number 238
+
+SWYHNEPTVSEH
+------------
+
+peptide number 239
+
+TGISELAHSNLP
+------------
+
+peptide number 240
+
+CPFTNHLLLISVLC
+--------------
+
+peptide number 241
+
+SIHFMTSHDTPT
+------------
+
+peptide number 242
+
+CYLQVIRWSKWCGC
+--------------
+
+peptide number 243
+
+FNITCPSETKND
+------------
+
+peptide number 244
+
+CNPMARDQTADS
+---------AD-
+
+peptide number 245
+
+CPFTTHLLVISVLC
+--------------
+
+peptide number 246
+
+CYLQVVRWSMWSGC
+--------------
+
+peptide number 247
+
+CPNNTHKLLISVLC
+--------------
+
+peptide number 248
+
+CPFTTHLLLITELC
+--------------
+
+peptide number 249
+
+SPFTTHLLLNSVLC
+--------------
+
+peptide number 250
+
+CGAVWPMKYFDKLC
+--------------
+
+peptide number 251
+
+SINIKKALDYKP
+------------
+
+peptide number 252
+
+CPFSTHLLLISVLC
+--------------
+
+peptide number 253
+
+CAERLQLQRVLC
+-AE---------
+
+peptide number 254
+
+TAYVLEDELTKS
+------------
+
+peptide number 255
+
+CNTMARVQPADC
+--------PAD-
+
+peptide number 256
+
+CPFTTHLLLISLLC
+--------------
+
+peptide number 257
+
+GRKQWYIPEY
+----------
+
+peptide number 258
+
+CPFTSHLLLISVLC
+--------------
+
+peptide number 259
+
+CAERLQLQRELC
+-AE---------
+
+peptide number 260
+
+CIYPVQNANTKS
+------NAN---
+
+peptide number 261
+
+TRIRELAHSNLP
+------------
+
+peptide number 262
+
+FYITCTQETNNV
+------------
+
+peptide number 263
+
+GCKQWYIGEF
+----------
+
+peptide number 264
+
+CAERLQMQRVLC
+-AE---------
+
+peptide number 265
+
+CNTKALVYTAVS
+------------
+
+peptide number 266
+
+TAYVLEDELSKS
+------------
+
+peptide number 267
+
+TGIRQLAHSNLP
+------------
+
+peptide number 268
+
+TGIRQLAHSNLP
+------------
+
+peptide number 269
+
+CAERLQLQRVMC
+-AE---------
+
+peptide number 270
+
+CAERLQKQRVLC
+-AE---------
+
+peptide number 271
+
+TGSVFVLEMINK
+------------
+
+peptide number 272
+
+TCIRELAHSNLP
+------------
+
+peptide number 273
+
+SGISELPHTNMT
+------------
+
+peptide number 274
+
+CENHRQIRSELC
+------------
