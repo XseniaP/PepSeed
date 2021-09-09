@@ -40,23 +40,27 @@ def main_func():
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
     # seed = 'LRTQRNRP'
     # seed = 'TNRLRN'
+    # seed = 'RLRPTN'
+    # seed = 'RLNRPTN'
+    # seed = 'RLNR'
+    # seed = 'LRNRPTN'
+    # seed = 'RNLRPTN'
+    # seed = ""
+
     print(seed)
     PepSurf_run.perpsurf_run(seed)
-
 
     #   Sapir's: functions calls to create a surface graph
     residue_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/surface.txt"
     # residue_txt = "surface.txt"
     Initialize_graph(residue_txt)
 
-
     pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
     # pairs_distance_txt = "pairsDistance.txt"
-    D_param = 10
+    D_param = 4
     Initialize_Neighbors_list(pairs_distance_txt, D_param)
 
-
-#   Sapir's: get the highest score paths
+    #   Sapir's: get the highest score paths
     significant_path_txt = str(pathlib.Path.cwd()) + "/RESULTS/sigPathsAln/0_significantPaths.txt"
     # significant_path_txt = '0_significantPaths.txt'
     paths_set, input_alignment_set, output_alignment_set = choose_path_from_pepsurf(significant_path_txt)
@@ -64,18 +68,73 @@ def main_func():
     print(input_alignment_set)
     print(output_alignment_set)
 
-    # paths_set = [['N183', 'W184', 'T188', '', 'A194', '', '', 'C198'], ['N74', '', '', 'A77', 'A78', 'D81', 'E79'], ['N120', '', 'T48', '', 'A47', 'D51', ''], ['Q219', '', 'T216', 'A217', '', 'D197', '', 'C198'], ['N21', '', 'T19', 'A22', '', 'E29', 'E28'], ['N193', '', 'T171', 'A174', '', 'D166', 'D163'], ['', 'T210', 'A208', 'A209', 'E213', 'E212'], ['', '', 'T186', '', 'A177', '', 'E180']]
-    # input_alignment_set = [['X', 'Z', 'O', 'A', 'A', 'J', 'J', 'C'], ['X', 'Z', 'O', 'A', 'A', 'J', 'J'], ['X', 'Z', 'O', 'A', 'A', 'J', 'J'], ['X', 'Z', 'O', 'A', 'A', 'J', 'J', 'C'], ['X', 'Z', 'O', 'A', 'A', 'J', 'J'], ['X', 'Z', 'O', 'A', 'A', 'J', 'J'], ['Z', 'O', 'A', 'A', 'J', 'J'], ['X', 'Z', 'O', 'A', 'A', 'J', 'J']]
-    # output_alignment_set = [['X', 'Z', 'O', 'U', 'A', 'X', 'X', 'C'], ['X', 'U', '-', 'A', 'A', 'J', 'J'], ['X', 'M', 'O', 'G', 'A', 'J', 'X'], ['X', 'M', 'O', 'A', 'U', 'J', 'B', 'C'], ['X', 'U', 'O', 'A', 'U', 'J', 'J'], ['X', 'U', 'O', 'A', 'B', 'J', 'J'], ['M', 'O', 'A', 'A', 'J', 'J'], ['J', 'Y', 'O', 'B', 'A', 'X', 'J']]
+    #   Ksenia's: return set of dictionaries, 1 for each path
+    seed_graph_indexes_dict = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set,
+                                                                  output_alignment_set, original_seed, seed)
 
-#   Ksenia's: return set of dictionaries, 1 for each path
-    seed_graph_indexes_dict = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed, seed)
-
-#   Sapir's: locating the cluster found by pepsurf on the surface graph
-#   Running cluster extension
+    #   Sapir's: locating the cluster found by pepsurf on the surface graph
+    #   Running cluster extension
     graph_csv = str(pathlib.Path.cwd()) + "/graph.csv"
-    extention_param = 3
+    extention_param = 1
     get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extention_param)
+
+
+    # set = ['RN', 'RL', 'RP', 'TN']
+    # my_list = ["0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001", "1010", "1011", "1100",
+    #        "1101", "1110", "1111"]
+    # seeds = []
+    # for element in my_list:
+    #     string = ''
+    #     for i in range(len(set)):
+    #         # string = string + set[i] if element[i] == 0 else string = string + set[i][1] + set[i][0]
+    #         if element[i] == '0':
+    #             if string == '':
+    #                 string = string + set[i]
+    #             elif string[len(string)-1] == set[i][0]:
+    #                 string = string + set[i][1]
+    #             else:
+    #                 string = string + set[i]
+    #         elif element[i] == '1':
+    #             if string == '':
+    #                 string = string + set[i][1] + set[i][0]
+    #             elif string[len(string)-1] == set[i][1]:
+    #                 string = string + set[i][0]
+    #             else:
+    #                 string = string + set[i][1] + set[i][0]
+    #     seeds.append(string)
+
+    # for seed in seeds:
+    #     print(seed)
+    #     PepSurf_run.perpsurf_run(seed)
+    #
+    #
+    #     #   Sapir's: functions calls to create a surface graph
+    #     residue_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/surface.txt"
+    #     # residue_txt = "surface.txt"
+    #     Initialize_graph(residue_txt)
+    #
+    #
+    #     pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
+    #     # pairs_distance_txt = "pairsDistance.txt"
+    #     D_param = 7
+    #     Initialize_Neighbors_list(pairs_distance_txt, D_param)
+    #
+    # #   Sapir's: get the highest score paths
+    #     significant_path_txt = str(pathlib.Path.cwd()) + "/RESULTS/sigPathsAln/0_significantPaths.txt"
+    #     # significant_path_txt = '0_significantPaths.txt'
+    #     paths_set, input_alignment_set, output_alignment_set = choose_path_from_pepsurf(significant_path_txt)
+    #     print(paths_set)
+    #     print(input_alignment_set)
+    #     print(output_alignment_set)
+    #
+    # #   Ksenia's: return set of dictionaries, 1 for each path
+    #     seed_graph_indexes_dict = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed, seed)
+    #
+    # #   Sapir's: locating the cluster found by pepsurf on the surface graph
+    # #   Running cluster extension
+    #     graph_csv = str(pathlib.Path.cwd()) + "/graph.csv"
+    #     extention_param = 1
+    #     get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extention_param)
 
 
 # Press the green button in the gutter to run the script.
