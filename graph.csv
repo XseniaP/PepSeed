@@ -1,17 +1,13 @@
 pair,weight,parents,children
-AY,2,{'BU'},{'BU'}
-BC,5,"{'OX', 'MB', 'XB', 'PB'}",set()
-BM,1,set(),{'MB'}
-BP,4,"{'CB', 'UB', 'MO'}",{'OX'}
-BU,5,"{'MB', 'UB', 'AY'}","{'AY', 'UB', 'PB'}"
-BX,3,"{'CB', 'MB', 'UB'}","{'UB', 'PB'}"
-CB,2,set(),"{'BP', 'BX'}"
-CM,2,set(),"{'UB', 'MO'}"
-HM,1,set(),{'UB'}
-MB,3,"{'XM', 'UB', 'BM'}","{'BU', 'BC', 'BX'}"
-MO,3,"{'CM', 'XM', 'UB'}","{'BP', 'OX', 'UB'}"
-OX,4,"{'BP', 'MO'}","{'XM', 'XB', 'BC'}"
-PB,2,"{'BU', 'BX'}",{'BC'}
-UB,10,"{'MO', 'BX', 'HM', 'CM', 'BU'}","{'BP', 'MB', 'MO', 'BX', 'BU'}"
-XB,1,{'OX'},{'BC'}
-XM,2,{'OX'},"{'MB', 'MO'}"
+AJ,1,{'JA'},set()
+BJ,9,"{'ZG', 'JB'}",{'JA'}
+GZ,1,set(),{'ZH'}
+HC,2,"{'ZH', 'YH'}",set()
+HZ,1,{'ZH'},{'ZG'}
+JA,6,{'BJ'},"{'AJ', 'ZX'}"
+JB,3,{'ZH'},"{'ZH', 'BJ'}"
+XZ,4,"{'ZG', 'ZX'}","{'ZH', 'ZG'}"
+YH,2,set(),{'HC'}
+ZG,6,"{'HZ', 'XZ'}","{'BJ', 'XZ'}"
+ZH,5,"{'GZ', 'XZ', 'JB'}","{'HZ', 'HC', 'JB'}"
+ZX,2,{'JA'},{'XZ'}

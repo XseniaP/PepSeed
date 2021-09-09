@@ -57,7 +57,7 @@ def main_func():
 
     pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
     # pairs_distance_txt = "pairsDistance.txt"
-    D_param = 4
+    D_param = 5
     Initialize_Neighbors_list(pairs_distance_txt, D_param)
 
     #   Sapir's: get the highest score paths

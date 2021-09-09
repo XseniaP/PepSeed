@@ -2,25 +2,16 @@ select all
 colour white
 background white
 spacefill
-select THR320:A , ASN321:A , ASN347:A , SER346:A , LYS344:A
-select selected or ASN381:A , CYS323:A , PRO324:A , LEU504:A , LYS343:A , SER500:A
-select selected or LYS373:A , PRO335:A , MET417:A , CYS366:A , VAL369:A , LEU374:A
-select selected or ASN375:A , LEU377:A , CYS378:A , LEU503:A , LYS333:A , ARG342:A
-select selected or LYS439:A , ARG453:A , ARG495:A , LYS365:A , THR372:A , SER353:A
-select selected or ASN330:A , ILE428:A , ASN435:A , ASN437:A , PRO413:A , PRO450:A
-select selected or ASN457:A , LEU478:A , ILE455:A , VAL394:A , ASN424:A , ASN427:A
-select selected or GLN396:A , PRO399:A , ASN357:A , THR332:A , SER386:A , ARG426:A
-select selected or SER336:A , THR431:A , SER432:A , THR433:A , THR485:A , LYS411:A
-select selected or ARG449:A , LYS447:A , SER456:A , ARG444:A , LYS390:A , ARG395:A
-select selected or THR359:A , SER362:A , THR363:A , THR402:A , SER358:A , ILE489:A
-select selected or GLN401:A , VAL404:A , LEU443:A , VAL458:A , PRO459:A , PRO462:A
-select selected or LYS465:A , PRO466:A , CYS467:A , PRO469:A , LEU472:A , ASN473:A
-select selected or SER461:A , THR468:A
+select GLN3:Q , TRP120:Q , GLN40:Q , ASN99:Q , GLY116:Q
+select selected or GLY121:Q , GLN122:Q , GLY123:Q , TRP48:Q , TRP112:Q , PHE113:Q
+select selected or ASN61:Q , HIS33:Q , HIS53:Q , ASN55:Q , GLY105:Q , GLY110:Q
+select selected or HIS114:Q , TYR54:Q , TYR115:Q , TYR104:Q
 define c1 selected
-select ALA331:A , TYR438:A , ALA339:A , ALA430:A , TYR338:A
-select selected or TYR408:A , TYR440:A , TYR436:A , TYR491:A , TYR494:A
+select ARG5:Q , GLU6:Q , ALA125:Q , GLU165:Q , LYS44:Q
+select selected or GLU47:Q , ARG39:Q , ALA45:Q , ASP90:Q , ALA88:Q , ALA89:Q
 define c2 selected
-select TYR356:A , ALA371:A , TYR367:A , ALA398:A
+select ASP27:Q , ARG29:Q , ARG98:Q , ASP32:Q , ASP51:Q
+select selected or ASP118:Q , ARG102:Q , ALA57:Q , GLU111:Q , ALA108:Q
 define c3 selected
 select c1
 colour red

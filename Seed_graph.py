@@ -134,9 +134,11 @@ def find_mean(graph):
             sum += graph[element].weight
             weights.append(graph[element].weight)
     mean = (sum / count)
+    # mean = math.floor(mean)
     weights.sort()
     median = weights[round(count * 0.5)]
     return mean
+    # return median
 
 
 # create a seed graph and return the graph and the median weight
