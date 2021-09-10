@@ -1,16 +1,17 @@
 NUM_OF_CLUSTERS=1
 Best cluster
-Score: 7.5458
-Residues number: 5
+Score: 8.309
+Residues number: 6
 
-TYR85:A
-PHE170:A
-ASN272:A
-ALA274:A
-ILE275:A
+GLU6:Q
+SER7:Q
+TRP120:Q
+GLY121:Q
+GLN122:Q
+GLY123:Q
 
 ---------------------------------------------
 Peptides participating in this cluster:
 ID	Sequence
-1	FYIVQ
+1	WGKEA
 ++++++++++++++++++++++++++

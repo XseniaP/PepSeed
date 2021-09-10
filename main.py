@@ -34,7 +34,7 @@ def main_func():
     Seed_graph.extract_to_csv(graph)
 
 #   Ksenia's: find a seed
-    seed, original_seed = Seed_graph.seed_search(graph, s_set, mean, rev_indices)
+    seed, original_seed, all_seeds = Seed_graph.seed_search(graph, s_set, mean, rev_indices)
     print(seed)
 
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
@@ -80,32 +80,11 @@ def main_func():
     extention_param = 1
     get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extention_param)
 
-
-    # set = ['RN', 'RL', 'RP', 'TN']
-    # my_list = ["0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001", "1010", "1011", "1100",
-    #        "1101", "1110", "1111"]
-    # seeds = []
-    # for element in my_list:
-    #     string = ''
-    #     for i in range(len(set)):
-    #         # string = string + set[i] if element[i] == 0 else string = string + set[i][1] + set[i][0]
-    #         if element[i] == '0':
-    #             if string == '':
-    #                 string = string + set[i]
-    #             elif string[len(string)-1] == set[i][0]:
-    #                 string = string + set[i][1]
-    #             else:
-    #                 string = string + set[i]
-    #         elif element[i] == '1':
-    #             if string == '':
-    #                 string = string + set[i][1] + set[i][0]
-    #             elif string[len(string)-1] == set[i][1]:
-    #                 string = string + set[i][0]
-    #             else:
-    #                 string = string + set[i][1] + set[i][0]
-    #     seeds.append(string)
-
-    # for seed in seeds:
+    # for seedo in all_seeds:
+    #     seed = ''
+    #     for letter in seedo:
+    #         if (letter != 'c') and (letter != 'z'):
+    #             seed = seed + letter
     #     print(seed)
     #     PepSurf_run.perpsurf_run(seed)
     #
@@ -118,7 +97,7 @@ def main_func():
     #
     #     pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
     #     # pairs_distance_txt = "pairsDistance.txt"
-    #     D_param = 7
+    #     D_param = 4
     #     Initialize_Neighbors_list(pairs_distance_txt, D_param)
     #
     # #   Sapir's: get the highest score paths

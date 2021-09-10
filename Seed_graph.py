@@ -98,8 +98,8 @@ def convert_abc():
 def add_source_sink(seq, rev):
     if rev == False:
         seq = "cc" + seq + "zz"
-    else:
-        seq = "zz" + seq + "cc"
+    # else:
+    #     seq = "zz" + seq + "cc"
     return seq
 
 
@@ -139,15 +139,18 @@ def find_mean(graph):
     weights = []
     s_set = []
     for element in graph:
-        if (graph[element] != 0) and (graph[element] != 'cc') and (graph[element] != 'zz'):
+        # if (graph[element] != 0) and (graph[element] != 'cc') and (graph[element] != 'zz'):
+        if (graph[element] != 0):
             count += 1
             sum += graph[element].weight
             weights.append(graph[element].weight)
     mean = (sum / count)
     weights.sort()
-    median = weights[round(count * 0.5)]
+    weight = set(weights)
+    median = weights[round(count * 0.50)]
     # return mean
     return median
+    # return 4
 
 # create a seed graph and return the graph and the median weight
 def seed_graph_create():
@@ -158,22 +161,26 @@ def seed_graph_create():
     graph['cc'] = 0
     graph['zz'] = 0
     for seq in sequences:
+        seen = []
         rev = check_reverse(seq, graph)
         reverse_indices.append(rev)
         seq = add_source_sink(seq, rev)
         prev = ''
         for i in range(len(seq) - 1):
-            if not rev:
-                temp = str(seq[i:i + 2])
-            else:
-                temp = str(seq[-(i + 1):-i]) + str(seq[-(i + 2):-(i + 1)])
+
+            temp = str(seq[i:i + 2])
+
+            # if not rev:
+            #     temp = str(seq[i:i + 2])
+            # else:
+            #     temp = str(seq[-(i + 1):-i]) + str(seq[-(i + 2):-(i + 1)])
             if (temp in ssps) or (temp == 'cc') or (temp == 'zz'):
                 if (graph[temp] == 0) and (graph[temp[1]+temp[0]] == 0):
                     graph[temp] = Node(name=temp, weight=1, children=set(), parents=set())
                 elif (graph[temp[1]+temp[0]] != 0):
-                    temp = temp[1]+temp[0]
+                    temp = temp[1] + temp[0]
                     graph[temp].change_weight(graph[temp].weight + 1)
-                else:
+                elif (graph[temp] != 0):
                     graph[temp].change_weight(graph[temp].weight + 1)
                 if prev != '':
                     graph[prev].add_child(temp)
@@ -345,6 +352,7 @@ def seed_search(graph, s_set, mean, rev_indices):
     # DP target , no more than 4 insersions allowed, each insertion leads to penalty
     abs_max = 0
     k = input("Enter max number of pairs with the weight below mean value on the path: ")
+    all_seeds = {}
     for i in range(int(k)+1):
         max = 0
         for v in s_set:
@@ -357,6 +365,7 @@ def seed_search(graph, s_set, mean, rev_indices):
             nodes = set(graph.keys())
             nodes.remove(v)
             temp, seed = recursive_weight(i, v, S, graph, nodes)
+            all_seeds[seed] = temp
             # temp += graph[v].weight
             # temp = temp - mean * i * 1.7
             if temp > max:
@@ -374,8 +383,9 @@ def seed_search(graph, s_set, mean, rev_indices):
         print(f_final_seed)
         seed = redefine_seed(f_final_seed)
         print(f_final_seed)
+        print(all_seeds)
         # return final_seed, i
-        return seed, original_seed
+        return seed, original_seed, all_seeds
     else:
         print("\n no seed found")
         return "", ""
