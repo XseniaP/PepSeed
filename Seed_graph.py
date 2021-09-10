@@ -164,13 +164,10 @@ def seed_graph_create():
         seen = []
         rev = check_reverse(seq, graph)
         reverse_indices.append(rev)
-        # rev = False
         seq = add_source_sink(seq, rev)
         prev = ''
         for i in range(len(seq) - 1):
-
             temp = str(seq[i:i + 2])
-
             if not rev:
                 temp = str(seq[i:i + 2])
             else:
@@ -221,7 +218,7 @@ def recursive_weight(i, v, S, graph, nodes):
 
     # this is the regular init for each node from the set to be the first node and its weight to be the first weight added
     if (i >= 0) & (S == []):
-        if (graph[v].name != 'zz' and graph[v].name !='cc'):
+        if graph[v].name != 'zz' and graph[v].name != 'cc':
             return graph[v].weight, v
         elif graph[v].name == 'zz' or graph[v].name == 'cc':
             return 0, v
@@ -229,9 +226,9 @@ def recursive_weight(i, v, S, graph, nodes):
     if (i >= 0) & (len(S) != 0) & (len(graph[v].parents) == 0):
         # return MINUSINF, v
         # return graph[v].weight, v
-        if (graph[v].name != 'zz' and graph[v].name !='cc'):
+        if graph[v].name != 'zz' and graph[v].name != 'cc':
             return graph[v].weight, v
-        elif graph[v].name == 'zz' or graph[v].name =='cc':
+        elif graph[v].name == 'zz' or graph[v].name == 'cc':
             return 0, v
     # need to change here that also case when the only parent is node itself should use this case
     if (i >= 0) & (len(S) != 0) & (len(graph[v].parents) == 1) & (v in graph[v].parents):
@@ -239,7 +236,7 @@ def recursive_weight(i, v, S, graph, nodes):
         # return graph[v].weight, v
         if (graph[v].name != 'zz' and graph[v].name !='cc'):
             return graph[v].weight, v
-        elif graph[v].name != 'zz' or graph[v].name !='cc':
+        elif graph[v].name == 'zz' or graph[v].name == 'cc':
             return 0, v
     # more than i nodes not from the SET were used in the path
     if i < 0:
