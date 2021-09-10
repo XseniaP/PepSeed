@@ -1,12 +1,12 @@
 pair,weight,parents,children
-BM,4,"{'cc', 'UB', 'BM'}","{'MX', 'BX', 'zz', 'BM'}"
-BX,4,"{'cc', 'UB', 'BM'}","{'PB', 'UB', 'XO'}"
+BM,4,"{'UB', 'cc', 'BM'}","{'zz', 'BX', 'BM', 'MX'}"
+BX,4,"{'UB', 'BM', 'cc'}","{'UB', 'PB', 'XO'}"
 HM,1,{'cc'},{'UB'}
-MX,2,"{'OM', 'BM'}","{'zz', 'XO'}"
-OM,3,"{'PB', 'UB', 'XO'}","{'MX', 'zz', 'UB'}"
-PB,6,"{'BX', 'UB', 'XO'}","{'UB', 'zz', 'OM'}"
-UB,15,"{'cc', 'BX', 'OM', 'PB', 'UB', 'HM', 'YA'}","{'BX', 'OM', 'PB', 'UB', 'BM', 'YA', 'zz'}"
-XO,4,"{'MX', 'BX'}","{'PB', 'OM'}"
+MX,2,"{'BM', 'OM'}","{'zz', 'XO'}"
+OM,3,"{'UB', 'PB', 'XO'}","{'zz', 'UB', 'MX'}"
+PB,6,"{'BX', 'UB', 'XO'}","{'zz', 'UB', 'OM'}"
+UB,15,"{'YA', 'BX', 'cc', 'UB', 'HM', 'OM', 'PB'}","{'YA', 'BM', 'zz', 'BX', 'UB', 'OM', 'PB'}"
+XO,4,"{'BX', 'MX'}","{'PB', 'OM'}"
 YA,2,{'UB'},"{'zz', 'UB'}"
-cc,5,set(),"{'BX', 'UB', 'HM', 'BM'}"
-zz,11,"{'OM', 'PB', 'MX', 'UB', 'YA', 'BM'}",set()
+cc,5,set(),"{'BX', 'UB', 'BM', 'HM'}"
+zz,11,"{'YA', 'BM', 'MX', 'UB', 'OM', 'PB'}",set()

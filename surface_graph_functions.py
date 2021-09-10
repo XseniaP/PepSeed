@@ -161,7 +161,7 @@ def update_path():
 def extention2(graph_csv ,seed_graph_indexes_dict):
     AA_groups_dict = {'B':['R','K'] , 'J':['E','D'] , 'O':['S','T'] , 'U':['L','V','I'] ,
                       'X': ['Q','N'] , 'Z':['W','F'] , 'A':['A'] , 'C':['C'] , 'G':['G'] ,
-                      'H':['H'] , 'M':['M'] , 'P':['P'] , 'Y':['Y']}
+                      'H':['H'] , 'M':['M'] , 'P':['P'] , 'Y':['Y'], 'c':['c'], 'z':['z']}
     count_dict ={}
     df = pd.read_csv(graph_csv)
     df = df[(df.pair != 'mean') & (df.pair != 'median') & (df.pair.isnull()==False)]
@@ -362,7 +362,7 @@ def get_paths_and_return_best_epitope(paths_list ,seed_graph_indexes_dict ,graph
         #print("this is the ", i + 1, "path")
         epitope = []
         score = 0
-        epitope_dict = extention2(graph_csv, seed_graph_indexes_dict[i])
+        epitope_dict = extention(graph_csv, seed_graph_indexes_dict[i])
         for AA in paths_list[i]:
             if AA != '':
                 epitope.append(AA)

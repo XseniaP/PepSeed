@@ -58,7 +58,7 @@ def main_func():
 
     pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
     # pairs_distance_txt = "pairsDistance.txt"
-    D_param = 8
+    D_param = 4
     Initialize_Neighbors_list(pairs_distance_txt, D_param)
 
     #   Sapir's: get the highest score paths
@@ -78,7 +78,7 @@ def main_func():
     graph_csv = str(pathlib.Path.cwd()) + "/graph.csv"
 
     # extension is spelled with s , but I remember a lesson and I am not changing it hahaha
-    extention_param = 1
+    extention_param =1
     get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extention_param)
 
     # for seedo in all_seeds:
