@@ -1,21 +1,81 @@
 *Alignment with highest score*
-Alignment score: 13.6842 P-value: 0.000204562
+Alignment score: 12.1549 P-value: 0.000229412
 
-peptide: RNQTPRLRKM
-path:    R395A Q401A K411A P450A R449A F451A R342A K343A 
+peptide: NFTAAD
+path:    N120P M118P T48P G46P A47P D51P 
 
 Alignment:
-RNQTPRLRK
-R-QKPRFRK
+NFTAAD
+NMTGAD
 
 _________________________________
-Alignment score: 11.0326 P-value: 0.00211556
+Alignment score: 11.4399 P-value: 0.000437368
 
-peptide: RNQTPRLRKM
-path:    N473A S461A P462A F460A R444A K447A 
+peptide: NFTAAD
+path:    N74P I73P A77P A78P D81P 
 
 Alignment:
-NQTPRLRK
-N-SP-FRK
+NFTAAD
+NI-AAD
+
+_________________________________
+Alignment score: 10.5286 P-value: 0.000995199
+
+peptide: NFTAAD
+path:    N193P I153P T171P T148P S149P D152P 
+
+Alignment:
+NFTAAD
+NITTSD
+
+_________________________________
+Alignment score: 10.2699 P-value: 0.00125676
+
+peptide: NFTAAD
+path:    T186P Y169P T171P A174P K170P D166P 
+
+Alignment:
+NFTAAD
+TYTAKD
+
+_________________________________
+Alignment score: 10.0667 P-value: 0.00150944
+
+peptide: NFTAAD
+path:    N183P W184P T188P V191P A194P N195P 
+
+Alignment:
+NFTAAD
+NWTVAN
+
+_________________________________
+Alignment score: 10.0358 P-value: 0.0015522
+
+peptide: NFTAAD
+path:    N21P L20P T19P A22P V26P E28P 
+
+Alignment:
+NFTAAD
+NLTAVE
+
+_________________________________
+Alignment score: 9.53165 P-value: 0.00244538
+
+peptide: NFTAAD
+path:    N57P L56P T58P L20P T54P D51P 
+
+Alignment:
+NFTAAD
+NLTLTD
+
+_________________________________
+Alignment score: 9.03812 P-value: 0.00381497
+
+peptide: NFTAAD
+path:    T216P M214P T210P A208P A209P E213P 
+
+Alignment:
+NFTAAD
+TMTAAE
 
 _________________________________
