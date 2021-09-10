@@ -98,8 +98,8 @@ def convert_abc():
 def add_source_sink(seq, rev):
     if rev == False:
         seq = "cc" + seq + "zz"
-    # else:
-    #     seq = "zz" + seq + "cc"
+    else:
+        seq = "zz" + seq + "cc"
     return seq
 
 
@@ -146,7 +146,7 @@ def find_mean(graph):
             weights.append(graph[element].weight)
     mean = (sum / count)
     weights.sort()
-    weight = set(weights)
+    # weights = set(weights)
     median = weights[round(count * 0.50)]
     # return mean
     return median
@@ -164,16 +164,17 @@ def seed_graph_create():
         seen = []
         rev = check_reverse(seq, graph)
         reverse_indices.append(rev)
+        # rev = False
         seq = add_source_sink(seq, rev)
         prev = ''
         for i in range(len(seq) - 1):
 
             temp = str(seq[i:i + 2])
 
-            # if not rev:
-            #     temp = str(seq[i:i + 2])
-            # else:
-            #     temp = str(seq[-(i + 1):-i]) + str(seq[-(i + 2):-(i + 1)])
+            if not rev:
+                temp = str(seq[i:i + 2])
+            else:
+                temp = str(seq[-(i + 1):-i]) + str(seq[-(i + 2):-(i + 1)])
             if (temp in ssps) or (temp == 'cc') or (temp == 'zz'):
                 if (graph[temp] == 0) and (graph[temp[1]+temp[0]] == 0):
                     graph[temp] = Node(name=temp, weight=1, children=set(), parents=set())

@@ -1,31 +1,41 @@
 *Alignment with highest score*
-Alignment score: 11.6127 P-value: 0.000246301
+Alignment score: 13.698 P-value: 0.000272823
 
-peptide: WGKEA
-path:    W120Q G121Q Q122Q E6Q S7Q 
+peptide: KMRNQTPRLR
+path:    K390A V394A R395A Q401A K411A P450A R449A F451A R342A 
 
 Alignment:
-WGKEA
-WGQES
+KMRNQTPRLR
+KVR-QKPRFR
 
 _________________________________
-Alignment score: 9.57314 P-value: 0.00158933
+Alignment score: 10.6302 P-value: 0.00377713
 
-peptide: WGKEA
-path:    W112Q G110Q Y104Q E111Q G105Q 
+peptide: KMRNQTPRLR
+path:    K447A R444A D454A R453A A339A P335A F334A R495A 
 
 Alignment:
-WGKEA
-WGYEG
+KMRNQTPRLR
+K-RDRAP-FR
 
 _________________________________
-Alignment score: 9.11717 P-value: 0.00241066
+Alignment score: 8.73466 P-value: 0.0190309
 
-peptide: WGKEA
-path:    G43Q K44Q Q40Q A45Q 
+peptide: KMRNQTPRLR
+path:    K390A D393A Q396A A398A P399A 
 
 Alignment:
-GKEA
-GKQA
+KMRNQTP
+K--DQAP
+
+_________________________________
+Alignment score: 7.63402 P-value: 0.0481598
+
+peptide: KMRNQTPRLR
+path:    R495A I428A N427A R426A T485A 
+
+Alignment:
+KMRNQT
+RI-NRT
 
 _________________________________
