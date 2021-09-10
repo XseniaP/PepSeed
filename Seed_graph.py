@@ -221,15 +221,26 @@ def recursive_weight(i, v, S, graph, nodes):
 
     # this is the regular init for each node from the set to be the first node and its weight to be the first weight added
     if (i >= 0) & (S == []):
-        return graph[v].weight, v
+        if (graph[v].name != 'zz' and graph[v].name !='cc'):
+            return graph[v].weight, v
+        elif graph[v].name == 'zz' or graph[v].name == 'cc':
+            return 0, v
     # the case when there are still nodes left in the set but current node has no parents to proceed with the search
     if (i >= 0) & (len(S) != 0) & (len(graph[v].parents) == 0):
         # return MINUSINF, v
-        return graph[v].weight, v
+        # return graph[v].weight, v
+        if (graph[v].name != 'zz' and graph[v].name !='cc'):
+            return graph[v].weight, v
+        elif graph[v].name == 'zz' or graph[v].name =='cc':
+            return 0, v
     # need to change here that also case when the only parent is node itself should use this case
     if (i >= 0) & (len(S) != 0) & (len(graph[v].parents) == 1) & (v in graph[v].parents):
         # return MINUSINF, v
-        return graph[v].weight, v
+        # return graph[v].weight, v
+        if (graph[v].name != 'zz' and graph[v].name !='cc'):
+            return graph[v].weight, v
+        elif graph[v].name != 'zz' or graph[v].name !='cc':
+            return 0, v
     # more than i nodes not from the SET were used in the path
     if i < 0:
         return MINUSINF, v
@@ -357,6 +368,8 @@ def seed_search(graph, s_set, mean, rev_indices):
     for i in range(int(k)+1):
         max = 0
         for v in s_set:
+            # need to see if we want to start always with zz or with all possible options
+            # v = 'zz'
             S = []
             temp = 0
             # deep copy of s_set
