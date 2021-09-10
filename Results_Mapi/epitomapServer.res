@@ -1,34 +1,48 @@
 NUM_OF_CLUSTERS=3
 Best cluster
-Residues number: 5
+Residues number: 12
 
-GLY110:Q
-TRP112:Q
-PHE113:Q
-HIS114:Q
-TYR115:Q
+LYS390:A
+VAL394:A
+ARG395:A
+GLN396:A
+PRO399:A
+GLN401:A
+THR402:A
+LYS411:A
+PRO413:A
+ARG449:A
+PRO450:A
+ILE489:A
 
 ++++++++++++++++++++++++++
 Cluster rank: 2
-Residues number: 7
+Residues number: 12
 
-ALA142:Q
-LYS223:Q
-ASP225:Q
-LYS226:Q
-ARG227:Q
-GLU229:Q
-LYS231:Q
+SER353:A
+ASN357:A
+SER358:A
+THR359:A
+VAL369:A
+THR372:A
+LYS373:A
+LEU374:A
+ASN375:A
+LEU377:A
+CYS378:A
+LEU503:A
 
 ++++++++++++++++++++++++++
 Cluster rank: 3
-Residues number: 6
+Residues number: 8
 
-ARG39:Q
-ALA45:Q
-GLU47:Q
-ALA88:Q
-ALA89:Q
-ASP90:Q
+ASN330:A
+THR332:A
+SER362:A
+ASN424:A
+ARG426:A
+ASN427:A
+ILE428:A
+ARG495:A
 
 ++++++++++++++++++++++++++

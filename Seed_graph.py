@@ -269,13 +269,11 @@ def recursive_weight(i, v, S, graph, nodes):
             S_new.remove(parent)
             nodes_copy.remove(parent)
             temp, seed = recursive_weight(i, parent, S_new, graph, nodes_copy)
-            all_seeds[seed] = temp
         else:
             if parent in nodes_copy:
                 nodes_copy.remove(parent)
                 temp, seed = recursive_weight(i-1, parent, S_new, graph, nodes_copy)
                 temp = temp - penalty
-                all_seeds[seed] = temp
             else:
                 seed = ""
                 temp = MINUSINF
@@ -283,9 +281,11 @@ def recursive_weight(i, v, S, graph, nodes):
         if temp > max_v:
             max_v = temp
             final_seed = seed + v
+        all_seeds[seed + v] = temp
     # if graph[v].weight > max_v:
     #     max_v = graph[v].weight
     #     final_seed = v
+    print(all_seeds)
     return max_v, final_seed
 
 def remove_source_sink(seq):
@@ -388,13 +388,14 @@ def seed_search(graph, s_set, mean, rev_indices):
             nodes = set(graph.keys())
             nodes.remove(v)
             temp, seed = recursive_weight(i, v, S, graph, nodes)
-            all_seeds[seed] = temp
             if temp > max:
                 max = temp
                 final_seed = seed
+            all_seeds[seed] = temp
         if max > abs_max:
             abs_max = max
             f_final_seed = final_seed
+
     if (abs_max != 0) and (len(f_final_seed) >= 6):
     # if (abs_max != 0):
         vocab = convert_abc()[1]
