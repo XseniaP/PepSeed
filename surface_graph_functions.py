@@ -158,6 +158,84 @@ def update_path():
     #print(path_dict)
 
 
+def extention2(graph_csv ,seed_graph_indexes_dict):
+    AA_groups_dict = {'B':['R','K'] , 'J':['E','D'] , 'O':['S','T'] , 'U':['L','V','I'] ,
+                      'X': ['Q','N'] , 'Z':['W','F'] , 'A':['A'] , 'C':['C'] , 'G':['G'] ,
+                      'H':['H'] , 'M':['M'] , 'P':['P'] , 'Y':['Y']}
+    count_dict ={}
+    df = pd.read_csv(graph_csv)
+    df = df[(df.pair != 'mean') & (df.pair != 'median') & (df.pair.isnull()==False)]
+    for index, pairs_dict in seed_graph_indexes_dict.items():
+        #print(index)
+        for pair, first_or_second in pairs_dict.items():
+            all_neighbors_to_look=[]
+            neighbors_to_look = df[df["pair"] == pair]
+            neighbors_to_look = neighbors_to_look['parents']
+            for i in neighbors_to_look:
+                neighbors_to_look = i
+                for ch in ['{', '}', '"', " ", "'"]:
+                    if ch in neighbors_to_look:
+                        neighbors_to_look = neighbors_to_look.replace(ch, "")
+                neighbors_to_look = neighbors_to_look.split(',')
+                if neighbors_to_look != ['set()']:
+                    for AA in neighbors_to_look:
+                        all_neighbors_to_look.append(AA)
+            neighbors_to_look = df[df["pair"] == pair]
+            neighbors_to_look = neighbors_to_look['children']
+            for i in neighbors_to_look:
+                neighbors_to_look = i
+                for ch in ['{', '}', '"', " ", "'"]:
+                    if ch in neighbors_to_look:
+                        neighbors_to_look = neighbors_to_look.replace(ch, "")
+                neighbors_to_look = neighbors_to_look.split(',')
+                if neighbors_to_look != ['set()']:
+                    for AA in neighbors_to_look:
+                        all_neighbors_to_look.append(AA)
+            #print(all_neighbors_to_look)
+            neighbors_to_look_new =[]
+            for amino_group in all_neighbors_to_look:
+                AA1 = amino_group[0]
+                AA2 = amino_group[1]
+                for amino_acid1 in AA_groups_dict[AA1]:
+                    for amino_acid2 in AA_groups_dict[AA2]:
+                        if amino_acid1+amino_acid2 not in neighbors_to_look_new:
+                            neighbors_to_look_new.append(amino_acid1+amino_acid2)
+                        if amino_acid2+amino_acid1 not in neighbors_to_look_new:
+                            neighbors_to_look_new.append(amino_acid2 + amino_acid1)
+            #print(neighbors_to_look_new)
+            index_neighbors = surface_dict[index].get_neighbors_list()
+            #print("index_neighbors :", index_neighbors)
+            pair_extention = []
+            for pairs in neighbors_to_look_new:
+             #   print(pairs)
+                first = pairs[0]
+                second = pairs[1]
+                # if first == 'C':
+                #     continue
+                for AA in index_neighbors:
+                    if first in AA:
+                        for AA2 in surface_dict[AA].get_neighbors_list():
+                            if second in AA2:
+                                #print(AA,AA2)
+                                if AA not in pair_extention:
+                                    pair_extention.append(AA)
+                                if AA2 not in pair_extention:
+                                    pair_extention.append(AA2)
+            #print("pair_extention ", pair_extention)
+
+            for residue in pair_extention:
+                if residue in count_dict.keys():
+                    count_dict[residue] += 1
+                if residue not in count_dict.keys():
+                    count_dict[residue] = 1
+    #print("count_dict: ",count_dict)
+    return (count_dict)
+
+
+
+
+
+
 def extention(graph_csv ,seed_graph_indexes_dict):
     AA_groups_dict = {'B':['R','K'] , 'J':['E','D'] , 'O':['S','T'] , 'U':['L','V','I'] ,
                       'X': ['Q','N'] , 'Z':['W','F'] , 'A':['A'] , 'C':['C'] , 'G':['G'] ,
@@ -272,26 +350,49 @@ def extention(graph_csv ,seed_graph_indexes_dict):
                     count_dict[residue]+=1
                 if residue not in count_dict.keys():
                     count_dict[residue]=1
-    print(count_dict)
+    #print(count_dict)
     return(count_dict)
 
 
 def get_paths_and_return_best_epitope(paths_list ,seed_graph_indexes_dict ,graph_csv , extention_param):
     list_scores=[]
+    list_dict=[]
+    epitope_list=[]
     for i in range(len(seed_graph_indexes_dict)):
+        #print("this is the ", i + 1, "path")
         epitope = []
         score = 0
-        print(i+1," path is: " ,paths_list[i])
-        epitope_dict = extention(graph_csv, seed_graph_indexes_dict[i])
+        epitope_dict = extention2(graph_csv, seed_graph_indexes_dict[i])
+        for AA in paths_list[i]:
+            if AA != '':
+                epitope.append(AA)
         for key,value in epitope_dict.items():
             if epitope_dict[key] > extention_param:
+                #print("key =",key)
                 score+=1
-                epitope.append(key)
+                #print("score =",score)
+                if key not in epitope:
+                    epitope.append(key)
             if epitope_dict[key] == extention_param:
                 score+=0.5
-                epitope.append(key)
-        print("path score :" ,score)
+                #print("key =",key)
+                #print("score =",score)
+                if key not in epitope:
+                    epitope.append(key)
+        #print("path score :" ,score)
         list_scores.append(score)
-        #print(list_scores)
-        print("epitope: " ,epitope)
+        list_dict.append(epitope_dict)
+        epitope_list.append(epitope)
+        #print("epitope: " ,epitope)
+        #print("  ")
+    #print(list_scores)
+    s = [i[0] for i in sorted(enumerate(list_scores), key=lambda x: x[1])]
+    #print(s)
+    print("\nthe results sorted from the best: ")
+    for index in reversed(s):
+        print("the path is: ", paths_list[index])
+        print("path score :" ,list_scores[index])
+        print("dict is: " , list_dict[index])
+        print("epitope: " ,epitope_list[index])
         print("  ")
+
