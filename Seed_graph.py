@@ -161,7 +161,6 @@ def seed_graph_create():
     graph['cc'] = 0
     graph['zz'] = 0
     for seq in sequences:
-        seen = []
         rev = check_reverse(seq, graph)
         reverse_indices.append(rev)
         seq = add_source_sink(seq, rev)
@@ -215,6 +214,7 @@ def recursive_weight(i, v, S, graph, nodes):
     final_seed = ""
     max_v = MINUSINF
     penalty = 1.5 * find_mean(graph)
+    # penalty = 1
 
     # this is the regular init for each node from the set to be the first node and its weight to be the first weight added
     if (i >= 0) & (S == []):
@@ -377,8 +377,6 @@ def seed_search(graph, s_set, mean, rev_indices):
             nodes.remove(v)
             temp, seed = recursive_weight(i, v, S, graph, nodes)
             all_seeds[seed] = temp
-            # temp += graph[v].weight
-            # temp = temp - mean * i * 1.7
             if temp > max:
                 max = temp
                 final_seed = seed
@@ -386,6 +384,7 @@ def seed_search(graph, s_set, mean, rev_indices):
             abs_max = max
             f_final_seed = final_seed
     if (abs_max != 0) and (len(f_final_seed) >= 6):
+    # if (abs_max != 0):
         vocab = convert_abc()[1]
         print(f_final_seed)
         original_seed = f_final_seed
@@ -395,7 +394,6 @@ def seed_search(graph, s_set, mean, rev_indices):
         seed = redefine_seed(f_final_seed)
         print(f_final_seed)
         print(all_seeds)
-        # return final_seed, i
         return seed, original_seed, all_seeds
     else:
         print("\n no seed found")
