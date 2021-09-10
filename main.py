@@ -29,6 +29,7 @@ def main_func():
 
 #   Ksenia's: create a seed graph
     graph, mean, s_set, rev_indices = Seed_graph.seed_graph_create()
+    Seed_graph.print_seed_graph(graph, mean)
 
 #   Extract graph to scv
     Seed_graph.extract_to_csv(graph)

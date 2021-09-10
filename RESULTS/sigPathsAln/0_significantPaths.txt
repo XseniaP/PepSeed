@@ -1,21 +1,21 @@
 *Alignment with highest score*
-Alignment score: 13.998 P-value: 0.000583581
+Alignment score: 14.6837 P-value: 0.000356926
 
-peptide: KMRNQTPRLR
-path:    K390A V394A R395A Q401A K411A P450A R449A F451A R342A 
+peptide: LRKMRNQTPR
+path:    L443A R444A K447A R449A K411A Q401A P399A 
 
 Alignment:
-KMRNQTPRLR
-KVR-QKPRFR
+LRKMRNQTP
+LRK-RKQ-P
 
 _________________________________
-Alignment score: 11.0147 P-value: 0.00619498
+Alignment score: 9.13859 P-value: 0.0284798
 
-peptide: KMRNQTPRLR
-path:    K343A R342A E341A S386A P335A F334A R495A 
+peptide: LRKMRNQTPR
+path:    I428A R495A Y438A N435A T431A T485A R426A 
 
 Alignment:
-KMRNQTPRLR
-K-R-ESP-FR
+LRKMRNQTPR
+IRY--NTT-R
 
 _________________________________

@@ -11,8 +11,14 @@ import pathlib
 import pandas as pd
 import sys
 import pathlib
+from graphviz import Digraph
+import networkx as nx
+import numpy as np
+import matplotlib.pyplot as plt
 
 # define a global value as minus infinity
+from matplotlib.patches import ConnectionStyle
+
 MINUSINF = -math.inf
 
 
@@ -376,9 +382,9 @@ def seed_search(graph, s_set, mean, rev_indices):
     all_seeds = {}
     for i in range(int(k)+1):
         max = 0
-        for v in s_set:
+        for v in (s_set +['zz']):
             # need to see if we want to start always with zz or with all possible options
-            v = 'zz'
+            # v = 'zz'
             S = []
             temp = 0
             # deep copy of s_set
@@ -512,3 +518,37 @@ def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_align
         k += 1
     print(my_set)
     return my_set
+
+def print_seed_graph(graph, mean):
+    G = nx.Graph()
+    new_set = list()
+    val_dict = {}
+    blue_nodes = ['So', 'Si']
+    red_nodes = list()
+    for element in graph:
+        if element != 'zz' and element != 'cc':
+            val_dict[element] = graph[element].weight
+            if graph[element].weight >= mean:
+                red_nodes.append(element)
+        for child in graph[element].children:
+            if element == 'zz':
+                element = 'Si'
+            elif element == 'cc':
+                element = 'So'
+            if child == 'zz':
+                child = 'Si'
+            elif child == 'cc':
+                child = 'So'
+            new_set.append((element, child))
+    val_dict['So'] = 0
+    val_dict['Si'] = 0
+    G.add_edges_from(new_set)
+    val_map = val_dict
+    pos = nx.spring_layout(G)
+    # values = [val_map.get(node, 0.25) for node in G.nodes()]
+    nx.draw(G, pos, cmap=plt.get_cmap('jet'), node_color='grey', node_size=1000)
+    nx.draw(G, pos, cmap=plt.get_cmap('jet'), nodelist = blue_nodes, node_color = 'blue', node_size=1000)
+    nx.draw(G, pos, cmap=plt.get_cmap('jet'), nodelist=red_nodes, node_color='red', node_size=1000)
+    nx.draw_networkx_labels(G, pos, font_color='white')
+    nx.draw_networkx_edges(G, pos, edgelist=new_set, edge_color='cyan', arrows=True, arrowsize=25)
+    plt.show()
