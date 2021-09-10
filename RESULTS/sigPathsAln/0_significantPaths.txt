@@ -1,61 +1,11 @@
 *Alignment with highest score*
-Alignment score: 23.292 P-value: 2.94719e-05
+Alignment score: 9.88778 P-value: 0.00162909
 
-peptide: FYINALQNVGPAE
-path:    F325A W315A T318A N321A A323A S324A Q328A L44A G46A P47A A48A E51A 
-
-Alignment:
-FYINALQNVGPAE
-FWTNASQ-LGPAE
-
-_________________________________
-Alignment score: 22.9007 P-value: 3.83073e-05
-
-peptide: FYINALQNVGPAE
-path:    F250A L146A Q142A A144A L152A N151A V150A G149A P148A A145A 
+peptide: RVLRPTQRC
+path:    R444A L443A F460A P462A S461A K465A C467A 
 
 Alignment:
-FYINALQNVGPA
-F-LQAL-NVGPA
-
-_________________________________
-Alignment score: 22.8405 P-value: 3.98835e-05
-
-peptide: FYINALQNVGPAE
-path:    F170A Y85A A274A N272A A271A L345A A347A D343A V339A P335A A337A K340A 
-
-Alignment:
-FYINALQNVGPAE
-FYANALADV-PAK
-
-_________________________________
-Alignment score: 21.0716 P-value: 0.000130477
-
-peptide: FYINALQNVGPAE
-path:    F229A L230A D231A S234A L238A A216A N112A L113A G115A P114A V116A E118A 
-
-Alignment:
-FYINALQNVGPAE
-F-LDSLANLGPVE
-
-_________________________________
-Alignment score: 20.1295 P-value: 0.000245289
-
-peptide: FYINALQNVGPAE
-path:    W315A H314A V19A Q310A A306A Q300A N78A V77A G75A A74A Q71A 
-
-Alignment:
-FYINALQNVGPAE
-WHVQA-QNVG-AQ
-
-_________________________________
-Alignment score: 18.3691 P-value: 0.000797696
-
-peptide: FYINALQNVGPAE
-path:    F170A F190A V194A D195A P197A F196A A198A V199A G201A P200A A202A 
-
-Alignment:
-FYINALQNVGPA
-FFVDPF-AVGPA
+RVLRPTQRC
+RLF-PSK-C
 
 _________________________________

@@ -5,9 +5,8 @@ backbone
 colour [200,200,200]
 select :A
 spacefill
-select ALA323:A , ALA48:A , ASN321:A , ASP319:A , ASP327:A
-select selected or GLN328:A , GLU51:A , GLY46:A , LEU44:A , LYS322:A , PHE325:A
-select selected or PRO47:A , SER324:A , THR318:A , TRP315:A
+select ARG444:A , ASP463:A , CYS467:A , LEU443:A , LYS465:A
+select selected or PHE460:A , PRO462:A , SER461:A
 define c1 selected
 select c1
 colour red

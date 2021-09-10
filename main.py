@@ -52,7 +52,7 @@ def main_func():
 
     pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
     # pairs_distance_txt = "pairsDistance.txt"
-    D_param = 8
+    D_param = 4
     Initialize_Neighbors_list(pairs_distance_txt, D_param)
 
 
@@ -74,7 +74,7 @@ def main_func():
 #   Sapir's: locating the cluster found by pepsurf on the surface graph
 #   Running cluster extension
     graph_csv = str(pathlib.Path.cwd()) + "/graph.csv"
-    extention_param = 4
+    extention_param = 1
     get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extention_param)
 
 
