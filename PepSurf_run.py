@@ -19,6 +19,8 @@ def perpsurf_run(seed):
     arguments.append('-I')
     create_seed_txt(seed)
     arguments.append('seed.txt')
+    arguments.append('-G')
+    arguments.append('-0.2')
     for i in range(len(my_list)):
         if (my_list[i] == '-P') or (my_list[i] == '-C') or (my_list[i] == '-S'):
             arguments.append(my_list[i])

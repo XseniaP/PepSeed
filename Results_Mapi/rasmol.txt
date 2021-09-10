@@ -2,22 +2,13 @@ select all
 colour white
 background white
 spacefill
-select HIS12:P , ALA14:P , SER16:P , THR48:P , ASP51:P
-select selected or ALA22:P , ALA47:P , THR19:P , GLU28:P , GLU45:P , GLU128:P
-select selected or ALA42:P , ALA31:P , SER41:P , GLU29:P , SER33:P , GLU35:P
-select selected or HIS62:P , TYR145:P , ALA64:P , GLN63:P , MET66:P , MET68:P
-select selected or ASN139:P , MET144:P , SER146:P , THR148:P , ASN57:P , GLY60:P
-select selected or GLY61:P , GLN67:P , ASN74:P , TRP133:P , ALA174:P , TRP80:P
-select selected or SER149:P , THR171:P , GLU175:P , HIS84:P , PRO85:P , PRO99:P
-select selected or TYR169:P , ALA177:P , THR186:P , SER178:P , GLU180:P
+select GLY110:Q , TRP112:Q , HIS114:Q , PHE113:Q , TYR115:Q
 define c1 selected
-select GLU159:P , CYS198:P , ALA194:P , ASP197:P , ALA204:P
-select selected or ALA217:P , THR200:P , GLU212:P , GLU213:P , THR216:P , ALA209:P
-select selected or ALA208:P , GLU187:P , THR210:P
+select ALA142:Q , GLU229:Q , ARG227:Q , LYS231:Q , ASP225:Q
+select selected or LYS223:Q , LYS226:Q
 define c2 selected
-select GLU71:P , ALA77:P , GLU75:P , GLU76:P , ALA78:P
-select selected or GLU79:P , ASP81:P , SER102:P , ALA105:P , THR107:P , THR108:P
-select selected or SER109:P
+select ARG39:Q , GLU47:Q , ASP90:Q , ALA45:Q , ALA88:Q
+select selected or ALA89:Q
 define c3 selected
 select c1
 colour red
