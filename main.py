@@ -38,8 +38,6 @@ def main_func():
     print(seed)
 
 #   Ksenia's: running Pepsurf with the seed found and given arguments to find the preliminary cluster
-    # seed = 'LRTQRNRP'
-    # seed = 'TNRLRN'
     print(seed)
     PepSurf_run.perpsurf_run(seed)
 
