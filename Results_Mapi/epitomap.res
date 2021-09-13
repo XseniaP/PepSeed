@@ -1,297 +1,210 @@
--U Results_Mapi -P 1e6j_P.pdb -S 1e6j_P.txt -I 13b5.txt -C P -D 6 -V 2.5 -R rasmol.txt -F 0 
+-U Results_Mapi -P 6ch7_Q.pdb -S 6ch7_Q.txt -I fatsa_BG18_top10motifs.txt -C Q -D 5.0 -V 3.64 -R rasmol.txt -F 0 
 
-The -V parameter is: 2.5
+The -V parameter is: 3.64
 cluster number: 1
-number of pairs: 15
-number of different amino acids: 11
-number of different pairs' types: 3
-The amino-acids are:
-GLU75:P
-GLU76:P
-ALA77:P
-ALA78:P
-GLU79:P
-ASP81:P
-SER102:P
-ALA105:P
-THR107:P
-THR108:P
-SER109:P
-
-The pairs are:
-JA	E75:P	A77:P	3.24003
-JA	E75:P	A78:P	3.31829
-JA	E76:P	A77:P	1.33044
-AA	A77:P	A78:P	1.33109
-AJ	A77:P	E79:P	3.16228
-AJ	A77:P	D81:P	3.30104
-AO	A77:P	S102:P	4.70567
-AA	A77:P	A105:P	5.44915
-JA	E76:P	A78:P	3.35548
-AJ	A78:P	E79:P	1.32809
-AJ	A78:P	D81:P	3.18336
-OA	S102:P	A105:P	3.67047
-AO	A105:P	T107:P	3.20492
-AO	A105:P	T108:P	5.59608
-AO	A105:P	S109:P	5.25892
-
-
-
-cluster number: 2
-number of pairs: 9
-number of different amino acids: 10
-number of different pairs' types: 3
-The amino-acids are:
-HIS12:P
-ALA14:P
-SER16:P
-SER41:P
-ALA42:P
-GLU45:P
-ALA47:P
-THR48:P
-ASP51:P
-GLU128:P
-
-The pairs are:
-HA	H12:P	A14:P	3.7922
-AO	A14:P	S16:P	3.28163
-AJ	A14:P	D51:P	4.20741
-AJ	A47:P	D51:P	3.56882
-JA	E45:P	A47:P	3.05029
-AO	A47:P	T48:P	1.33027
-AJ	A47:P	E128:P	5.09615
-AJ	A42:P	E45:P	3.5954
-OA	S41:P	A42:P	1.3301
-
-
-
-cluster number: 3
-number of pairs: 9
-number of different amino acids: 9
-number of different pairs' types: 3
-The amino-acids are:
-GLY46:P
-PRO93:P
-GLY94:P
-GLN95:P
-MET96:P
-GLN112:P
-GLY116:P
-MET118:P
-ASN120:P
-
-The pairs are:
-GM	G46:P	M118:P	5.51975
-GM	G116:P	M118:P	3.184
-MX	M118:P	N120:P	3.62577
-MG	M96:P	G116:P	3.8786
-MX	M96:P	N120:P	4.18409
-GM	G94:P	M96:P	4.3538
-XM	Q95:P	M96:P	1.32971
-MX	M96:P	Q112:P	5.2147
-PG	P93:P	G94:P	1.32788
-
-
-
-cluster number: 4
-number of pairs: 8
-number of different amino acids: 9
-number of different pairs' types: 3
-The amino-acids are:
-THR148:P
-TYR169:P
-THR171:P
-ALA174:P
-GLU175:P
-ALA177:P
-SER178:P
-GLU180:P
-THR186:P
-
-The pairs are:
-OA	T148:P	A174:P	3.99145
-OA	T171:P	A174:P	2.76512
-AJ	A174:P	E175:P	1.32932
-YO	Y169:P	T171:P	3.31725
-JA	E175:P	A177:P	3.58648
-YO	Y169:P	T186:P	2.92923
-AO	A177:P	S178:P	1.32849
-AJ	A177:P	E180:P	5.99125
-
-
-
-cluster number: 5
-number of pairs: 8
-number of different amino acids: 7
-number of different pairs' types: 3
-The amino-acids are:
-ALA208:P
-ALA209:P
-THR210:P
-GLU212:P
-GLU213:P
-THR216:P
-ALA217:P
-
-The pairs are:
-AA	A208:P	A209:P	1.32821
-AO	A208:P	T210:P	3.60446
-AJ	A208:P	E213:P	4.97473
-AO	A209:P	T210:P	1.33008
-AJ	A209:P	E213:P	3.70818
-JA	E213:P	A217:P	2.96976
-JA	E212:P	A217:P	5.06318
-OA	T216:P	A217:P	1.32966
-
-
-
-cluster number: 6
-number of pairs: 5
-number of different amino acids: 6
-number of different pairs' types: 3
-The amino-acids are:
-GLY206:P
-PRO207:P
-MET214:P
-MET215:P
-GLN219:P
-GLY220:P
-
-The pairs are:
-GP	G206:P	P207:P	1.34371
-GM	G206:P	M214:P	4.96919
-MX	M214:P	Q219:P	5.11891
-MX	M215:P	Q219:P	3.16801
-MG	M215:P	G220:P	5.95316
-
-
-
-cluster number: 7
-number of pairs: 5
-number of different amino acids: 6
-number of different pairs' types: 3
-The amino-acids are:
-GLU28:P
-GLU29:P
-ALA31:P
-SER33:P
-HIS62:P
-ALA64:P
-
-The pairs are:
-JA	E28:P	A31:P	4.4312
-JA	E29:P	A31:P	3.10836
-AO	A31:P	S33:P	3.86828
-AH	A31:P	H62:P	4.79412
-HA	H62:P	A64:P	2.85265
-
-
-
-cluster number: 8
 number of pairs: 4
 number of different amino acids: 5
 number of different pairs' types: 3
 The amino-acids are:
-TRP80:P
-HIS84:P
-PRO85:P
-PRO99:P
-TRP133:P
+GLY110:Q
+TRP112:Q
+PHE113:Q
+HIS114:Q
+TYR115:Q
 
 The pairs are:
-ZH	W80:P	H84:P	2.97903
-ZP	W80:P	P85:P	5.13503
-ZP	W80:P	P99:P	3.22453
-ZZ	W80:P	W133:P	4.06926
+GZ	G110:Q	W112:Q	3.75755
+ZH	W112:Q	H114:Q	3.72111
+ZH	F113:Q	H114:Q	1.33047
+HY	H114:Q	Y115:Q	1.33338
+
+
+
+cluster number: 2
+number of pairs: 6
+number of different amino acids: 7
+number of different pairs' types: 2
+The amino-acids are:
+ALA142:Q
+LYS223:Q
+ASP225:Q
+LYS226:Q
+ARG227:Q
+GLU229:Q
+LYS231:Q
+
+The pairs are:
+AJ	A142:Q	E229:Q	3.74269
+BJ	R227:Q	E229:Q	3.79441
+JB	E229:Q	K231:Q	2.59167
+JB	D225:Q	R227:Q	4.45113
+BJ	K223:Q	D225:Q	4.34484
+JB	D225:Q	K226:Q	1.33064
+
+
+
+cluster number: 3
+number of pairs: 5
+number of different amino acids: 6
+number of different pairs' types: 2
+The amino-acids are:
+ARG39:Q
+ALA45:Q
+GLU47:Q
+ALA88:Q
+ALA89:Q
+ASP90:Q
+
+The pairs are:
+BJ	R39:Q	E47:Q	2.73492
+BJ	R39:Q	D90:Q	3.22843
+AJ	A45:Q	E47:Q	3.78584
+AJ	A88:Q	D90:Q	2.52912
+AJ	A89:Q	D90:Q	1.33289
+
+
+
+cluster number: 4
+number of pairs: 2
+number of different amino acids: 3
+number of different pairs' types: 2
+The amino-acids are:
+TRP120:Q
+GLY121:Q
+GLN122:Q
+
+The pairs are:
+ZG	W120:Q	G121:Q	1.33378
+ZX	W120:Q	Q122:Q	4.52018
+
+
+
+cluster number: 5
+number of pairs: 4
+number of different amino acids: 5
+number of different pairs' types: 1
+The amino-acids are:
+ASP27:Q
+ARG29:Q
+ASP32:Q
+ARG98:Q
+ASP118:Q
+
+The pairs are:
+JB	D27:Q	R29:Q	2.94976
+JB	D27:Q	R98:Q	4.49026
+BJ	R29:Q	D32:Q	3.13085
+BJ	R98:Q	D118:Q	2.73228
+
+
+
+cluster number: 6
+number of pairs: 4
+number of different amino acids: 5
+number of different pairs' types: 1
+The amino-acids are:
+ARG69:Q
+GLU71:Q
+ASP73:Q
+ARG78:Q
+LYS82:Q
+
+The pairs are:
+BJ	R69:Q	E71:Q	3.74488
+JB	E71:Q	R78:Q	4.3088
+JB	E71:Q	K82:Q	4.90736
+JB	D73:Q	R78:Q	3.89438
+
+
+
+cluster number: 7
+number of pairs: 1
+number of different amino acids: 2
+number of different pairs' types: 1
+The amino-acids are:
+ALA125:Q
+GLU165:Q
+
+The pairs are:
+AJ	A125:Q	E165:Q	3.97124
+
+
+
+cluster number: 8
+number of pairs: 1
+number of different amino acids: 2
+number of different pairs' types: 1
+The amino-acids are:
+HIS181:Q
+PHE183:Q
+
+The pairs are:
+HZ	H181:Q	F183:Q	3.15028
 
 
 
 cluster number: 9
-number of pairs: 3
-number of different amino acids: 4
-number of different pairs' types: 3
+number of pairs: 1
+number of different amino acids: 2
+number of different pairs' types: 1
 The amino-acids are:
-ASN139:P
-MET144:P
-TYR145:P
-SER146:P
+PHE139:Q
+GLY156:Q
 
 The pairs are:
-XM	N139:P	M144:P	5.40823
-MY	M144:P	Y145:P	1.32822
-YO	Y145:P	S146:P	1.32858
+ZG	F139:Q	G156:Q	4.74775
 
 
 
 cluster number: 10
-number of pairs: 6
-number of different amino acids: 6
-number of different pairs' types: 2
+number of pairs: 1
+number of different amino acids: 2
+number of different pairs' types: 1
 The amino-acids are:
-ASN57:P
-GLY61:P
-GLN63:P
-MET66:P
-GLN67:P
-MET68:P
+HIS53:Q
+TYR54:Q
 
 The pairs are:
-XM	N57:P	M66:P	5.26039
-GM	G61:P	M66:P	4.22229
-XM	Q63:P	M66:P	3.303
-MX	M66:P	Q67:P	1.32943
-XM	Q63:P	M68:P	5.30282
-XM	Q67:P	M68:P	1.32994
+HY	H53:Q	Y54:Q	1.33873
 
 
 
 cluster number: 11
-number of pairs: 3
-number of different amino acids: 4
-number of different pairs' types: 2
+number of pairs: 1
+number of different amino acids: 2
+number of different pairs' types: 1
 The amino-acids are:
-GLU159:P
-ALA194:P
-ASP197:P
-CYS198:P
+ASP51:Q
+ALA57:Q
 
 The pairs are:
-JC	E159:P	C198:P	5.46286
-AC	A194:P	C198:P	4.31799
-JC	D197:P	C198:P	1.32908
+JA	D51:Q	A57:Q	3.8377
 
 
 
 cluster number: 12
-number of pairs: 3
-number of different amino acids: 4
+number of pairs: 1
+number of different amino acids: 2
 number of different pairs' types: 1
 The amino-acids are:
-GLN179:P
-ASN183:P
-TRP184:P
-GLN192:P
+TRP48:Q
+ASN61:Q
 
 The pairs are:
-XZ	Q179:P	W184:P	5.49308
-XZ	N183:P	W184:P	1.33727
-ZX	W184:P	Q192:P	4.57814
+ZX	W48:Q	N61:Q	3.1866
 
 
 
 cluster number: 13
-number of pairs: 2
-number of different amino acids: 3
+number of pairs: 1
+number of different amino acids: 2
 number of different pairs' types: 1
 The amino-acids are:
-GLY156:P
-PRO157:P
-PRO160:P
+LYS160:Q
+ASP161:Q
 
 The pairs are:
-GP	G156:P	P157:P	1.34545
-GP	G156:P	P160:P	5.51383
+BJ	K160:Q	D161:Q	1.32677
 
 
 
@@ -300,11 +213,11 @@ number of pairs: 1
 number of different amino acids: 2
 number of different pairs' types: 1
 The amino-acids are:
-THR200:P
-ALA204:P
+PHE163:Q
+GLY191:Q
 
 The pairs are:
-OA	T200:P	A204:P	3.53405
+ZG	F163:Q	G191:Q	3.8863
 
 
 
@@ -313,11 +226,11 @@ number of pairs: 1
 number of different amino acids: 2
 number of different pairs' types: 1
 The amino-acids are:
-HIS87:P
-ALA88:P
+LYS13:Q
+GLU16:Q
 
 The pairs are:
-HA	H87:P	A88:P	1.3279
+BJ	K13:Q	E16:Q	3.71058
 
 
 
@@ -326,24 +239,11 @@ number of pairs: 1
 number of different amino acids: 2
 number of different pairs' types: 1
 The amino-acids are:
-THR19:P
-ALA22:P
+ARG5:Q
+GLU6:Q
 
 The pairs are:
-OA	T19:P	A22:P	3.31506
-
-
-
-cluster number: 17
-number of pairs: 1
-number of different amino acids: 2
-number of different pairs' types: 1
-The amino-acids are:
-GLY89:P
-PRO90:P
-
-The pairs are:
-GP	G89:P	P90:P	1.34261
+BJ	R5:Q	E6:Q	1.33454
 
 
 
@@ -352,244 +252,304 @@ GP	G89:P	P90:P	1.34261
 
 peptide number 1
 
-CAHFPPRSQMIADC
------------AD-
+KKVAVWGKEA
+-----WG---
 
 peptide number 2
 
-CAHFAPGTAMYSDC
--------TA-----
+SGELGYPRRYYH
+----------YH
 
 peptide number 3
 
-CRQFPHSSSMYTDC
---------------
+CVGEPTIRPAKYHC
+-----------YH-
 
 peptide number 4
 
-CRESRAALERGWWC
------AA-------
+FIGREAPWSR
+----------
 
 peptide number 5
 
-CEARTHNEARRRRC
--EA----EA-----
+GGVLEFPEFGKS
+--------FG--
 
 peptide number 6
 
-CAAARSTGETSAHY
--AAA------SA--
+SGELGYPRRYFH
+----------FH
 
 peptide number 7
 
-CYYRMGANYTVGEC
---------------
+CWQPGFHWNC
+----GFHW--
 
 peptide number 8
 
-CSVSPLYAADDPLC
--------AAD----
+CYVVFQWGKC
+------WG--
 
 peptide number 9
 
-CTQMHEMDPNFPPC
+CGVFLEKAVPTNRC
 --------------
 
 peptide number 10
 
-CVTALGPNYTGQEC
---TA----------
+VLKEAPWK
+--------
 
 peptide number 11
 
-VWRCNWF
--------
+LVYREAEWVA
+----------
 
 peptide number 12
 
-CVVFLDVSEAFRDC
---------EA----
+NDFHELAKMN
+--FH------
 
 peptide number 13
 
-CADVMGPLVTAAEC
--AD------TAAE-
+VGQVGSREAPWN
+------------
 
 peptide number 14
 
-CADVMGPLVTAGEC
--AD------TA---
+TKFAVWGKEA
+-----WG---
 
 peptide number 15
 
-AASWNGR
-AAS----
+FSEGKKAVPC
+----------
 
 peptide number 16
 
-CYVQQPWWVLEREC
---------------
+NKPEFDKGPREQ
+------------
+
+peptide number 17
+
+CATVKEEQKC
+----------
+
+peptide number 18
+
+QKIVDKKVWT
+----------
+
+peptide number 19
+
+QSQFGEELKF
+---FG-----
+
+peptide number 20
+
+CVSARGFHEKLFHC
+-----GFH---FH-
 
 *************  cluster number: 2 ************
 
 peptide number 1
 
-CAHFPPRSQMIADC
--AH--------AD-
+KKVAVWGKEA
+-------KEA
 
 peptide number 2
 
-CAHFAPGTAMYSDC
--AH----TA-----
+SGELGYPRRYYH
+------------
 
 peptide number 3
 
-CRQFPHSSSMYTDC
+CVGEPTIRPAKYHC
 --------------
 
 peptide number 4
 
-CRESRAALERGWWC
---------------
+FIGREAPWSR
+---REA----
 
 peptide number 5
 
-CEARTHNEARRRRC
--EA----EA-----
+GGVLEFPEFGKS
+------------
 
 peptide number 6
 
-CAAARSTGETSAHY
-----------SAH-
+SGELGYPRRYFH
+------------
 
 peptide number 7
 
-CYYRMGANYTVGEC
---------------
+CWQPGFHWNC
+----------
 
 peptide number 8
 
-CSVSPLYAADDPLC
---------AD----
+CYVVFQWGKC
+----------
 
 peptide number 9
 
-CTQMHEMDPNFPPC
---------------
+CGVFLEKAVPTNRC
+-----EK-------
 
 peptide number 10
 
-CVTALGPNYTGQEC
---TA----------
+VLKEAPWK
+--KEA---
 
 peptide number 11
 
-VWRCNWF
--------
+LVYREAEWVA
+---REAE---
 
 peptide number 12
 
-CVVFLDVSEAFRDC
---------EA----
+NDFHELAKMN
+----------
 
 peptide number 13
 
-CADVMGPLVTAAEC
--AD------TAAE-
+VGQVGSREAPWN
+------REA---
 
 peptide number 14
 
-CADVMGPLVTAGEC
--AD------TA---
+TKFAVWGKEA
+-------KEA
 
 peptide number 15
 
-AASWNGR
--AS----
+FSEGKKAVPC
+----------
 
 peptide number 16
 
-CYVQQPWWVLEREC
---------------
+NKPEFDKGPREQ
+-----DK--RE-
+
+peptide number 17
+
+CATVKEEQKC
+----KE----
+
+peptide number 18
+
+QKIVDKKVWT
+----DK----
+
+peptide number 19
+
+QSQFGEELKF
+----------
+
+peptide number 20
+
+CVSARGFHEKLFHC
+--------EK----
 
 *************  cluster number: 3 ************
 
 peptide number 1
 
-CAHFPPRSQMIADC
---------QM----
+KKVAVWGKEA
+-------KEA
 
 peptide number 2
 
-CAHFAPGTAMYSDC
------PG-------
+SGELGYPRRYYH
+------------
 
 peptide number 3
 
-CRQFPHSSSMYTDC
+CVGEPTIRPAKYHC
 --------------
 
 peptide number 4
 
-CRESRAALERGWWC
---------------
+FIGREAPWSR
+---REA----
 
 peptide number 5
 
-CEARTHNEARRRRC
---------------
+GGVLEFPEFGKS
+------------
 
 peptide number 6
 
-CAAARSTGETSAHY
---------------
+SGELGYPRRYFH
+------------
 
 peptide number 7
 
-CYYRMGANYTVGEC
-----MG--------
+CWQPGFHWNC
+----------
 
 peptide number 8
 
-CSVSPLYAADDPLC
---------------
+CYVVFQWGKC
+----------
 
 peptide number 9
 
-CTQMHEMDPNFPPC
---QM----------
+CGVFLEKAVPTNRC
+-----EK-------
 
 peptide number 10
 
-CVTALGPNYTGQEC
------GP-------
+VLKEAPWK
+--KEA---
 
 peptide number 11
 
-VWRCNWF
--------
+LVYREAEWVA
+---REAE---
 
 peptide number 12
 
-CVVFLDVSEAFRDC
---------------
+NDFHELAKMN
+----------
 
 peptide number 13
 
-CADVMGPLVTAAEC
-----MGP-------
+VGQVGSREAPWN
+------REA---
 
 peptide number 14
 
-CADVMGPLVTAGEC
-----MGP-------
+TKFAVWGKEA
+-------KEA
 
 peptide number 15
 
-AASWNGR
--------
+FSEGKKAVPC
+----------
 
 peptide number 16
 
-CYVQQPWWVLEREC
---------------
+NKPEFDKGPREQ
+-----DK--RE-
+
+peptide number 17
+
+CATVKEEQKC
+----KE----
+
+peptide number 18
+
+QKIVDKKVWT
+----DK----
+
+peptide number 19
+
+QSQFGEELKF
+----------
+
+peptide number 20
+
+CVSARGFHEKLFHC
+--------EK----
