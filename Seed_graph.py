@@ -1,20 +1,13 @@
 import math
-from tkinter import *
-from tkinter import filedialog
-from tkinter import scrolledtext
-import tkinter as tk
-import os
-import subprocess
-import shlex
-from subprocess import check_output
-import pathlib
 import pandas as pd
 import sys
 import pathlib
+import networkx as nx
+import matplotlib.pyplot as plt
 
 # define a global value as minus infinity
-# MINUSINF = -1000000000
 MINUSINF = -math.inf
+
 
 class Node:
     def __init__(self, name, weight, children, parents):
@@ -35,7 +28,8 @@ class Node:
     def change_weight(self, new_weight):
         self.weight = new_weight
 
-def truncate_carbons(seq, end, start):
+
+def trim_cysteines(seq, end, start):
     dic = {}
     dic['end'] = '0'
     dic['start'] = '0'
@@ -50,6 +44,7 @@ def truncate_carbons(seq, end, start):
     elif (dic['end'] == '1') and (dic['start'] == '0'):
         seq = seq[0:len(seq)-1]
     return seq
+
 
 def convert_abc():
     vocab = {}
@@ -84,7 +79,7 @@ def convert_abc():
             vocab[word] = seq
     else:
         for seq in seq_set:
-            # seq = truncate_carbons(seq, end, start)
+            seq = trim_cysteines(seq, end, start)
             word = str('')
             for letter in seq:
                 word = word + str(dict_abc[letter])
@@ -93,7 +88,14 @@ def convert_abc():
     return new_set, vocab
 
 
-# extract sssps out of the file sspMatrix.txt created by mapitope
+def add_source_sink(seq, rev):
+    if rev == False:
+        seq = "cc" + seq + "zz"
+    else:
+        seq = "zz" + seq + "cc"
+    return seq
+
+
 # extract sssps out of the file allPairs.txt created by mapitope
 def get_ssps():
     pairs = []
@@ -107,7 +109,7 @@ def get_ssps():
     return pairs
 
 
-# check if the sequence might be in reversed order
+# check in which order (left-to-write or right-to-left) to read the sequence
 def check_reverse(seq, graph):
     rev = False
     count = 0
@@ -123,21 +125,22 @@ def check_reverse(seq, graph):
         rev = True
     return rev
 
+
 def find_mean(graph):
     count = 0
     sum = 0
     weights = []
     s_set = []
     for element in graph:
-        if graph[element] != 0:
+        # if (graph[element] != 0) and (graph[element] != 'cc') and (graph[element] != 'zz'):
+        if (graph[element] != 0):
             count += 1
             sum += graph[element].weight
             weights.append(graph[element].weight)
     mean = (sum / count)
     weights.sort()
-    median = weights[round(count * 0.5)]
-    return mean
-
+    median = weights[round(count * 0.50)]
+    return median
 
 # create a seed graph and return the graph and the median weight
 def seed_graph_create():
@@ -145,19 +148,26 @@ def seed_graph_create():
     sequences = convert_abc()[0]
     ssps = sorted(set(get_ssps()))
     graph = dict.fromkeys(ssps, 0)
+    graph['cc'] = 0
+    graph['zz'] = 0
     for seq in sequences:
         rev = check_reverse(seq, graph)
         reverse_indices.append(rev)
+        seq = add_source_sink(seq, rev)
         prev = ''
         for i in range(len(seq) - 1):
+            temp = str(seq[i:i + 2])
             if not rev:
                 temp = str(seq[i:i + 2])
             else:
                 temp = str(seq[-(i + 1):-i]) + str(seq[-(i + 2):-(i + 1)])
-            if temp in ssps:
-                if graph[temp] == 0:
+            if (temp in ssps) or (temp == 'cc') or (temp == 'zz'):
+                if (graph[temp] == 0) and (graph[temp[1]+temp[0]] == 0):
                     graph[temp] = Node(name=temp, weight=1, children=set(), parents=set())
-                else:
+                elif (graph[temp[1]+temp[0]] != 0):
+                    temp = temp[1] + temp[0]
+                    graph[temp].change_weight(graph[temp].weight + 1)
+                elif (graph[temp] != 0):
                     graph[temp].change_weight(graph[temp].weight + 1)
                 if prev != '':
                     graph[prev].add_child(temp)
@@ -193,29 +203,38 @@ def extract_to_csv(graph):
 def recursive_weight(i, v, S, graph, nodes):
     final_seed = ""
     max_v = MINUSINF
-    penalty = 1.5 * find_mean(graph)
+    penalty = 1 * find_mean(graph)
 
-    # this is the regular init for each node from the set to be the first node and its weight to be the first weight added
+    # INIT of the DP
+    # this is the regular init for each node from the set to
+    # be the first node and its weight to be the first weight added
     if (i >= 0) & (S == []):
-        return graph[v].weight, v
+        if graph[v].name != 'zz' and graph[v].name != 'cc':
+            return graph[v].weight, v
+        elif graph[v].name == 'zz' or graph[v].name == 'cc':
+            return 0, v
     # the case when there are still nodes left in the set but current node has no parents to proceed with the search
     if (i >= 0) & (len(S) != 0) & (len(graph[v].parents) == 0):
-        # return MINUSINF, v
-        return graph[v].weight, v
-    # need to change here that also case when the only parent is node itself should use this case
+        if graph[v].name not in S and graph[v].name != 'zz' and graph[v].name != 'cc':
+            return MINUSINF, v
+            # return graph[v].weight, v
+        elif graph[v].name == 'zz' or graph[v].name == 'cc':
+            return 0, v
+        elif graph[v].name in S:
+            return graph[v].weight, v
+    # the case when there are still nodes left in the set but current node has no parents other than itself
     if (i >= 0) & (len(S) != 0) & (len(graph[v].parents) == 1) & (v in graph[v].parents):
-        # return MINUSINF, v
-        return graph[v].weight, v
-    # more than i nodes not from the SET were used in the path
+        return MINUSINF, v
+        # return graph[v].weight, v
+
+    # more than i nodes NOT from the HeavySSPs set were used in the path
     if i < 0:
         return MINUSINF, v
-    if v == 'q':
-        return MINUSINF, v
 
-    # recurrence
+    # DP Recurrence
+    all_seeds = {}
     parents = graph[v].parents - set([v])
     for parent in parents:
-    # for parent in graph[v].parents:
         S_new = []
         temp = 0
         # hard copy of the set
@@ -224,10 +243,12 @@ def recursive_weight(i, v, S, graph, nodes):
         nodes_copy = []
         for element in nodes:
             nodes_copy.append(element)
+        #   if parent is in the HeavySSPs set
         if parent in S_new:
             S_new.remove(parent)
             nodes_copy.remove(parent)
             temp, seed = recursive_weight(i, parent, S_new, graph, nodes_copy)
+        #   if parent is not in the HeavySSPs set
         else:
             if parent in nodes_copy:
                 nodes_copy.remove(parent)
@@ -235,16 +256,30 @@ def recursive_weight(i, v, S, graph, nodes):
                 temp = temp - penalty
             else:
                 seed = ""
+                temp = MINUSINF
         temp += graph[v].weight
         if temp > max_v:
             max_v = temp
             final_seed = seed + v
-    if graph[v].weight > max_v:
+        all_seeds[seed + v] = temp
+
+    if (graph[v].weight > max_v) and (graph[v].weight > find_mean(graph)):
         max_v = graph[v].weight
         final_seed = v
+    # print(all_seeds)
     return max_v, final_seed
 
 
+#   remove source and sink, that is "ss" and "qq", form the beginning and the end of the sequence respectively
+def remove_source_sink(seq):
+    seed_f = ''
+    for i in range(len(seq)):
+        if (i != len(seq)) and (seq[i] != 'c') and (seq[i] != 'z'):
+            seed_f = seed_f + seq[i]
+    return seed_f
+
+
+#   removes "ss" and "zz" from the seed and also the letters duplication
 def redefine_seed(final_seed):
     seed = ""
     for i in range(len(final_seed)-1):
@@ -258,9 +293,11 @@ def redefine_seed(final_seed):
                 seed = seed + final_seed[i+1]
             else:
                 seed = seed + final_seed[i : i + 2]
+    seed = remove_source_sink(seed)
     return seed
 
 
+#  convert the seed from the alphabet of 13 to the alphabet of 20
 def convert_to_20(seed, vocab, rev_indices):
     new_seed = ""
     for i in range(len(seed)-1):
@@ -306,21 +343,17 @@ def convert_to_20(seed, vocab, rev_indices):
                     max2 = my_dict_2[element]
                     letter = element
             new_seed = new_seed + letter
-
-            # my_dict_1 = {i[0]: i.count(i[0]) for i in my_list}
-            # my_dict_1 = {i: my_list.count(i) for i in my_list}
-
     return new_seed
 
 
-# DP algorithm - uses the help function which calculates the weight recursively
+# DP algorithm Target function call - uses the help function which calculates the weight recursively (recurrence)
 def seed_search(graph, s_set, mean, rev_indices):
-    # DP target , no more than 4 insersions allowed, each insertion leads to penalty
     abs_max = 0
     k = input("Enter max number of pairs with the weight below mean value on the path: ")
+    all_seeds = {}
     for i in range(int(k)+1):
         max = 0
-        for v in s_set:
+        for v in (s_set +['zz']):
             S = []
             temp = 0
             # deep copy of s_set
@@ -330,34 +363,30 @@ def seed_search(graph, s_set, mean, rev_indices):
             nodes = set(graph.keys())
             nodes.remove(v)
             temp, seed = recursive_weight(i, v, S, graph, nodes)
-            # temp += graph[v].weight
-            # temp = temp - mean * i * 1.7
             if temp > max:
                 max = temp
                 final_seed = seed
+            all_seeds[seed] = temp
         if max > abs_max:
             abs_max = max
             f_final_seed = final_seed
-    if (abs_max != 0) and (len(f_final_seed) >= 6):
+
+    # if (abs_max != 0) and (len(f_final_seed) >= 6):
+    if (abs_max != 0):
         vocab = convert_abc()[1]
-        print(f_final_seed)
         original_seed = f_final_seed
+        original_seed = remove_source_sink(original_seed)
         f_final_seed = convert_to_20(f_final_seed, vocab, rev_indices)
-        print(f_final_seed)
+        print("the original seed is: " + f_final_seed)
         seed = redefine_seed(f_final_seed)
-        print(f_final_seed)
-        # return final_seed, i
-        return seed, original_seed
+        print("the redefined seed is: " + seed)
+        return seed, original_seed, all_seeds
     else:
         print("\n no seed found")
         return "", ""
 
 
 def add_cut_spaces(paths_set, input_alignment_set, output_alignment_set, k, cut_at_start, seq_cut):
-    # paths_set_copy = list()
-    # input_alignment_set_copy = list()
-    # output_alignment_set_copy = list()
-
     paths_set_k = list()
     input_alignment_set_k = list()
     output_alignment_set_k = list()
@@ -374,17 +403,6 @@ def add_cut_spaces(paths_set, input_alignment_set, output_alignment_set, k, cut_
         paths_set_k.append(paths_set[k][i])
         input_alignment_set_k.append(input_alignment_set[k][i])
         output_alignment_set_k.append(output_alignment_set[k][i])
-
-    #
-    # for i in range(len(paths_set)):
-    #     if i!= k:
-    #         paths_set_copy.append(paths_set[i])
-    #         input_alignment_set_copy.append((input_alignment_set[i]))
-    #         output_alignment_set_copy.append(output_alignment_set[i])
-    #     else:
-    #         paths_set_copy.append(paths_set_k)
-    #         input_alignment_set_copy.append(input_alignment_set_k)
-    #         output_alignment_set_copy.append(output_alignment_set_k)
     return paths_set_k, input_alignment_set_k, output_alignment_set_k
 
 
@@ -392,7 +410,7 @@ def add_cut_spaces(paths_set, input_alignment_set, output_alignment_set, k, cut_
 # which suggests the relevant nodes in the graph
 def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_alignment_set, original_seed, seed):
     dict_abc = {'R': 'B', 'K': 'B', 'E': 'J', 'D': 'J', 'S': 'O', 'T': 'O', 'L': 'U', 'V': 'U', 'I': 'U', 'Q': 'X',
-                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y', 'q': 'X'}
+                'N': 'X', 'W': 'Z', 'F': 'Z', 'A': 'A', 'C': 'C', 'G': 'G', 'H': 'H', 'M': 'M', 'P': 'P', 'Y': 'Y', 'q': 'X', 'c': 'c', 'z': 'z'}
     my_set = list()
     k = 0
     for path in paths_set:
@@ -452,3 +470,36 @@ def path_to_graph_dictionary(graph, paths_set, input_alignment_set, output_align
         k += 1
     print(my_set)
     return my_set
+
+def print_seed_graph(graph, mean):
+    G = nx.Graph()
+    new_set = list()
+    val_dict = {}
+    blue_nodes = ['So', 'Si']
+    red_nodes = list()
+    for element in graph:
+        if element != 'zz' and element != 'cc':
+            val_dict[element] = graph[element].weight
+            if graph[element].weight >= mean:
+                red_nodes.append(element)
+        for child in graph[element].children:
+            if element == 'zz':
+                element = 'Si'
+            elif element == 'cc':
+                element = 'So'
+            if child == 'zz':
+                child = 'Si'
+            elif child == 'cc':
+                child = 'So'
+            new_set.append((element, child))
+    val_dict['So'] = 0
+    val_dict['Si'] = 0
+    G.add_edges_from(new_set)
+    # val_map = val_dict
+    pos = nx.spring_layout(G)
+    nx.draw(G, pos, cmap=plt.get_cmap('jet'), node_color='grey', node_size=1000)
+    nx.draw(G, pos, cmap=plt.get_cmap('jet'), nodelist = blue_nodes, node_color = 'blue', node_size=1000)
+    nx.draw(G, pos, cmap=plt.get_cmap('jet'), nodelist=red_nodes, node_color='red', node_size=1000)
+    nx.draw_networkx_labels(G, pos, font_color='white')
+    nx.draw_networkx_edges(G, pos, edgelist=new_set, edge_color='cyan', arrows=True, arrowsize=25)
+    plt.show()

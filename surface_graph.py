@@ -24,4 +24,3 @@ class Surface_Amino_Acid:
         for neighbor in self.Neighbors_list:
             lst.append(neighbor.AA_name + neighbor.index)
         return(lst)
-            #return(neighbor.AA_name + neighbor.index)
