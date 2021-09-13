@@ -1,16 +1,14 @@
 NUM_OF_CLUSTERS=1
 Cluster #0
-Score: 7.5585
- residues number: 8
+Score: 8.38
+ residues number: 6
 residue	score	Occurances
-LYS343:A	3.1535	1
-PRO450:A	2.9812	1
-GLN401:A	2.7804	1
-ARG449:A	1.8795	1
-ARG395:A	1.8795	1
-ARG342:A	1.8795	1
-PHE451:A	0.28423	1
-LYS411:A	0.001	1
+ASP51:P	3.6686	1
+ASN120:P	3.3419	1
+ALA47:P	2.2149	1
+THR48:P	1.9799	1
+MET118:P	0.62496	1
+GLY46:P	0.32465	1
 
 ---------------------------------------------
 Peptide Contribution:
