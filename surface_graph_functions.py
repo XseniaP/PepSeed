@@ -187,7 +187,7 @@ def extention(graph_csv ,seed_graph_indexes_dict):
                       'H':['H'] , 'M':['M'] , 'P':['P'] , 'Y':['Y'], 'c':['c'], 'z':['z']}
     count_dict = {}
     df = pd.read_csv(graph_csv)
-    df = df[(df.pair != 'mean') & (df.pair != 'median') & (df.pair.isnull()==False)]
+    df = df[(df.pair != 'mean') & (df.pair != 'median') & (df.pair.isnull() == False)]
     for index, pairs_dict in seed_graph_indexes_dict.items():
         for pair, first_or_second in pairs_dict.items():
 
@@ -297,3 +297,5 @@ def get_paths_and_return_best_epitope(paths_list ,seed_graph_indexes_dict ,graph
         print("epitope: " ,epitope_list[index])
         print("  ")
 
+def return_surface_dict():
+    return surface_dict

@@ -7,6 +7,8 @@ from surface_graph_functions import Initialize_Neighbors_list
 from surface_graph_functions import choose_path_from_pepsurf
 from surface_graph_functions import Initialize_graph
 from surface_graph_functions import get_paths_and_return_best_epitope
+from surface_graph_functions import return_surface_dict
+from Qpath import qpath_target_call
 
 #  3 examples parameters (configurations) to run the
 # -U Results_Mapi -P 1e6j_P.pdb -S 1e6j_P.txt -I 13b5.txt -C P -D 6 -V 2.5 -R rasmol.txt -F 0
@@ -34,7 +36,7 @@ def main_func():
     seed, original_seed, all_seeds = Seed_graph.seed_search(graph, s_set, mean, rev_indices)
 
 #   Running QPath with the seed as an input to find the preliminary path on the antigen surface
-    PepSurf_run.perpsurf_run(seed)
+#     PepSurf_run.perpsurf_run(seed)
 
 #   Create a surface graph
     residue_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/surface.txt"
@@ -42,10 +44,18 @@ def main_func():
 
     pairs_distance_txt = str(pathlib.Path.cwd()) + "/Results_Mapi/pairsDistance.txt"
 
-
     D_param = int(input("Enter distance which defines the neighbors: "))
     # D_param = 4
     Initialize_Neighbors_list(pairs_distance_txt, D_param)
+
+#   return surface graph (dictionary)
+    surface_dict = return_surface_dict()
+    match_score = 1
+    gap_penalty = -0.5
+    nindel = 2
+    max_score, final_path, all_paths, all_paths_scores = qpath_target_call(seed, surface_dict, nindel, gap_penalty, match_score)
+    print(final_path)
+
 
 #   Get the highest score paths
     significant_path_txt = str(pathlib.Path.cwd()) + "/RESULTS/sigPathsAln/0_significantPaths.txt"
