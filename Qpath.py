@@ -83,14 +83,16 @@ def qpath_recursive_call(seed, i, v, S, nindel, surface_dict, gap_penalty, match
                     # all_max_paths_match[max_v_match] = all_paths[temp_score]
 
                     # all_max_paths_match[max_v_match] = [(list(item)).append(v) for item in set(all_paths[max_v_match - match_score])]
-                elif (temp_score == max_v_match) & (temp_score != MINUSINF):
-                    all_max_paths_match[max_v_match].append(all_paths[max_v_match - match_score])
-
-                    # all_max_paths_match[max_v_match].append(all_paths[temp_score])
-
-                    # all_max_paths_match[max_v_match].append(all_paths[max_v_match - match_score][0])
-                    # all_max_paths_match[max_v_match].append([(list(item)).append(v) for item in set(all_paths[max_v_match - match_score])])
-                    # all_max_paths_match[max_v_match].add(all_paths[max_v_match - match_score])
+                # elif (temp_score == max_v_match) & (temp_score != MINUSINF):
+                #     # all_max_paths_match[max_v_match].append(all_paths[max_v_match - match_score])
+                #
+                #     all_max_paths_match[max_v_match] = all_max_paths_match[max_v_match] + all_paths[max_v_match - match_score]
+                #
+                #     # all_max_paths_match[max_v_match].append(all_paths[temp_score])
+                #
+                #     # all_max_paths_match[max_v_match].append(all_paths[max_v_match - match_score][0])
+                #     # all_max_paths_match[max_v_match].append([(list(item)).append(v) for item in set(all_paths[max_v_match - match_score])])
+                #     # all_max_paths_match[max_v_match].add(all_paths[max_v_match - match_score])
         if max_v_match > max_v:
             max_v = max_v_match
             final_path = fin_path_match
@@ -100,11 +102,14 @@ def qpath_recursive_call(seed, i, v, S, nindel, surface_dict, gap_penalty, match
         elif (max_v_match == max_v) & (max_v_match != MINUSINF):
             # all_max_paths[max_v].append(all_paths[max_v - gap_penalty][0])
             # all_max_paths[max_v].append(all_paths[max_v_match - gap_penalty])
-            all_max_paths[max_v].append(all_max_paths_match[max_v_match])
+
+            # all_max_paths[max_v].append(all_max_paths_match[max_v_match])
+
+            all_max_paths[max_v] = all_max_paths[max_v] + all_max_paths_match[max_v_match]
 
 
     # insertion (can't be the last node)
-    if i != len(seed) - 1:
+    if (i != len(seed) - 1) & (i >= 0):
         all_max_paths_ins = dict()
         fin_path_ins = list()
         max_v_ins = MINUSINF
@@ -133,13 +138,15 @@ def qpath_recursive_call(seed, i, v, S, nindel, surface_dict, gap_penalty, match
 
                     # all_max_paths_ins[max_v_ins] = all_paths[temp_score]
 
-                elif (temp_score == max_v_ins) & (temp_score != MINUSINF):
-                    all_max_paths_ins[max_v_ins].append(all_paths[max_v_ins - gap_penalty])
-
-                    # all_max_paths_ins[max_v_ins].append(all_paths[temp_score])
-
-                    # all_max_paths_ins[max_v_ins].append(all_paths[max_v_ins - gap_penalty][0])
-                    # all_max_paths_ins[max_v_ins].add(all_paths[max_v_ins - gap_penalty])
+                # elif (temp_score == max_v_ins) & (temp_score != MINUSINF):
+                #     # all_max_paths_ins[max_v_ins].append(all_paths[max_v_ins - gap_penalty])
+                #
+                #     all_max_paths_ins[max_v_ins] = all_max_paths_ins[max_v_ins] + all_paths[max_v_ins - gap_penalty]
+                #
+                #     # all_max_paths_ins[max_v_ins].append(all_paths[temp_score])
+                #
+                #     # all_max_paths_ins[max_v_ins].append(all_paths[max_v_ins - gap_penalty][0])
+                #     # all_max_paths_ins[max_v_ins].add(all_paths[max_v_ins - gap_penalty])
         if max_v_ins > max_v:
             max_v = max_v_ins
             final_path = fin_path_ins
@@ -150,7 +157,9 @@ def qpath_recursive_call(seed, i, v, S, nindel, surface_dict, gap_penalty, match
             # all_max_paths[max_v].append(all_paths[max_v - gap_penalty][0])
             # all_max_paths[max_v].append(all_paths[max_v_ins - gap_penalty])
 
-            all_max_paths[max_v].append(all_max_paths_ins[max_v_ins])
+            # all_max_paths[max_v].append(all_max_paths_ins[max_v_ins])
+
+            all_max_paths[max_v] = all_max_paths[max_v] + all_max_paths_ins[max_v_ins]
 
     # deletion (skip letter of the seed)
     # if (nindel > 0) & (i > 0):
@@ -175,13 +184,16 @@ def qpath_recursive_call(seed, i, v, S, nindel, surface_dict, gap_penalty, match
 
             # all_max_paths[max_v] = all_paths[max_v]
 
-        elif (temp_score == max_v) & (temp_score != MINUSINF):
-            # all_max_paths[max_v].append(all_paths[max_v - gap_penalty][0])
-            all_max_paths[max_v].append(all_paths[max_v - gap_penalty])
-
-            # all_max_paths[max_v].append(all_paths[max_v])
-
-            # all_max_paths[max_v].add(all_paths[max_v - gap_penalty])
+        # elif (temp_score == max_v) & (temp_score != MINUSINF):
+        #     # all_max_paths[max_v].append(all_paths[max_v - gap_penalty][0])
+        #
+        #     # all_max_paths[max_v].append(all_paths[max_v - gap_penalty])
+        #
+        #     all_max_paths[max_v] = all_max_paths[max_v] + all_paths[max_v - gap_penalty]
+        #
+        #     # all_max_paths[max_v].append(all_paths[max_v])
+        #
+        #     # all_max_paths[max_v].add(all_paths[max_v - gap_penalty])
 
     # # mismatch
     # if (i != 0):
@@ -238,10 +250,14 @@ def qpath_target_call(seed, surface_dict, nindel, gap_penalty, match_score):
         if temp_score in all_paths_scores:
             # all_paths_scores[temp_score] = all_paths_scores[temp_score] + temp_all_max_unique
             # all_paths_scores[temp_score].add(temp_all_max_unique)
-            all_paths_scores[temp_score].append(temp_all_max[temp_score])
+            # all_paths_scores[temp_score].append(temp_all_max[temp_score])
+
+            all_paths_scores[temp_score] = all_paths_scores[temp_score] + temp_all_max[temp_score]
+
         elif (temp_score not in all_paths_scores) & (temp_score != MINUSINF):
             # all_paths_scores[temp_score] = temp_all_max_unique
             all_paths_scores[temp_score] = temp_all_max[temp_score]
+
         if temp_score > max_score:
             max_score = temp_score
             final_path = temp_path
@@ -251,6 +267,10 @@ def qpath_target_call(seed, surface_dict, nindel, gap_penalty, match_score):
     if max_score != 0:
         # all_paths_scores.pop(MINUSINF)
         # all_paths.pop(MINUSINF)
+        # all_paths_scores_final = dict()
+        # for score in all_paths_scores:
+        #     all_paths_scores_final[score] = set(all_paths_scores[score])
+        # return max_score, final_path, all_paths, all_paths_scores_final
         return max_score, final_path, all_paths, all_paths_scores
     else:
         return {}, 0, "no path found"

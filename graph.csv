@@ -1,17 +1,17 @@
 pair,weight,parents,children
-AA,6,"{'cc', 'AA', 'OA'}","{'AJ', 'OA', 'ZZ', 'AA', 'zz'}"
+AA,6,"{'cc', 'OA', 'AA'}","{'AA', 'ZZ', 'AJ', 'OA', 'zz'}"
 AH,3,"{'cc', 'OA'}","{'HZ', 'zz'}"
-AJ,8,"{'AA', 'AJ', 'cc', 'XM'}","{'AJ', 'MG', 'zz'}"
+AJ,8,"{'cc', 'AJ', 'AA', 'XM'}","{'AJ', 'zz', 'MG'}"
 HZ,2,{'AH'},"{'ZP', 'PG'}"
 MG,3,"{'cc', 'AJ'}","{'PG', 'XY'}"
 MY,2,"{'ZP', 'OA'}",{'YO'}
-OA,6,"{'PG', 'AA', 'XZ', 'cc'}","{'AA', 'MY', 'AH', 'PG', 'zz'}"
+OA,6,"{'PG', 'cc', 'XZ', 'AA'}","{'MY', 'PG', 'AA', 'AH', 'zz'}"
 PG,4,"{'HZ', 'OA', 'MG'}","{'OA', 'XY'}"
-XM,2,"{'ZP', 'cc'}","{'AJ', 'XZ'}"
+XM,2,"{'ZP', 'cc'}","{'XZ', 'AJ'}"
 XY,2,"{'PG', 'MG'}",{'YO'}
-XZ,4,"{'cc', 'XM'}","{'ZZ', 'ZP', 'OA'}"
-YO,4,"{'XY', 'MY'}",{'zz'}
-ZP,4,"{'HZ', 'ZZ', 'XZ'}","{'zz', 'MY', 'XM'}"
-ZZ,3,"{'AA', 'XZ'}","{'ZP', 'zz'}"
-cc,12,set(),"{'AJ', 'OA', 'XM', 'AH', 'MG', 'AA', 'XZ'}"
-zz,16,"{'AA', 'AJ', 'OA', 'ZZ', 'YO', 'AH', 'ZP'}",set()
+XZ,4,"{'cc', 'XM'}","{'ZP', 'OA', 'ZZ'}"
+YO,4,"{'MY', 'XY'}",{'zz'}
+ZP,4,"{'HZ', 'XZ', 'ZZ'}","{'MY', 'zz', 'XM'}"
+ZZ,3,"{'XZ', 'AA'}","{'ZP', 'zz'}"
+cc,12,set(),"{'AA', 'XZ', 'AH', 'XM', 'AJ', 'OA', 'MG'}"
+zz,16,"{'AA', 'YO', 'AH', 'ZZ', 'AJ', 'OA', 'ZP'}",set()
