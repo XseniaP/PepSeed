@@ -1,0 +1,16 @@
+The surface area of 6ch7_G    
+Number of non-HOH, non-H atoms=3546
+Time used=0.000000 sec
+Probe radius=1.40
+TOTAL ASA=24383.24                             TOTAL MSA=0.00
+Polar ASA=11583.95     Non-polar ASA=12799.29    
+Polar MSA=0.00     Non-polar MSA=0.00
+Total backbone ASA=5006.84   Total backbone MSA=0.00
+Polar backbone ASA=3237.30 Non-polar backbone ASA=1769.54 
+Polar backbone MSA=0.00 Non-polar backbone MSA=0.00
+Polar side chain ASA=8346.65 Non-polar side chain ASA=11029.75 
+Polar side chain MSA=0.00 Non-polar side chain MSA=0.00
++charge ASA=2445.54  -charge ASA=1574.78   
++charge MSA=0.00  -charge MSA=0.00
+Structure contains 62 cavities
+
