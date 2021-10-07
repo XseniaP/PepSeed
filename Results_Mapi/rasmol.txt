@@ -2,14 +2,14 @@ select all
 colour white
 background white
 spacefill
-select GLU75:P , ALA77:P , ALA78:P , GLU76:P , GLU79:P
-select selected or ASP81:P , SER102:P , ALA105:P , THR107:P , THR108:P , SER109:P
+select TRP45:G , ASP47:G , GLU91:G , GLU492:G , LYS46:G
+select selected or ALA48:G , LYS490:G , GLU49:G , GLY222:G , PHE223:G , GLN246:G
 define c1 selected
-select HIS12:P , ALA14:P , SER16:P , ASP51:P , ALA47:P
-select selected or GLU45:P , THR48:P , GLU128:P , ALA42:P , SER41:P
+select ARG350:G , GLY354:G , LYS351:G , PHE353:G , HIS352:G
+select selected or ASN355:G , ASN356:G , GLU466:G , ARG360:G
 define c2 selected
-select GLY46:P , MET118:P , GLY116:P , ASN120:P , MET96:P
-select selected or GLY94:P , GLN95:P , GLN112:P , PRO93:P
+select HIS105:G , TRP427:G , ASP113:G , ASN425:G , GLN428:G
+select selected or LYS117:G , ARG429:G , GLY431:G
 define c3 selected
 select c1
 colour red
