@@ -1,10 +1,12 @@
 pair,weight,parents,children
-BJ,12,"{'BJ', 'cc', 'ZG', 'ZH'}","{'zz', 'BJ', 'JA', 'ZH'}"
+BJ,12,"{'cc', 'ZH', 'GB'}","{'JZ', 'ZH', 'JA', 'zz', 'GB'}"
+GB,8,"{'ZG', 'cc', 'BJ'}","{'ZG', 'zz', 'BJ'}"
 HC,2,"{'YH', 'ZH'}",{'zz'}
-JA,7,"{'BJ', 'JA'}","{'zz', 'XZ', 'JA'}"
-XZ,6,"{'XZ', 'cc', 'ZG', 'JA'}","{'zz', 'XZ', 'ZG', 'ZH'}"
+JA,7,"{'JA', 'BJ'}","{'JA', 'zz', 'XZ', 'JZ'}"
+JZ,6,"{'JA', 'JZ', 'cc', 'BJ'}","{'ZG', 'JZ', 'zz', 'ZH'}"
+XZ,6,"{'ZG', 'JA', 'cc', 'XZ'}","{'ZG', 'zz', 'XZ', 'ZH'}"
 YH,2,{'cc'},"{'zz', 'HC'}"
-ZG,7,"{'XZ', 'cc', 'ZH'}","{'zz', 'BJ', 'ZH', 'XZ'}"
-ZH,6,"{'XZ', 'ZH', 'BJ', 'cc', 'ZG'}","{'HC', 'zz', 'ZH', 'BJ', 'ZG'}"
-cc,17,set(),"{'zz', 'XZ', 'ZH', 'BJ', 'YH', 'ZG'}"
-zz,20,"{'JA', 'HC', 'XZ', 'ZH', 'BJ', 'YH', 'cc', 'ZG'}",set()
+ZG,7,"{'JZ', 'ZH', 'cc', 'XZ', 'GB'}","{'ZH', 'zz', 'XZ', 'GB'}"
+ZH,6,"{'ZG', 'JZ', 'ZH', 'cc', 'BJ', 'XZ'}","{'ZG', 'HC', 'ZH', 'BJ', 'zz'}"
+cc,16,set(),"{'ZG', 'JZ', 'ZH', 'BJ', 'YH', 'XZ', 'GB'}"
+zz,20,"{'ZG', 'JZ', 'HC', 'ZH', 'BJ', 'YH', 'JA', 'XZ', 'GB'}",set()
