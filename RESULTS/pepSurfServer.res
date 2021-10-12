@@ -1,17 +1,19 @@
 NUM_OF_CLUSTERS=1
 Best cluster
-Score: 8.38
-Residues number: 6
+Score: 8.573
+Residues number: 8
 
-GLY46:P
-ALA47:P
-THR48:P
-ASP51:P
-MET118:P
-ASN120:P
+ALA398:A
+PRO399:A
+GLN401:A
+LYS411:A
+LEU443:A
+ARG444:A
+LYS447:A
+ARG449:A
 
 ---------------------------------------------
 Peptides participating in this cluster:
 ID	Sequence
-1	NFTAAD
+1	LRKMRNQTPR
 ++++++++++++++++++++++++++

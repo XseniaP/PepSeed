@@ -405,6 +405,8 @@ def add_cut_spaces(paths_set, input_alignment_set, output_alignment_set, k, cut_
         output_alignment_set_k.append(output_alignment_set[k][i])
     return paths_set_k, input_alignment_set_k, output_alignment_set_k
 
+    # return paths_set, input_alignment_set, output_alignment_set
+
 
 # getting the path or set of paths and return the relevant dictionary for each
 # which suggests the relevant nodes in the graph

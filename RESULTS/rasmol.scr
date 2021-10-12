@@ -3,10 +3,10 @@ restrict not selected
 select all
 backbone
 colour [200,200,200]
-select :P
+select :A
 spacefill
-select ALA47:P , ASN120:P , ASP51:P , GLY46:P , MET118:P
-select selected or THR48:P
+select ALA398:A , ARG444:A , ARG449:A , GLN401:A , LEU443:A
+select selected or LYS411:A , LYS447:A , PRO399:A
 define c1 selected
 select c1
 colour red

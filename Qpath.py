@@ -265,12 +265,23 @@ def qpath_target_call(seed, surface_dict, nindel, gap_penalty, match_score):
         elif (temp_score == max_score) & (temp_score != MINUSINF):
             all_paths[max_score].append(temp_all_max[max_score])
     if max_score != 0:
+        final_list = []
+        input_set_list = []
+        output_set_list = []
+        for score in all_paths_scores:
+            for my_list in all_paths_scores[score]:
+                my_list_new = ["" if element == " DEL " else element for element in my_list if element != " INS "]
+                final_list.append(my_list_new)
+                input_set = [dict_abc[element] for element in seed]
+                input_set_list.append(input_set)
+                output_set = ["-" if (element == "") else dict_abc[element[0]] for element in my_list_new]
+                output_set_list.append(output_set)
         # all_paths_scores.pop(MINUSINF)
         # all_paths.pop(MINUSINF)
         # all_paths_scores_final = dict()
         # for score in all_paths_scores:
         #     all_paths_scores_final[score] = set(all_paths_scores[score])
         # return max_score, final_path, all_paths, all_paths_scores_final
-        return max_score, final_path, all_paths, all_paths_scores
+        return max_score, final_path, all_paths_scores, final_list, input_set_list, output_set_list
     else:
-        return {}, 0, "no path found"
+        return {}, 0, "no path found", [], [], []

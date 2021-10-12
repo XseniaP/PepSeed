@@ -53,8 +53,9 @@ def main_func():
     match_score = 1
     gap_penalty = -0.5
     nindel = 2
-    max_score, final_path, all_paths, all_paths_scores = qpath_target_call(seed, surface_dict, nindel, gap_penalty, match_score)
+    max_score, final_path, all_paths, final_list,input_set_list, output_set_list = qpath_target_call(seed, surface_dict, nindel, gap_penalty, match_score)
     print(final_path)
+    print(final_list)
 
 
 #   Get the highest score paths
@@ -63,14 +64,19 @@ def main_func():
     print(paths_set)
 
 #   Return set of dictionaries, 1 for each path
-    seed_graph_indexes_dict = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set,
-                                                                  output_alignment_set, original_seed, seed)
+#     seed_graph_indexes_dict = Seed_graph.path_to_graph_dictionary(graph, paths_set, input_alignment_set,
+#                                                                   output_alignment_set, original_seed, seed)
+
+    seed_graph_indexes_dict = Seed_graph.path_to_graph_dictionary(graph, final_list, input_set_list,
+                                                                  output_set_list, original_seed, seed)
+
 
 #   Locating the cluster found by PepSurf on the surface graph and Running cluster extension
     graph_csv = str(pathlib.Path.cwd()) + "/graph.csv"
     extension_param = int(input("Enter the extension parameter: "))
     # extention_param = 1
-    get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extension_param)
+    # get_paths_and_return_best_epitope(paths_set, seed_graph_indexes_dict, graph_csv, extension_param)
+    get_paths_and_return_best_epitope(final_list, seed_graph_indexes_dict, graph_csv, extension_param)
 
 
 # Press the green button in the gutter to run the script.
